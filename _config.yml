@@ -1,0 +1,67 @@
+### site ###
+title: Thirsty Turtle
+author: Xavier Talpe
+description: description here
+
+### jekyll ###
+
+# Disables custom plugins.
+safe: false
+
+# Enables or disables Jekyll from recreating the site when files are modified.
+auto: false
+
+# Fires up a server that will host your _site directory.
+server: false
+
+# Changes the port that the Jekyll server will run on.
+server_port: 4000
+
+# Serve website from a given base URL.
+baseurl: /
+
+# Sets site.url, useful for environment switching.
+#url: http://www.thirsty-turtle.com
+
+# Changes the directory where Jekyll will look to transform files.
+source: ./
+
+# Changes the directory where Jekyll will look for plugins.
+plugins: ./_plugins
+
+# Changes the directory where Jekyll will write files to.
+destination: ./_site
+
+# Uses RDiscount or [engine] instead of Maruku.
+markdown: kramdown
+
+# Enables highlight tag with Pygments.
+pygments: true
+
+# Publishes posts with a future date.
+future: false
+
+# Produces an index for related posts.
+lsi: true
+
+# Controls the URLs that posts are generated with.
+permalink: /:year/:month/:title/
+
+# Splits your posts up over multiple subdirectories called “page2”, “page3”, … “pageN”.
+# paginate:
+
+# A list of directories and files to exclude from the conversion.
+exclude: README.md
+
+# A list of directories and files to specifically include in the conversion.
+include: .htaccess
+
+# Limits the number of posts to parse and publish.
+# limit_posts: 10
+
+### kramdown ###
+
+kramdown:
+  auto_ids: true,
+  use_coderay: false
+
