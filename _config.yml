@@ -51,10 +51,10 @@ permalink: /:year/:month/:title/
 # paginate:
 
 # A list of directories and files to exclude from the conversion.
-exclude: .gitignore Gemfile Gemfile.lock Procfile README.md 
+exclude: [ .gitignore, Gemfile, Gemfile.lock, Procfile, README.md, vendor ]
 
 # A list of directories and files to specifically include in the conversion.
-include: .htaccess
+include: [ .htaccess ]
 
 # Limits the number of posts to parse and publish.
 # limit_posts: 10
