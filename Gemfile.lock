@@ -23,6 +23,9 @@ GEM
       syntax (>= 1.0.0)
     posix-spawn (0.3.6)
     rack (1.4.1)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
+    sass (3.2.0)
     syntax (1.0.0)
     thin (1.4.1)
       daemons (>= 1.0.9)
@@ -35,4 +38,7 @@ PLATFORMS
 DEPENDENCIES
   RedCloth
   jekyll
+  rack
+  rack-contrib
+  sass
   thin
