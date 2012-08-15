@@ -1,13 +1,61 @@
+<!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
-  <meta name="robots" content="noodp,noydir" />
-  <meta name="description" content="{{ page.description }}" />
+  <link rel="stylesheet" href="/css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="/css/style.css" type="text/css"/>
+  <link rel="stylesheet" href="/css/pygments.css" type="text/css"/>
+  <meta name="robots" content="noodp,noydir"/>
+  <meta name="description" content="{{ page.description }}"/>
 </head>
 <body>
-body here
+<div id="page">
+  <header>
+    <h1>Thirsty Turtle</h1>
 
-{{ content }}
+    <nav>
+      <ul>
+        <li>blog</li>
+        <li>about</li>
+        <li>contact</li>
+      </ul>
+    </nav>
+  </header>
+
+  <article class="featured first">
+    <img src="images/teaser_03.png"/>
+
+    <h1><a href="#">Plentiful Options</a></h1>
+
+    <p>This is some example content. WordPress is an extremely user friendly content management system for websites and
+      blogs. Users can easily add and update text, images, video, audio and</p>
+  </article>
+
+  <article class="featured second">
+    <img src="images/teaser_02.png"/>
+
+    <h1><a href="#">Highly Customizable</a></h1>
+
+    <p>This is some example content. WordPress is an extremely user friendly content management system for websites and
+      blogs. Users can easily add and update text, images, video, audio and</p>
+  </article>
+
+  <article class="featured third">
+    <img src="images/teaser_01.png"/>
+
+    <h1><a href="#">Beautiful Solution</a></h1>
+
+    <p>This is some example content. WordPress is an extremely user friendly content management system for websites and
+      blogs. Users can easily add and update text, images, video, audio and</p>
+  </article>
+
+  {{content}}
+
+  <footer>
+    <small>Copyright &copy; 2009 - 2012 Thirsty Turtle. All rights reserved.</small>
+  </footer>
+
+</div>
 </body>
 </html>

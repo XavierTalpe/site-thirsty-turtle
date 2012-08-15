@@ -9,4 +9,4 @@ use Rack::TryStatic,
     :try => ['.html', 'index.html', '/index.html']
 
 # Otherwise show 404 page.
-run lambda { [404, {'Content-Type' => 'text/html'}, ['Error 404. Page not found.']]}
+run lambda { [404, {'Content-Type' => 'text/html'}, ['Error 404. Page not found.']] }
