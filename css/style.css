@@ -1,0 +1,108 @@
+html {
+  background: url(../images/background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+body {
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 15px 0 0;
+  font-size: 12px;
+  line-height: 18px; }
+
+a {
+  color: #333333;
+  text-decoration: none; }
+  a:hover {
+    color: #44aa00; }
+
+#page {
+  margin: 0 auto;
+  width: 960px; }
+
+header {
+  background: #333333;
+  color: white;
+  height: 60px;
+  margin: 0 0 15px;
+  font-family: Verdana, sans-serif, Helvetica;
+  width: 940px;
+  padding: 10px;
+  text-align: justify;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -webkit-border-radius: 5px; }
+
+article {
+  background: white;
+  float: left;
+  margin: 0 0 15px;
+  width: 640px;
+  padding: 10px;
+  text-align: justify;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 1px 1px 2px 0 #666666;
+  -moz-box-shadow: 1px 1px 2px 0 #666666;
+  -webkit-box-shadow: 1px 1px 2px 0 #666666; }
+  article h1 {
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0 0 15px;
+    padding: 0; }
+  article p {
+    font-size: 13px;
+    line-height: 19.5px; }
+  article iframe {
+    margin: 15px auto;
+    display: block; }
+  article .highlight {
+    background: #333333;
+    margin: 15px;
+    padding: 10px;
+    text-align: justify;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -webkit-border-radius: 5px; }
+
+article.featured {
+  width: 290px; }
+  article.featured.first {
+    clear: both; }
+  article.featured.second, article.featured.third {
+    margin-left: 15px; }
+  article.featured img {
+    border: 1px solid #cccccc;
+    margin: 0 0 7.5px;
+    width: 100%; }
+  article.featured h1 {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0 0 7.5px; }
+  article.featured p {
+    font-size: 12px;
+    line-height: 18px; }
+
+footer {
+  background: #333333;
+  clear: both;
+  color: white;
+  font-family: Verdana, sans-serif, Helvetica;
+  font-size: 11px;
+  line-height: 11px;
+  margin: 0 0 15px;
+  width: 940px;
+  padding: 10px;
+  text-align: center;
+  font-size: 11px;
+  line-height: 11px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -webkit-border-radius: 5px; }
