@@ -4,10 +4,6 @@ title: My First Blogpost on Jekyll
 ---
 
 Hello crazy world!
-* F
-* U
-* C
-* K
 
 {% youtube oHg5SJYRHA0 500 400 %}
 

@@ -1,7 +1,10 @@
-$page-width: 960px;
 $spacer: 15px;
 $text-padding: 10px;
 $text-size: 12px;
+
+$page-width: 960px;
+$widget-width: $page-width / 3 - 2/3 * $spacer;
+$article-width: $page-width -$widget-width - $spacer;
 
 $color-white: #fff;
 $color-light-gray: #ccc;
@@ -85,11 +88,11 @@ article {
   background: $color-white;
   float: left;
   margin: 0 0 $spacer;
-  width: $page-width * 2/3;
+  width: $article-width - 2 * $text-padding;
 
   @include text-layout($text-padding);
   @include border-radius(5px);
-  @include box-shadow(1px, 1px, 2px, 0, $color-gray);
+  @include box-shadow(0, 0, 2px, 0, $color-gray);
 
   h1 {
     @include text-size(30px, 30px);
@@ -115,7 +118,7 @@ article {
 }
 
 article.featured {
-  width: $page-width / 3 - 2 * $text-padding - 2/3 * $spacer;
+  width: $widget-width - 2 * $text-padding;
 
   &.first {
     clear: both;
@@ -139,6 +142,35 @@ article.featured {
   p {
     @include text-size();
   }
+}
+
+.widget {
+  background: $color-white;
+  margin: 0 0 $spacer;
+  width: $widget-width - 2 * $text-padding;
+
+  @include text-layout($text-padding);
+  @include border-radius(5px);
+  @include box-shadow(0, 0, 2px, 0, $color-gray);
+
+  h1 {
+    @include text-size(20px, 20px);
+    margin: 0 0 $spacer/2;
+  }
+
+  p {
+    @include text-size();
+  }
+}
+
+section#articles {
+  clear: both;
+  float: left;
+}
+
+#sidebar {
+  float: left;
+  margin: 0 0 0 $spacer;
 }
 
 footer {
