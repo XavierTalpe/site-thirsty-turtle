@@ -55,20 +55,17 @@ article.full {
   -moz-box-shadow: 0 0 2px 0 #555555;
   -webkit-box-shadow: 0 0 2px 0 #555555;
   float: left;
-  width: 615px; }
+  width: 615px;
+  background-image: linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
+  background-image: -o-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
+  background-image: -moz-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
+  background-image: -webkit-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
+  background-image: -ms-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #f5f9ff), color-stop(0, #f5f9ff)); }
   article.full h1 {
     font-size: 20px;
     line-height: 20px;
     margin: 0 0 7.5px; }
-    article.full h1 a {
-      color: #333333;
-      transition: color 0.25s ease-in;
-      -o-transition: color 0.25s ease-in;
-      -moz-transition: color 0.25s ease-in;
-      -webkit-transition: color 0.25s ease-in; }
-      article.full h1 a:hover {
-        color: #137400;
-        text-decoration: none; }
   article.full p {
     font-size: 13px;
     line-height: 17.55px; }
@@ -121,15 +118,6 @@ article.featured {
     font-size: 20px;
     line-height: 20px;
     margin: 0 0 7.5px; }
-    article.featured h1 a {
-      color: #333333;
-      transition: color 0.25s ease-in;
-      -o-transition: color 0.25s ease-in;
-      -moz-transition: color 0.25s ease-in;
-      -webkit-transition: color 0.25s ease-in; }
-      article.featured h1 a:hover {
-        color: #137400;
-        text-decoration: none; }
   article.featured p {
     font-size: 13px;
     line-height: 17.55px; }
@@ -159,20 +147,17 @@ article.featured {
   box-shadow: 0 0 2px 0 #555555;
   -moz-box-shadow: 0 0 2px 0 #555555;
   -webkit-box-shadow: 0 0 2px 0 #555555;
-  width: 290px; }
+  width: 290px;
+  background-image: linear-gradient(bottom, #fdfdfd 100%, #fdfdfd 0%);
+  background-image: -o-linear-gradient(bottom, #fdfdfd 100%, #fdfdfd 0%);
+  background-image: -moz-linear-gradient(bottom, #fdfdfd 100%, #fdfdfd 0%);
+  background-image: -webkit-linear-gradient(bottom, #fdfdfd 100%, #fdfdfd 0%);
+  background-image: -ms-linear-gradient(bottom, #fdfdfd 100%, #fdfdfd 0%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #fdfdfd), color-stop(0, #fdfdfd)); }
   .widget h1 {
     font-size: 20px;
     line-height: 20px;
     margin: 0 0 7.5px; }
-    .widget h1 a {
-      color: #333333;
-      transition: color 0.25s ease-in;
-      -o-transition: color 0.25s ease-in;
-      -moz-transition: color 0.25s ease-in;
-      -webkit-transition: color 0.25s ease-in; }
-      .widget h1 a:hover {
-        color: #137400;
-        text-decoration: none; }
   .widget p {
     font-size: 13px;
     line-height: 17.55px; }

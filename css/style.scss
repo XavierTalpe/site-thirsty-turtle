@@ -30,20 +30,19 @@ $images: '../images';
 
 @mixin text-box {
   //background: $color-white;
-  background-image: linear-gradient(bottom, #F5F9FF 100%, #FDFDFD 0%);
-  background-image: -o-linear-gradient(bottom, #F5F9FF 100%, #FDFDFD 0%);
-  background-image: -moz-linear-gradient(bottom, #F5F9FF 100%, #FDFDFD 0%);
-  background-image: -webkit-linear-gradient(bottom, #F5F9FF 100%, #FDFDFD 0%);
-  background-image: -ms-linear-gradient(bottom, #F5F9FF 100%, #FDFDFD 0%);
+  background-image: linear-gradient(bottom, #f5f9ff 100%, #FDFDFD 0%);
+  background-image: -o-linear-gradient(bottom, #f5f9ff 100%, #FDFDFD 0%);
+  background-image: -moz-linear-gradient(bottom, #f5f9ff 100%, #FDFDFD 0%);
+  background-image: -webkit-linear-gradient(bottom, #f5f9ff 100%, #FDFDFD 0%);
+  background-image: -ms-linear-gradient(bottom, #f5f9ff 100%, #FDFDFD 0%);
 
   background-image: -webkit-gradient(
   	linear,
   	left bottom,
   	left top,
-  	color-stop(1, #F5F9FF),
+  	color-stop(1, #f5f9ff),
   	color-stop(0, #FDFDFD)
   );
-
 
   margin: 0 0 $spacer;
 
@@ -55,15 +54,6 @@ $images: '../images';
     @include text-size($text-size-large, $text-size-large);
     margin: 0 0 $spacer/2;
 
-    a {
-      color: $color-dark-gray;
-      @include transition(color, 0.25s, ease-in);
-
-      &:hover {
-        color: $color-green;
-        text-decoration: none;
-      }
-    }
   }
 
   p {
@@ -145,6 +135,20 @@ article.full {
   float: left;
   width: $article-width - 2 * $text-padding;
 
+  background-image: linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
+  background-image: -o-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
+  background-image: -moz-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
+  background-image: -webkit-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
+  background-image: -ms-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
+
+  background-image: -webkit-gradient(
+  	linear,
+  	left bottom,
+  	left top,
+  	color-stop(1, #f5f9ff),
+  	color-stop(0, #f5f9ff)
+  );
+
   h1, h2 {
     @include text-size($text-size-very-large, $text-size-very-large);
     margin: 0 0 $spacer;
@@ -197,6 +201,21 @@ article.featured {
 .widget {
   @include text-box;
   width: $widget-width - 2 * $text-padding;
+  background-image: linear-gradient(bottom, #FDFDFD 100%, #FDFDFD 0%);
+  background-image: -o-linear-gradient(bottom, #FDFDFD 100%, #FDFDFD 0%);
+  background-image: -moz-linear-gradient(bottom, #FDFDFD 100%, #FDFDFD 0%);
+  background-image: -webkit-linear-gradient(bottom, #FDFDFD 100%, #FDFDFD 0%);
+  background-image: -ms-linear-gradient(bottom, #FDFDFD 100%, #FDFDFD 0%);
+
+  background-image: -webkit-gradient(
+  	linear,
+  	left bottom,
+  	left top,
+  	color-stop(1, #FDFDFD),
+  	color-stop(0, #FDFDFD)
+  );
+
+
 }
 
 section#articles {
