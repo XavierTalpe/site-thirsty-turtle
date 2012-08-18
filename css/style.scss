@@ -1,16 +1,20 @@
 $spacer: 15px;
 $text-padding: 10px;
-$text-size: 12px;
+$text-size-very-large: 30px;
+$text-size-large: 20px;
+$text-size-medium: 14px;
+$text-size-default: 13px;
+$text-size-tiny: 11px;
 
 $page-width: 960px;
 $widget-width: $page-width / 3 - 2/3 * $spacer;
 $article-width: $page-width -$widget-width - $spacer;
 
-$color-white: #fff;
-$color-light-gray: #ccc;
-$color-gray: #666;
+$color-white: #fefefe;
+$color-light-gray: #aaa;
+$color-gray: #555;
 $color-dark-gray: #333;
-$color-green: #4a0;
+$color-green: #137400;
 
 $images: '../images';
 
@@ -19,9 +23,32 @@ $images: '../images';
   text-align: $alignment;
 }
 
-@mixin text-size($font-size: $text-size, $line-height: $font-size * 1.5){
+@mixin text-size($font-size, $line-height: $font-size * 1.35){
   font-size: $font-size;
   line-height: $line-height;
+}
+
+@mixin text-box {
+  background: $color-white;
+  margin: 0 0 $spacer;
+
+  @include text-layout($text-padding);
+  @include border-radius(5px);
+  @include box-shadow(0, 0, 2px, 0, $color-gray);
+
+  h1 {
+    @include text-size($text-size-large, $text-size-large);
+    margin: 0 0 $spacer/2;
+
+    a{
+      color:$color-dark-gray;
+    }
+  }
+
+  p {
+    @include text-size($text-size-default);
+  }
+
 }
 
 @mixin border-radius($radius){
@@ -37,8 +64,15 @@ $images: '../images';
   -webkit-box-shadow: $horizontal-offset $vertical-offset $blur $spread $color;
 }
 
+@mixin transition($property, $duration, $type){
+  transition: $property $duration $type;
+  -o-transition: $property $duration $type;
+  -moz-transition: $property $duration $type;
+  -webkit-transition: $property $duration $type;
+}
+
 html {
-  background: url(#{$images}/background.png) no-repeat center center fixed;
+  background: url(#{$images}/background2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -49,13 +83,14 @@ body {
   color: $color-dark-gray;
   font-family: Arial, Helvetica, sans-serif;
   margin: $spacer 0 0;
-
-  @include text-size();
+  @include text-size($text-size-default);
 }
 
 a {
-  color: $color-dark-gray;
+  color: $color-green;
   text-decoration: none;
+  font-weight: bold;
+  @include transition(color, 0.25s, ease-in);
 
   &:active {
 
@@ -65,6 +100,7 @@ a {
   }
   &:hover {
     color: $color-green;
+    text-decoration: underline;
   }
 }
 
@@ -80,28 +116,30 @@ header {
   margin: 0 0 $spacer;
   font-family: Verdana, sans-serif, Helvetica;
   width: $page-width - 2 * $text-padding;
+
   @include text-layout($text-padding);
   @include border-radius(5px);
 }
 
-article {
-  background: $color-white;
+article.full {
+  @include text-box;
   float: left;
-  margin: 0 0 $spacer;
   width: $article-width - 2 * $text-padding;
 
-  @include text-layout($text-padding);
-  @include border-radius(5px);
-  @include box-shadow(0, 0, 2px, 0, $color-gray);
-
-  h1 {
-    @include text-size(30px, 30px);
+  h1, h2 {
+    @include text-size($text-size-very-large, $text-size-very-large);
     margin: 0 0 $spacer;
     padding: 0;
   }
 
+  h2 {
+    @include text-size($text-size-large, $text-size-large);
+    margin: 0 0 $spacer / 2;
+    padding: 0;
+  }
+
   p {
-    @include text-size(13px);
+    @include text-size($text-size-medium);
   }
 
   iframe {
@@ -118,6 +156,8 @@ article {
 }
 
 article.featured {
+  @include text-box;
+  float: left;
   width: $widget-width - 2 * $text-padding;
 
   &.first {
@@ -133,34 +173,11 @@ article.featured {
     margin: 0 0 $spacer/2;
     width: 100%;
   }
-
-  h1 {
-    @include text-size(20px, 20px);
-    margin: 0 0 $spacer/2;
-  }
-
-  p {
-    @include text-size();
-  }
 }
 
 .widget {
-  background: $color-white;
-  margin: 0 0 $spacer;
+  @include text-box;
   width: $widget-width - 2 * $text-padding;
-
-  @include text-layout($text-padding);
-  @include border-radius(5px);
-  @include box-shadow(0, 0, 2px, 0, $color-gray);
-
-  h1 {
-    @include text-size(20px, 20px);
-    margin: 0 0 $spacer/2;
-  }
-
-  p {
-    @include text-size();
-  }
 }
 
 section#articles {
@@ -173,17 +190,20 @@ section#articles {
   margin: 0 0 0 $spacer;
 }
 
-footer {
+@mixin text-box-meta {
   background: $color-dark-gray;
-  clear: both;
   color: $color-white;
   font-family: Verdana, sans-serif, Helvetica;
-  font-size: 11px;
-  line-height: 11px;
   margin: 0 0 $spacer;
-  width: $page-width - 2 * $text-padding;
 
   @include text-layout($text-padding, center);
-  @include text-size(11px, 11px);
+  @include text-size($text-size-tiny, $text-size-tiny);
   @include border-radius(5px);
+}
+
+footer {
+  @include text-box-meta;
+
+  clear: both;
+  width: $page-width - 2 * $text-padding;
 }

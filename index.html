@@ -4,8 +4,11 @@ title: Thirsty Turtle
 ---
 
 {% for post in site.posts %}
-<article>
+<article class="full">
   <h1>{{ post.title }}</h1>
   {{ post.content }}
+  <aside>
+    <p>Categories or tags go here</p>
+  </aside>
 </article>
 {% endfor %}
