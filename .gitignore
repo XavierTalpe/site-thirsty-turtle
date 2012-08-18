@@ -1,6 +1,7 @@
 *.iml
 .idea/
 
+.sass-cache/
 css/.sass-cache/
 _site/
 
