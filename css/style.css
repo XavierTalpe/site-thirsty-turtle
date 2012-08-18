@@ -171,6 +171,18 @@ header {
       header nav ul li a:hover {
         color: white;
         border-color: #4e90d4; }
+  header aside {
+    float: right;
+    margin: -21px 0 0; }
+    header aside img {
+      transition: opacity 0.25s linear;
+      -o-transition: opacity 0.25s linear;
+      -moz-transition: opacity 0.25s linear;
+      -webkit-transition: opacity 0.25s linear;
+      padding: 0 0 0 3px;
+      opacity: 0.65; }
+      header aside img:hover {
+        opacity: 1; }
 
 footer {
   background: #222222;

@@ -205,7 +205,6 @@ header {
   width: $page-width - 2 * $text-padding;
 
   nav {
-
     ul {
       li {
         display: inline;
@@ -225,6 +224,22 @@ header {
             border-color: $color-light-blue;
           }
         }
+      }
+    }
+  }
+
+  aside {
+    float: right;
+    margin: -1.4*$spacer 0 0;
+
+    img {
+      @include transition(opacity, 0.25s, linear);
+
+      padding: 0 0 0 $spacer / 5;
+      opacity: 0.65;
+
+      &:hover {
+        opacity: 1;
       }
     }
   }

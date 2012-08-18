@@ -51,7 +51,7 @@ permalink: /:year/:month/:title/
 # paginate:
 
 # A list of directories and files to exclude from the conversion.
-exclude: [ .gitignore, config.ru, Gemfile, Gemfile.lock, Procfile, README.md, vendor ]
+exclude: [ .gitignore, config.ru, Gemfile, Gemfile.lock, Procfile, README.md, resources, vendor ]
 
 # A list of directories and files to specifically include in the conversion.
 include: [ .htaccess ]
