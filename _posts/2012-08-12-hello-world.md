@@ -10,6 +10,8 @@ Well, the way they make shows is, they make one show. That show's called a [pilo
 
 This is [an example](http://example.com/ "Title") inline link.
 
+{% youtube oHg5SJYRHA0 500 400 %}
+
 {% highlight ruby %}
 module Jekyll
   class CategoryList < Liquid::Tag
