@@ -10,11 +10,13 @@ $page-width: 960px;
 $widget-width: $page-width / 3 - 2/3 * $spacer;
 $article-width: $page-width -$widget-width - $spacer;
 
-$color-white: #f5f9ff;
+$color-white: #fff;
 $color-light-gray: #aaa;
 $color-gray: #555;
-$color-dark-gray: #333;
+$color-dark-gray: #222;
 $color-green: #137400;
+
+$opacity-default: 0.9;
 
 $images: '../images';
 
@@ -29,22 +31,9 @@ $images: '../images';
 }
 
 @mixin text-box {
-  //background: $color-white;
-  background-image: linear-gradient(bottom, #f5f9ff 100%, #FDFDFD 0%);
-  background-image: -o-linear-gradient(bottom, #f5f9ff 100%, #FDFDFD 0%);
-  background-image: -moz-linear-gradient(bottom, #f5f9ff 100%, #FDFDFD 0%);
-  background-image: -webkit-linear-gradient(bottom, #f5f9ff 100%, #FDFDFD 0%);
-  background-image: -ms-linear-gradient(bottom, #f5f9ff 100%, #FDFDFD 0%);
-
-  background-image: -webkit-gradient(
-  	linear,
-  	left bottom,
-  	left top,
-  	color-stop(1, #f5f9ff),
-  	color-stop(0, #FDFDFD)
-  );
-
+  background: $color-white;
   margin: 0 0 $spacer;
+  @include opacity($opacity-default);
 
   @include text-layout($text-padding);
   @include border-radius(5px);
@@ -59,18 +48,18 @@ $images: '../images';
   p {
     @include text-size($text-size-default);
   }
-
 }
 
 @mixin border-radius($radius){
   border-radius: $radius;
+  -o-border-radius: $radius;
   -moz-border-radius: $radius;
-  -khtml-border-radius: $radius;
   -webkit-border-radius: $radius;
 }
 
 @mixin box-shadow($horizontal-offset, $vertical-offset, $blur, $spread, $color){
   box-shadow: $horizontal-offset $vertical-offset $blur $spread $color;
+  -o-box-shadow: $horizontal-offset $vertical-offset $blur $spread $color;
   -moz-box-shadow: $horizontal-offset $vertical-offset $blur $spread $color;
   -webkit-box-shadow: $horizontal-offset $vertical-offset $blur $spread $color;
 }
@@ -82,12 +71,16 @@ $images: '../images';
   -webkit-transition: $property $duration $type;
 }
 
+@mixin opacity($opacity){
+  opacity: $opacity;
+}
+
 html {
-  background: url(#{$images}/background3.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url(#{$images}/background.jpg) no-repeat center center fixed;
   background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 body {
@@ -102,12 +95,6 @@ a {
   text-decoration: none;
   font-weight: bold;
 
-  &:active {
-
-  }
-  &:visited {
-
-  }
   &:hover {
     text-decoration: underline;
   }
@@ -118,36 +105,10 @@ a {
   width: $page-width;
 }
 
-header {
-  background: $color-dark-gray;
-  color: $color-white;
-  height: 60px;
-  margin: 0 0 $spacer;
-  font-family: Verdana, sans-serif, Helvetica;
-  width: $page-width - 2 * $text-padding;
-
-  @include text-layout($text-padding);
-  @include border-radius(5px);
-}
-
 article.full {
   @include text-box;
   float: left;
   width: $article-width - 2 * $text-padding;
-
-  background-image: linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
-  background-image: -o-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
-  background-image: -moz-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
-  background-image: -webkit-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
-  background-image: -ms-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
-
-  background-image: -webkit-gradient(
-  	linear,
-  	left bottom,
-  	left top,
-  	color-stop(1, #f5f9ff),
-  	color-stop(0, #f5f9ff)
-  );
 
   h1, h2 {
     @include text-size($text-size-very-large, $text-size-very-large);
@@ -201,20 +162,6 @@ article.featured {
 .widget {
   @include text-box;
   width: $widget-width - 2 * $text-padding;
-  background-image: linear-gradient(bottom, #FDFDFD 100%, #FDFDFD 0%);
-  background-image: -o-linear-gradient(bottom, #FDFDFD 100%, #FDFDFD 0%);
-  background-image: -moz-linear-gradient(bottom, #FDFDFD 100%, #FDFDFD 0%);
-  background-image: -webkit-linear-gradient(bottom, #FDFDFD 100%, #FDFDFD 0%);
-  background-image: -ms-linear-gradient(bottom, #FDFDFD 100%, #FDFDFD 0%);
-
-  background-image: -webkit-gradient(
-  	linear,
-  	left bottom,
-  	left top,
-  	color-stop(1, #FDFDFD),
-  	color-stop(0, #FDFDFD)
-  );
-
 
 }
 
@@ -236,7 +183,18 @@ section#articles {
 
   @include text-layout($text-padding, center);
   @include text-size($text-size-tiny, $text-size-tiny);
+  opacity: 0.9;
   @include border-radius(5px);
+  border: 1px solid #black;
+  @include opacity(0.9);
+}
+
+header {
+  @include text-box-meta;
+  height: 60px;
+  width: $page-width - 2 * $text-padding;
+
+  @include text-layout($text-padding);
 }
 
 footer {

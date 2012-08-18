@@ -1,12 +1,12 @@
 html {
-  background: url(../images/background3.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
+  background: url(../images/background.jpg) no-repeat center center fixed;
+  background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  -moz-background-size: cover;
+  -webkit-background-size: cover; }
 
 body {
-  color: #333333;
+  color: #222222;
   font-family: Arial, Helvetica, sans-serif;
   margin: 15px 0 0;
   font-size: 13px;
@@ -23,45 +23,22 @@ a {
   margin: 0 auto;
   width: 960px; }
 
-header {
-  background: #333333;
-  color: #f5f9ff;
-  height: 60px;
-  margin: 0 0 15px;
-  font-family: Verdana, sans-serif, Helvetica;
-  width: 940px;
-  padding: 10px;
-  text-align: justify;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  -webkit-border-radius: 5px; }
-
 article.full {
-  background-image: linear-gradient(bottom, #f5f9ff 100%, #fdfdfd 0%);
-  background-image: -o-linear-gradient(bottom, #f5f9ff 100%, #fdfdfd 0%);
-  background-image: -moz-linear-gradient(bottom, #f5f9ff 100%, #fdfdfd 0%);
-  background-image: -webkit-linear-gradient(bottom, #f5f9ff 100%, #fdfdfd 0%);
-  background-image: -ms-linear-gradient(bottom, #f5f9ff 100%, #fdfdfd 0%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #f5f9ff), color-stop(0, #fdfdfd));
+  background: white;
   margin: 0 0 15px;
+  opacity: 0.9;
   padding: 10px;
   text-align: justify;
   border-radius: 5px;
+  -o-border-radius: 5px;
   -moz-border-radius: 5px;
-  -khtml-border-radius: 5px;
   -webkit-border-radius: 5px;
   box-shadow: 0 0 2px 0 #555555;
+  -o-box-shadow: 0 0 2px 0 #555555;
   -moz-box-shadow: 0 0 2px 0 #555555;
   -webkit-box-shadow: 0 0 2px 0 #555555;
   float: left;
-  width: 615px;
-  background-image: linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
-  background-image: -o-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
-  background-image: -moz-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
-  background-image: -webkit-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
-  background-image: -ms-linear-gradient(bottom, #f5f9ff 100%, #f5f9ff 0%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #f5f9ff), color-stop(0, #f5f9ff)); }
+  width: 615px; }
   article.full h1 {
     font-size: 20px;
     line-height: 20px;
@@ -86,30 +63,27 @@ article.full {
     margin: 15px auto;
     display: block; }
   article.full .highlight {
-    background: #333333;
+    background: #222222;
     margin: 15px;
     padding: 10px;
     text-align: justify;
     border-radius: 5px;
+    -o-border-radius: 5px;
     -moz-border-radius: 5px;
-    -khtml-border-radius: 5px;
     -webkit-border-radius: 5px; }
 
 article.featured {
-  background-image: linear-gradient(bottom, #f5f9ff 100%, #fdfdfd 0%);
-  background-image: -o-linear-gradient(bottom, #f5f9ff 100%, #fdfdfd 0%);
-  background-image: -moz-linear-gradient(bottom, #f5f9ff 100%, #fdfdfd 0%);
-  background-image: -webkit-linear-gradient(bottom, #f5f9ff 100%, #fdfdfd 0%);
-  background-image: -ms-linear-gradient(bottom, #f5f9ff 100%, #fdfdfd 0%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #f5f9ff), color-stop(0, #fdfdfd));
+  background: white;
   margin: 0 0 15px;
+  opacity: 0.9;
   padding: 10px;
   text-align: justify;
   border-radius: 5px;
+  -o-border-radius: 5px;
   -moz-border-radius: 5px;
-  -khtml-border-radius: 5px;
   -webkit-border-radius: 5px;
   box-shadow: 0 0 2px 0 #555555;
+  -o-box-shadow: 0 0 2px 0 #555555;
   -moz-box-shadow: 0 0 2px 0 #555555;
   -webkit-box-shadow: 0 0 2px 0 #555555;
   float: left;
@@ -131,29 +105,20 @@ article.featured {
     width: 100%; }
 
 .widget {
-  background-image: linear-gradient(bottom, #f5f9ff 100%, #fdfdfd 0%);
-  background-image: -o-linear-gradient(bottom, #f5f9ff 100%, #fdfdfd 0%);
-  background-image: -moz-linear-gradient(bottom, #f5f9ff 100%, #fdfdfd 0%);
-  background-image: -webkit-linear-gradient(bottom, #f5f9ff 100%, #fdfdfd 0%);
-  background-image: -ms-linear-gradient(bottom, #f5f9ff 100%, #fdfdfd 0%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #f5f9ff), color-stop(0, #fdfdfd));
+  background: white;
   margin: 0 0 15px;
+  opacity: 0.9;
   padding: 10px;
   text-align: justify;
   border-radius: 5px;
+  -o-border-radius: 5px;
   -moz-border-radius: 5px;
-  -khtml-border-radius: 5px;
   -webkit-border-radius: 5px;
   box-shadow: 0 0 2px 0 #555555;
+  -o-box-shadow: 0 0 2px 0 #555555;
   -moz-box-shadow: 0 0 2px 0 #555555;
   -webkit-box-shadow: 0 0 2px 0 #555555;
-  width: 290px;
-  background-image: linear-gradient(bottom, #fdfdfd 100%, #fdfdfd 0%);
-  background-image: -o-linear-gradient(bottom, #fdfdfd 100%, #fdfdfd 0%);
-  background-image: -moz-linear-gradient(bottom, #fdfdfd 100%, #fdfdfd 0%);
-  background-image: -webkit-linear-gradient(bottom, #fdfdfd 100%, #fdfdfd 0%);
-  background-image: -ms-linear-gradient(bottom, #fdfdfd 100%, #fdfdfd 0%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #fdfdfd), color-stop(0, #fdfdfd)); }
+  width: 290px; }
   .widget h1 {
     font-size: 20px;
     line-height: 20px;
@@ -170,18 +135,42 @@ section#articles {
   float: left;
   margin: 0 0 0 15px; }
 
-footer {
-  background: #333333;
-  color: #f5f9ff;
+header {
+  background: #222222;
+  color: white;
   font-family: Verdana, sans-serif, Helvetica;
   margin: 0 0 15px;
   padding: 10px;
   text-align: center;
   font-size: 11px;
   line-height: 11px;
+  opacity: 0.9;
   border-radius: 5px;
+  -o-border-radius: 5px;
   -moz-border-radius: 5px;
-  -khtml-border-radius: 5px;
   -webkit-border-radius: 5px;
+  border: 1px solid #black;
+  opacity: 0.9;
+  height: 60px;
+  width: 940px;
+  padding: 10px;
+  text-align: justify; }
+
+footer {
+  background: #222222;
+  color: white;
+  font-family: Verdana, sans-serif, Helvetica;
+  margin: 0 0 15px;
+  padding: 10px;
+  text-align: center;
+  font-size: 11px;
+  line-height: 11px;
+  opacity: 0.9;
+  border-radius: 5px;
+  -o-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #black;
+  opacity: 0.9;
   clear: both;
   width: 940px; }
