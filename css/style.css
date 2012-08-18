@@ -1,5 +1,5 @@
 html {
-  background: url(../images/background2.jpg) no-repeat center center fixed;
+  background: url(../images/background3.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -15,13 +15,8 @@ body {
 a {
   color: #137400;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.25s ease-in;
-  -o-transition: color 0.25s ease-in;
-  -moz-transition: color 0.25s ease-in;
-  -webkit-transition: color 0.25s ease-in; }
+  font-weight: bold; }
   a:hover {
-    color: #137400;
     text-decoration: underline; }
 
 #page {
@@ -61,7 +56,14 @@ article.full {
     line-height: 20px;
     margin: 0 0 7.5px; }
     article.full h1 a {
-      color: #333333; }
+      color: #333333;
+      transition: color 0.25s ease-in;
+      -o-transition: color 0.25s ease-in;
+      -moz-transition: color 0.25s ease-in;
+      -webkit-transition: color 0.25s ease-in; }
+      article.full h1 a:hover {
+        color: #137400;
+        text-decoration: none; }
   article.full p {
     font-size: 13px;
     line-height: 17.55px; }
@@ -110,7 +112,14 @@ article.featured {
     line-height: 20px;
     margin: 0 0 7.5px; }
     article.featured h1 a {
-      color: #333333; }
+      color: #333333;
+      transition: color 0.25s ease-in;
+      -o-transition: color 0.25s ease-in;
+      -moz-transition: color 0.25s ease-in;
+      -webkit-transition: color 0.25s ease-in; }
+      article.featured h1 a:hover {
+        color: #137400;
+        text-decoration: none; }
   article.featured p {
     font-size: 13px;
     line-height: 17.55px; }
@@ -141,7 +150,14 @@ article.featured {
     line-height: 20px;
     margin: 0 0 7.5px; }
     .widget h1 a {
-      color: #333333; }
+      color: #333333;
+      transition: color 0.25s ease-in;
+      -o-transition: color 0.25s ease-in;
+      -moz-transition: color 0.25s ease-in;
+      -webkit-transition: color 0.25s ease-in; }
+      .widget h1 a:hover {
+        color: #137400;
+        text-decoration: none; }
   .widget p {
     font-size: 13px;
     line-height: 17.55px; }
