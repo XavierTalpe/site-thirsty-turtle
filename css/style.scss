@@ -4,7 +4,7 @@ $text-size-very-large: 30px;
 $text-size-large: 20px;
 $text-size-medium: 14px;
 $text-size-default: 13px;
-$text-size-tiny: 11px;
+$text-size-tiny: 12px;
 
 $page-width: 960px;
 $widget-width: $page-width / 3 - 2/3 * $spacer;
@@ -14,7 +14,9 @@ $color-white: #fff;
 $color-light-gray: #aaa;
 $color-gray: #555;
 $color-dark-gray: #222;
-$color-green: #137400;
+$color-blue: #3A84CF;
+$color-light-blue: #4E90D4;
+$color-green: #2EB82E;
 
 $opacity-default: 0.9;
 
@@ -30,7 +32,7 @@ $images: '../images';
   line-height: $line-height;
 }
 
-@mixin text-box {
+@mixin text-box-white {
   background: $color-white;
   margin: 0 0 $spacer;
   @include opacity($opacity-default);
@@ -48,6 +50,17 @@ $images: '../images';
   p {
     @include text-size($text-size-default);
   }
+}
+
+@mixin text-box-dark {
+  background: $color-dark-gray;
+  color: $color-white;
+  margin: 0 0 $spacer;
+
+  border: 1px solid #black;
+  @include border-radius(5px);
+  @include text-layout($text-padding, center);
+  @include opacity(0.9);
 }
 
 @mixin border-radius($radius){
@@ -84,19 +97,22 @@ html {
 }
 
 body {
+  @include text-size($text-size-default);
+
   color: $color-dark-gray;
   font-family: Arial, Helvetica, sans-serif;
   margin: $spacer 0 0;
-  @include text-size($text-size-default);
 }
 
 a {
-  color: $color-green;
-  text-decoration: none;
+  @include transition(color, 0.25s, linear);
+
+  color: $color-blue;
   font-weight: bold;
+  text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
+    color: $color-green;
   }
 }
 
@@ -106,18 +122,21 @@ a {
 }
 
 article.full {
-  @include text-box;
+  @include text-box-white;
+
   float: left;
   width: $article-width - 2 * $text-padding;
 
   h1, h2 {
     @include text-size($text-size-very-large, $text-size-very-large);
+
     margin: 0 0 $spacer;
     padding: 0;
   }
 
   h2 {
     @include text-size($text-size-large, $text-size-large);
+
     margin: 0 0 $spacer / 2;
     padding: 0;
   }
@@ -132,15 +151,17 @@ article.full {
   }
 
   .highlight {
+    @include border-radius(5px);
+    @include text-layout($text-padding);
+
     background: $color-dark-gray;
     margin: $spacer;
-    @include text-layout($text-padding);
-    @include border-radius(5px);
   }
 }
 
 article.featured {
-  @include text-box;
+  @include text-box-white;
+
   float: left;
   width: $widget-width - 2 * $text-padding;
 
@@ -160,7 +181,8 @@ article.featured {
 }
 
 .widget {
-  @include text-box;
+  @include text-box-white;
+
   width: $widget-width - 2 * $text-padding;
 
 }
@@ -175,31 +197,44 @@ section#articles {
   margin: 0 0 0 $spacer;
 }
 
-@mixin text-box-meta {
-  background: $color-dark-gray;
-  color: $color-white;
-  font-family: Verdana, sans-serif, Helvetica;
-  margin: 0 0 $spacer;
-
-  @include text-layout($text-padding, center);
-  @include text-size($text-size-tiny, $text-size-tiny);
-  opacity: 0.9;
-  @include border-radius(5px);
-  border: 1px solid #black;
-  @include opacity(0.9);
-}
-
 header {
-  @include text-box-meta;
-  height: 60px;
+  @include text-box-dark;
+  @include text-size($text-size-medium);
+
+  font-family: Arial, Helvetica, sans-serif;
   width: $page-width - 2 * $text-padding;
 
-  @include text-layout($text-padding);
+  nav {
+
+    ul {
+      li {
+        display: inline;
+        margin: 0 2 * $spacer;
+        text-transform: uppercase;
+
+        a {
+          border-bottom: 3px solid transparent;
+          color: $color-white;
+          padding: 0 0 $spacer / 4 0;
+
+          transition: color 0s linear;
+          @include transition(border, 0.2s, linear);
+
+          &:hover {
+            color: $color-white;
+            border-color: $color-light-blue;
+          }
+        }
+      }
+    }
+  }
 }
 
 footer {
-  @include text-box-meta;
+  @include text-box-dark;
+  @include text-size($text-size-tiny, $text-size-tiny);
 
   clear: both;
+  font-family: Verdana, sans-serif, Helvetica;
   width: $page-width - 2 * $text-padding;
 }
