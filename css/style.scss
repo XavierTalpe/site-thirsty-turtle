@@ -140,6 +140,7 @@ article.full {
 
   p {
     @include text-size($text-size-medium);
+    margin: 0 0 $spacer;
   }
 
   iframe {
