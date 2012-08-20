@@ -57,7 +57,7 @@ $images: '../images';
 }
 
 @mixin text-box-dark {
-  @include text-box(#222, $color-white, $color-black);
+  @include text-box($color-dark-gray, $color-white, $color-black);
 }
 
 @mixin border-radius($radius){
@@ -180,7 +180,7 @@ article.featured {
 }
 
 .widget {
-  @include text-box-white;
+  @include text-box-dark;
 
   width: $widget-width - 2 * $text-padding;
 }
