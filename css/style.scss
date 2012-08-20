@@ -10,13 +10,13 @@ $page-width: 900px;
 $widget-width: $page-width / 3 - 2/3 * $spacer;
 $article-width: $page-width -$widget-width - $spacer;
 
-$color-white: #fff;
 $color-black: #000;
-$color-gray: #555;
 $color-dark-gray: #222;
+$color-gray: #555;
 $color-blue: #3A84CF;
 $color-light-blue: #4E90D4;
 $color-green: #2EB82E;
+$color-white: #fff;
 
 $opacity-default: 0.9;
 
@@ -32,19 +32,19 @@ $images: '../images';
   line-height: $line-height;
 }
 
-@mixin text-box-white {
-  background: $color-white;
+@mixin text-box($background-color, $text-color, $border-color){
+  background: $background-color;
+  color: $text-color;
   margin: 0 0 $spacer;
 
   @include opacity($opacity-default);
-  @include text-layout($text-padding);
+  @include text-layout($text-padding, justify);
   @include border-radius(5px);
-  @include box-shadow(0, 0, 2px, 0, $color-gray);
+  @include box-shadow(0, 0, 2px, 0, $border-color);
 
   h1 {
     @include text-size($text-size-large, $text-size-large);
     margin: 0 0 $spacer/2;
-
   }
 
   p {
@@ -52,15 +52,12 @@ $images: '../images';
   }
 }
 
-@mixin text-box-dark {
-  background: $color-dark-gray;
-  color: $color-white;
-  margin: 0 0 $spacer;
+@mixin text-box-white {
+  @include text-box($color-white, $color-dark-gray, $color-gray);
+}
 
-  @include opacity($opacity-default);
-  @include border-radius(5px);
-  @include box-shadow(0, 0, 1px, 0px, $color-black);
-  @include text-layout($text-padding, center);
+@mixin text-box-dark {
+  @include text-box(#222, $color-white, $color-black);
 }
 
 @mixin border-radius($radius){
@@ -185,7 +182,6 @@ article.featured {
   @include text-box-white;
 
   width: $widget-width - 2 * $text-padding;
-
 }
 
 section#articles {
@@ -201,8 +197,8 @@ section#articles {
 header {
   @include text-box-dark;
   @include text-size($text-size-medium);
+  @include text-layout($text-padding, center);
 
-  font-family: Arial, Helvetica, sans-serif;
   width: $page-width - 2 * $text-padding;
 
   nav {
@@ -213,12 +209,11 @@ header {
         text-transform: uppercase;
 
         a {
+          @include transition(border, 0.2s, linear);
+
           border-bottom: 3px solid transparent;
           color: $color-white;
           padding: 0 0 $spacer / 4 0;
-
-          transition: color 0s linear;
-          @include transition(border, 0.2s, linear);
 
           &:hover {
             color: $color-white;
