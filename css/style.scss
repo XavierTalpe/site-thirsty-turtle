@@ -11,7 +11,7 @@ $widget-width: $page-width / 3 - 2/3 * $spacer;
 $article-width: $page-width -$widget-width - $spacer;
 
 $color-white: #fff;
-$color-light-gray: #aaa;
+$color-black: #000;
 $color-gray: #555;
 $color-dark-gray: #222;
 $color-blue: #3A84CF;
@@ -35,8 +35,8 @@ $images: '../images';
 @mixin text-box-white {
   background: $color-white;
   margin: 0 0 $spacer;
-  @include opacity($opacity-default);
 
+  @include opacity($opacity-default);
   @include text-layout($text-padding);
   @include border-radius(5px);
   @include box-shadow(0, 0, 2px, 0, $color-gray);
@@ -57,10 +57,10 @@ $images: '../images';
   color: $color-white;
   margin: 0 0 $spacer;
 
-  border: 1px solid #black;
+  @include opacity($opacity-default);
   @include border-radius(5px);
+  @include box-shadow(0, 0, 1px, 0px, $color-black);
   @include text-layout($text-padding, center);
-  @include opacity(0.9);
 }
 
 @mixin border-radius($radius){
@@ -174,7 +174,8 @@ article.featured {
   }
 
   img {
-    border: 1px solid $color-light-gray;
+    @include box-shadow(0, 0, 1px, 0px, $color-black);
+
     margin: 0 0 $spacer/2;
     width: 100%;
   }
