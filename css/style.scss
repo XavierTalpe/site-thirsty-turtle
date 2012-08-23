@@ -1,9 +1,9 @@
 $spacer: 15px;
 $text-padding: 10px;
-$text-size-very-large: 30px;
+$text-size-very-large: 35px;
 $text-size-large: 20px;
-$text-size-medium: 14px;
-$text-size-default: 13px;
+$text-size-medium: 15px;
+$text-size-default: 14px;
 $text-size-tiny: 12px;
 
 $page-width: 900px;
@@ -97,7 +97,7 @@ body {
   @include text-size($text-size-default);
 
   color: $color-dark-gray;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'PT Sans', sans-serif;
   margin: $spacer 0 0;
 }
 
@@ -126,7 +126,8 @@ article.full {
 
   h1, h2 {
     @include text-size($text-size-very-large, $text-size-very-large);
-
+    font-family: 'Montserrat';
+    font-weight: normal;
     margin: 0 0 $spacer;
     padding: 0;
   }
@@ -197,8 +198,9 @@ section#articles {
 
 header {
   @include text-box-dark;
-  @include text-size($text-size-medium);
+  @include text-size($text-size-default);
   @include text-layout($text-padding, center);
+  font-family: Arial, Helvetica;
 
   width: $page-width - 2 * $text-padding;
 
@@ -247,7 +249,7 @@ footer {
   @include text-size($text-size-tiny, $text-size-tiny);
 
   clear: both;
-  font-family: Verdana, sans-serif, Helvetica;
+  font-family: Arial, Helvetica;
   text-align: center;
   width: $page-width - 2 * $text-padding;
 }
