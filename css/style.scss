@@ -18,7 +18,7 @@ $color-light-blue: #4E90D4;
 $color-green: #2EB82E;
 $color-white: #fff;
 
-$opacity-default: 0.9;
+$opacity-default: 1;
 
 $images: '../images';
 
@@ -49,6 +49,7 @@ $images: '../images';
 
   p {
     @include text-size($text-size-default);
+    color: $color-gray;
   }
 }
 
@@ -184,6 +185,10 @@ article.featured {
   @include text-box-dark;
 
   width: $widget-width - 2 * $text-padding;
+
+  p {
+    color: $color-white;
+  }
 }
 
 section#articles {
