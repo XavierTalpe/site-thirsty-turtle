@@ -39,7 +39,7 @@ $images: '../images';
 
   @include opacity($opacity-default);
   @include text-layout($text-padding, justify);
-  @include border-radius(5px);
+  @include border-radius(3px);
   @include box-shadow(0, 0, 2px, 0, $border-color);
 
   h1 {
@@ -58,7 +58,7 @@ $images: '../images';
 }
 
 @mixin text-box-dark {
-  @include text-box($color-dark-gray, $color-white, $color-black);
+  @include text-box($color-gray, $color-white, $color-black);
 }
 
 @mixin border-radius($radius){
@@ -66,6 +66,13 @@ $images: '../images';
   -o-border-radius: $radius;
   -moz-border-radius: $radius;
   -webkit-border-radius: $radius;
+}
+
+@mixin border-radius-detail($top-left, $top-right, $bottom-right, $bottom-left){
+  border-radius: $top-left $top-right $bottom-right $bottom-left;
+  -o-border-radius: $top-left $top-right $bottom-right $bottom-left;
+  -moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
+  -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
 }
 
 @mixin box-shadow($horizontal-offset, $vertical-offset, $blur, $spread, $color){
@@ -87,14 +94,15 @@ $images: '../images';
 }
 
 html {
-  background: url(#{$images}/background.jpg) no-repeat center center fixed;
-  background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
+  //background: url(#{$images}/background.jpg) no-repeat center center fixed;
+  //background-size: cover;
+  //-o-background-size: cover;
+  //-moz-background-size: cover;
+  //-webkit-background-size: cover;
 }
 
 body {
+  background: #444;
   @include text-size($text-size-default);
 
   color: $color-dark-gray;
@@ -123,6 +131,7 @@ article.full {
   @include text-box-white;
 
   float: left;
+  padding: 15px;
   width: $article-width - 2 * $text-padding;
 
   h1, h2 {
@@ -202,26 +211,75 @@ section#articles {
   margin: 0 0 0 $spacer;
 }
 
-header {
+footer {
   @include text-box-dark;
+  @include text-size($text-size-tiny, $text-size-tiny);
+
+  clear: both;
+  font-family: Arial, Helvetica;
+  text-align: center;
+  width: $page-width - 2 * $text-padding;
+}
+
+$primary-color: $color-white;
+$secondary-color: $color-gray;
+$border-radius-default: 5px;
+
+header {
+  background: $secondary-color;
+  margin: 0 0 $spacer;
+  float: left;
+  width: $page-width;
+
+  @include border-radius($border-radius-default);
+
   @include text-size($text-size-default);
-  @include text-layout($text-padding, center);
   font-family: Arial, Helvetica;
 
-  width: $page-width - 2 * $text-padding;
+  h1 {
+    background: $primary-color;
+    @include border-radius-detail($border-radius-default, $border-radius-default, 0, 0);
+    display: block;
+    float: left;
+    height: 18px;
+    padding: $text-padding / 2 $text-padding $text-padding;
+    width: 150 - 2 * $text-padding;
+  }
+
+  #background {
+    @include border-radius-detail(0, 0, $border-radius-default, $border-radius-default);
+
+    background:  $primary-color;
+    display: block;
+    float: left;
+    padding: $text-padding;
+    width: $page-width - 2 * $text-padding;
+
+    img {
+      @include border-radius(3px);
+      height: 175px;
+      width: 100%;
+    }
+  }
 
   nav {
+    background: $secondary-color;
+    float: left;
+    padding: $text-padding / 2 $text-padding $text-padding;
+    width: $page-width - 150 - 2 * $text-padding;
+    @include border-radius-detail(0, 0, 0, $border-radius-default);
+
     ul {
       li {
         display: inline;
-        margin: 0 2 * $spacer;
+        margin: 0 2 * $spacer 0 $spacer;
         text-transform: uppercase;
 
         a {
           @include transition(border, 0.2s, linear);
 
           border-bottom: 3px solid transparent;
-          color: $color-white;
+          color: $primary-color;
           padding: 0 0 $spacer / 4 0;
 
           &:hover {
@@ -235,27 +293,17 @@ header {
 
   aside {
     float: right;
-    margin: -1.4*$spacer 0 0;
+    margin: -2*$spacer $spacer / 2 0 0;
 
     img {
       @include transition(opacity, 0.25s, linear);
 
       padding: 0 0 0 $spacer / 5;
-      opacity: 0.65;
+      opacity: 0.7;
 
       &:hover {
         opacity: 1;
       }
     }
   }
-}
-
-footer {
-  @include text-box-dark;
-  @include text-size($text-size-tiny, $text-size-tiny);
-
-  clear: both;
-  font-family: Arial, Helvetica;
-  text-align: center;
-  width: $page-width - 2 * $text-padding;
 }
