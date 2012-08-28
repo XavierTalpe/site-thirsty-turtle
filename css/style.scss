@@ -1,22 +1,26 @@
 $spacer: 15px;
-$text-padding: 10px;
+$text-padding: 15px;
+$text-padding-minor: 10px;
 $text-size-very-large: 35px;
-$text-size-large: 20px;
+$text-size-large: 28px;
 $text-size-medium: 15px;
 $text-size-default: 14px;
-$text-size-tiny: 12px;
+$text-size-small: 13px;
 
 $page-width: 900px;
 $widget-width: $page-width / 3 - 2/3 * $spacer;
 $article-width: $page-width -$widget-width - $spacer;
 
 $color-black: #000;
-$color-dark-gray: #222;
-$color-gray: #555;
+$color-dark-gray: #333;
+$color-gray: #4a4a4a;
+$color-light-gray: #8a8a8a;
+
 $color-blue: #3A84CF;
 $color-light-blue: #4E90D4;
 $color-green: #2EB82E;
 $color-white: #fff;
+$color-soft-white: #f4f4f4;
 
 $opacity-default: 1;
 
@@ -32,34 +36,34 @@ $images: '../images';
   line-height: $line-height;
 }
 
-@mixin text-box($background-color, $text-color, $border-color){
-  background: $background-color;
-  color: $text-color;
-  margin: 0 0 $spacer;
-
-  @include opacity($opacity-default);
-  @include text-layout($text-padding, justify);
-  @include border-radius(3px);
-  @include box-shadow(0, 0, 2px, 0, $border-color);
-
-  h1 {
-    @include text-size($text-size-large, $text-size-large);
-    margin: 0 0 $spacer/2;
-  }
-
-  p {
-    @include text-size($text-size-default);
-    color: $color-gray;
-  }
-}
-
-@mixin text-box-white {
-  @include text-box($color-white, $color-dark-gray, $color-gray);
-}
-
-@mixin text-box-dark {
-  @include text-box($color-gray, $color-white, $color-black);
-}
+//@mixin text-box($background-color, $text-color, $border-color){
+//  background: $background-color;
+//  color: $text-color;
+//  margin: 0 0 $spacer;
+//
+//  @include opacity($opacity-default);
+//  @include text-layout($text-padding, justify);
+//  @include border-radius(3px);
+//  @include box-shadow(0, 0, 2px, 0, $border-color);
+//
+//  h1 {
+//    @include text-size($text-size-large, $text-size-large);
+//    margin: 0 0 $spacer/2;
+//  }
+//
+//  p {
+//    @include text-size($text-size-default);
+//    color: $color-gray;
+//  }
+//}
+//
+//@mixin text-box-white {
+//  @include text-box($color-white, $color-dark-gray, $color-gray);
+//}
+//
+//@mixin text-box-dark {
+//  @include text-box($color-gray, $color-white, $color-black);
+//}
 
 @mixin border-radius($radius){
   border-radius: $radius;
@@ -93,19 +97,9 @@ $images: '../images';
   opacity: $opacity;
 }
 
-html {
-  //background: url(#{$images}/background.jpg) no-repeat center center fixed;
-  //background-size: cover;
-  //-o-background-size: cover;
-  //-moz-background-size: cover;
-  //-webkit-background-size: cover;
-}
-
 body {
-  background: #444;
-  @include text-size($text-size-default);
-
-  color: $color-dark-gray;
+  //TODO: Try making darkground a bit darker.
+  background: url(#{$images}/grey-dark.png);
   font-family: 'PT Sans', sans-serif;
   margin: $spacer 0 0;
 }
@@ -114,7 +108,6 @@ a {
   @include transition(color, 0.25s, linear);
 
   color: $color-blue;
-  font-weight: bold;
   text-decoration: none;
 
   &:hover {
@@ -122,188 +115,245 @@ a {
   }
 }
 
+h1, h2 {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  margin: 0 0 $spacer;
+}
+
+h2 {
+  color: $color-blue;
+  margin: 0;
+}
+
+p {
+  margin: $spacer 0 0;
+}
+
+@mixin text-box($background-color, $text-color){
+  background: $background-color;
+  color: $text-color;
+  padding: $text-padding;
+  text-align: justify;
+}
+
+.box-white {
+  @include text-box($color-white, $color-gray);
+
+}
+
+.box-light-gray {
+  @include text-box($color-soft-white, $color-gray);
+}
+
+.box-gray {
+  @include text-box($color-gray, $color-white);
+}
+
 #page {
   margin: 0 auto;
   width: $page-width;
 }
 
-article.full {
-  @include text-box-white;
+header {
+  @include text-box($color-gray, $color-white);
 
   float: left;
-  padding: 15px;
-  width: $article-width - 2 * $text-padding;
+  margin: 0 0 $spacer;
+  width: $page-width - 2 * $text-padding;
+}
 
-  h1, h2 {
+article.post {
+  box-shadow: 0px 1px 5px -1px #6C6C6C;
+  float: left;
+  margin: 0 0 $spacer;
+  width: $article-width;
+
+  header {
+    color: $color-light-gray;
+    @include text-size($text-size-small);
+  }
+
+  aside {
+  }
+
+  h1 {
     @include text-size($text-size-very-large, $text-size-very-large);
-    font-family: 'Montserrat';
-    font-weight: normal;
-    margin: 0 0 $spacer;
-    padding: 0;
   }
 
   h2 {
     @include text-size($text-size-large, $text-size-large);
-
-    margin: 0 0 $spacer / 2;
-    padding: 0;
   }
 
   p {
     @include text-size($text-size-medium);
-    margin: 0 0 $spacer;
-  }
-
-  iframe {
-    margin: $spacer auto;
-    display: block;
-  }
-
-  .highlight {
-    @include border-radius(5px);
-    @include text-layout($text-padding);
-
-    background: $color-dark-gray;
-    margin: $spacer;
   }
 }
 
-article.featured {
-  @include text-box-white;
-
+aside {
   float: left;
-  width: $widget-width - 2 * $text-padding;
-
-  &.first {
-    clear: both;
-  }
-
-  &.second, &.third {
-    margin-left: $spacer;
-  }
-
-  img {
-    @include box-shadow(0, 0, 1px, 0px, $color-black);
-
-    margin: 0 0 $spacer/2;
-    width: 100%;
-  }
+  margin: 0 0 0 $spacer;
 }
 
-.widget {
-  @include text-box-dark;
+article.widget {
+  background: $color-soft-white;
+  box-shadow: 0px 1px 5px -1px #6C6C6C;
+  margin: 0 0 $spacer;
+  width: $widget-width;
 
-  width: $widget-width - 2 * $text-padding;
+  h1{
+    @include text-size(20px, 20px);
+    font-family: 'Ropa Sans', sans-serif;
+    margin:0;
+  }
 
   p {
-    color: $color-white;
+    @include text-size($text-size-default);
+    margin:0;
   }
 }
 
+//article.featured {
+//  @include text-box-white;
+//
+//  float: left;
+//  width: $widget-width - 2 * $text-padding;
+//
+//  &.first {
+//    clear: both;
+//  }
+//
+//  &.second, &.third {
+//    margin-left: $spacer;
+//  }
+//
+//  img {
+//    @include box-shadow(0, 0, 1px, 0px, $color-black);
+//
+//    margin: 0 0 $spacer/2;
+//    width: 100%;
+//  }
+//}
+
+//.widget {
+//  @include text-box-dark;
+//
+//  width: $widget-width - 2 * $text-padding;
+//
+//  p {
+//    color: $color-white;
+//  }
+//}
+
 section#articles {
-  clear: both;
   float: left;
   width: $article-width;
 }
 
 #sidebar {
-  float: left;
-  margin: 0 0 0 $spacer;
+
 }
 
-footer {
-  @include text-box-dark;
-  @include text-size($text-size-tiny, $text-size-tiny);
-
+#bottom {
+  background: $color-dark-gray;
   clear: both;
-  font-family: Arial, Helvetica;
-  text-align: center;
-  width: $page-width - 2 * $text-padding;
-}
+  padding: $spacer 0;
+  width: 100%;
 
-$primary-color: $color-white;
-$secondary-color: $color-gray;
-$border-radius-default: 5px;
-
-header {
-  background: $secondary-color;
-  margin: 0 0 $spacer;
-  float: left;
-  width: $page-width;
-
-  @include border-radius($border-radius-default);
-
-  @include text-size($text-size-default);
-  font-family: Arial, Helvetica;
-
-  h1 {
-    background: $primary-color;
-    @include border-radius-detail($border-radius-default, $border-radius-default, 0, 0);
-    display: block;
-    float: left;
-    height: 18px;
-    padding: $text-padding / 2 $text-padding $text-padding;
-    width: 150 - 2 * $text-padding;
-  }
-
-  #background {
-    @include border-radius-detail(0, 0, $border-radius-default, $border-radius-default);
-
-    background:  $primary-color;
-    display: block;
-    float: left;
-    padding: $text-padding;
-    width: $page-width - 2 * $text-padding;
-
-    img {
-      @include border-radius(3px);
-      height: 175px;
-      width: 100%;
-    }
-  }
-
-  nav {
-    background: $secondary-color;
-    float: left;
-    padding: $text-padding / 2 $text-padding $text-padding;
-    width: $page-width - 150 - 2 * $text-padding;
-    @include border-radius-detail(0, 0, 0, $border-radius-default);
-
-    ul {
-      li {
-        display: inline;
-        margin: 0 2 * $spacer 0 $spacer;
-        text-transform: uppercase;
-
-        a {
-          @include transition(border, 0.2s, linear);
-
-          border-bottom: 3px solid transparent;
-          color: $primary-color;
-          padding: 0 0 $spacer / 4 0;
-
-          &:hover {
-            color: $color-white;
-            border-color: $color-light-blue;
-          }
-        }
-      }
-    }
-  }
-
-  aside {
-    float: right;
-    margin: -2*$spacer $spacer / 2 0 0;
-
-    img {
-      @include transition(opacity, 0.25s, linear);
-
-      padding: 0 0 0 $spacer / 5;
-      opacity: 0.7;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
+  footer {
+    border-top: 5px solid $color-light-gray;
+    color: $color-light-gray;
+    margin: 0 auto;
+    padding: $spacer 0 0;
+    text-align: center;
+    width: $page-width;
   }
 }
+
+//
+//$primary-color: $color-white;
+//$secondary-color: $color-gray;
+//$border-radius-default: 5px;
+//
+//header {
+//  background: $secondary-color;
+//  margin: 0 0 $spacer;
+//  float: left;
+//  width: $page-width;
+//
+//  @include border-radius($border-radius-default);
+//
+//  @include text-size($text-size-default);
+//  font-family: Arial, Helvetica;
+//
+//  h1 {
+//    background: $primary-color;
+//    @include border-radius-detail($border-radius-default, $border-radius-default, 0, 0);
+//    display: block;
+//    float: left;
+//    height: 18px;
+//    padding: $text-padding / 2 $text-padding $text-padding;
+//    width: 150 - 2 * $text-padding;
+//  }
+//
+//  #background {
+//    @include border-radius-detail(0, 0, $border-radius-default, $border-radius-default);
+//
+//    background: $primary-color;
+//    display: block;
+//    float: left;
+//    padding: $text-padding;
+//    width: $page-width - 2 * $text-padding;
+//
+//    img {
+//      @include border-radius(3px);
+//      height: 175px;
+//      width: 100%;
+//    }
+//  }
+//
+//  nav {
+//    background: $secondary-color;
+//    float: left;
+//    padding: $text-padding / 2 $text-padding $text-padding;
+//    width: $page-width - 150 - 2 * $text-padding;
+//    @include border-radius-detail(0, 0, 0, $border-radius-default);
+//
+//    ul {
+//      li {
+//        display: inline;
+//        margin: 0 2 * $spacer 0 $spacer;
+//        text-transform: uppercase;
+//
+//        a {
+//          @include transition(border, 0.2s, linear);
+//
+//          border-bottom: 3px solid transparent;
+//          color: $primary-color;
+//          padding: 0 0 $spacer / 4 0;
+//
+//          &:hover {
+//            color: $color-white;
+//            border-color: $color-light-blue;
+//          }
+//        }
+//      }
+//    }
+//  }
+//
+//  aside {
+//    float: right;
+//    margin: -2*$spacer $spacer / 2 0 0;
+//
+//    img {
+//      @include transition(opacity, 0.25s, linear);
+//
+//      padding: 0 0 0 $spacer / 5;
+//      opacity: 0.7;
+//
+//      &:hover {
+//        opacity: 1;
+//      }
+//    }
+//  }
+//}
