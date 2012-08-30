@@ -190,13 +190,18 @@ article.post {
   float: left;
   width: $article-width;
 
-  header {
+  .text {
+    @include text-box-white;
+  }
+
+  header, aside {
     @include text-size($text-size-small, $text-size-small);
 
     color: $color-light-gray;
   }
 
-  aside {
+  aside.comments {
+    @include text-box-light-gray;
   }
 
   h1 {
@@ -210,7 +215,7 @@ article.post {
   }
 }
 
-aside {
+aside#sidebar {
   float: left;
   margin: 0 0 0 $spacer;
 }

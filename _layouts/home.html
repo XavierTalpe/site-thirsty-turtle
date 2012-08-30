@@ -70,7 +70,7 @@
 
   <section id="articles">
     <article class="post">
-      <div class="box-white">
+      <div class="text">
         <h1><a href="#">My First Blogpost on Jekyll</a></h1>
         <header>June 28, 2012</header>
         <aside>
@@ -102,15 +102,27 @@
           <p>Categories or tags go here</p>
         </aside>
       </div>
-      <div class="box-light-gray">
-        <aside>
-          <h2>Comments</h2>
-        </aside>
-      </div>
+      <aside class="comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'thirstyturtle';
+
+          (function () {
+            var dsq = document.createElement( 'script' );
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName( 'head' )[0] || document.getElementsByTagName( 'body' )[0]).appendChild( dsq );
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+          Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </aside>
     </article>
 
     <article class="post">
-      <div class="box-white">
+      <div class="text">
         <h1><a href="#">My First Blogpost on Jekyll</a></h1>
 
         <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil
@@ -133,15 +145,12 @@
           We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are
           connected, you and I. We’re on the same curve, just on opposite ends.</p>
       </div>
-      <div class="box-light-gray">
-        <aside>
-          <h2>Comments</h2>
-        </aside>
-      </div>
+      <aside class="comments">
+      </aside>
     </article>
   </section>
 
-  <aside>
+  <aside id="sidebar">
     <article class="widget">
       <h1>About the author</h1>
 
