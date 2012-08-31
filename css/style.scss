@@ -122,10 +122,11 @@ header#nav {
   h1 {
     float: left;
     margin: 0 2 * $spacer 0 0;
+    position: absolute;
   }
 
   nav {
-    float: left;
+    text-align: center;
 
     ul {
       li {
@@ -241,16 +242,18 @@ article.widget {
 
 #bottom {
   @include text-box-gray;
+  @include text-size($text-size-default);
 
   clear: both;
   font-family: 'Montserrat';
-  font-size: 12px;
-  padding: $spacer 0;
 
   footer {
     margin: 0 auto;
-    padding: $spacer 0 0;
     text-align: center;
     width: $page-width;
+
+    p {
+      margin: 0;
+    }
   }
 }
