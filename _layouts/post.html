@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<article class="post">
+  <div class="text">
+    <h1><a href="{{page.url}}">{{page.title}}</a></h1>
+    <header>{{ page.date | date: '%B %e, %Y' }}</header>
+    <!--<aside>-->
+    <!--<p>Fun Cat LOL</p>-->
+    <!--</aside>-->
+    {{content}}
+    <!--<aside>-->
+    <!--<p>Categories or tags go here</p>-->
+    <!--</aside>-->
+  </div>
+  <aside class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'thirstyturtle';
+      var disqus_identifier = '{{page.id}}';
+      var disqus_url = '{{site.url}}{{page.url}}';
+      var disqus_title = '{{page.title}}';
+
+      (function () {
+        var dsq = document.createElement( 'script' );
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = 'http://thirstyturtle.disqus.com/embed.js';
+        (document.getElementsByTagName( 'head' )[0] || document.getElementsByTagName( 'body' )[0]).appendChild( dsq );
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </aside>
+</article>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="robots" content="noodp,noydir"/>
+  <meta name="description" content="{{ site.description }}"/>
+  <meta name="author" content="{{site.author}}"/>
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat"/>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ropa+Sans"/>
+  <link rel="stylesheet" type="text/css" href="/css/reset.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/pygments.css"/>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push( ['_setAccount', 'UA-34183794-1'] );
+    _gaq.push( ['_trackPageview'] );
+
+    (function () {
+      var ga = document.createElement( 'script' );
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName( 'script' )[0];
+      s.parentNode.insertBefore( ga, s );
+    })();
+  </script>
+</head>
+<body>
+<div id="page">
+  <header id="nav">
+    <h1>{{ site.title }}</h1>
+
+    <nav>
+      <ul>
+        <li><a href="/">Blog</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <article class="teaser first">
+    <img src="/images/teaser_03.png"/>
+
+    <h1><a href="#">Plentiful Options</a></h1>
+
+    <p>This is some example content. WordPress is an extremely user friendly content management system for websites and
+      blogs. Users can easily add and update text, images, video, audio and</p>
+  </article>
+
+  <article class="teaser second">
+    <img src="/images/teaser_02.png"/>
+
+    <h1><a href="#">Highly Customizable</a></h1>
+
+    <p>This is some example content. WordPress is an extremely user friendly content management system for websites and
+      blogs. Users can easily add and update text, images, video, audio and</p>
+  </article>
+
+  <article class="teaser third">
+    <img src="/images/teaser_01.png"/>
+
+    <h1><a href="#">Beautiful Solution</a></h1>
+
+    <p>This is some example content. WordPress is an extremely user friendly content management system for websites and
+      blogs. Users can easily add and update text, images, video, audio and</p>
+  </article>
+
+  <section id="articles">
+    {{content}}
+  </section>
+
+  <aside id="sidebar">
+    <article class="widget">
+      <h1>About the author</h1>
+
+      <p>Xavier Talpe is a software engineer currently working at Luciad. He develops Android applications for
+        applications
+        that require geo-spatial situational awareness.</p>
+    </article>
+
+    <article class="widget">
+      <h1>About the author</h1>
+
+      <p>Xavier Talpe is a software engineer currently working at Luciad. He develops Android applications for
+        applications
+        that require geo-spatial situational awareness.</p>
+    </article>
+
+    <article class="widget">
+      <div id="popularthreads" class="dsq-widget">
+        <h1 class="dsq-widget-title">Most popular posts</h1>
+        <script type="text/javascript"
+                src="http://thirstyturtle.disqus.com/popular_threads_widget.js?num_items=5"></script>
+      </div>
+    </article>
+
+    <article class="widget">
+      <h1>Advertisement</h1>
+    </article>
+  </aside>
+
+</div>
+
+<div id="bottom">
+  <footer>
+    <p>Copyright &copy; 2009 - 2012 Thirsty Turtle. All rights reserved.</p>
+  </footer>
+</div>
+
+</body>
+</html>

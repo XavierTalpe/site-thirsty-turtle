@@ -14,13 +14,13 @@ $page-width: 900px;
 $widget-width: $page-width / 3 - 2/3 * $spacer;
 $article-width: $page-width -$widget-width - $spacer;
 
-$color-dark-gray: #333;
-$color-gray: #4a4a4a;
-$color-light-gray: #8a8a8a;
-
-$color-blue: #3A84CF;
 $color-white: #fff;
 $color-soft-white: #eee;
+$color-light-gray: #8a8a8a;
+$color-gray: #4a4a4a;
+$color-dark-gray: #333;
+$color-blue: #3A84CF;
+$color-light-blue: #4E90D4;
 
 $images: '../images';
 
@@ -85,11 +85,11 @@ a {
 h1, h2 {
   font-family: 'Montserrat';
   font-weight: normal;
-  margin: 0 0 $spacer;
+  margin: 0 0 $spacer * 2 / 3;
 }
 
 h2 {
-  margin: 0;
+  margin: $spacer 0 0;
 }
 
 p {
@@ -150,6 +150,19 @@ article {
 
   p {
     @include text-size($text-size-default);
+  }
+
+  iframe {
+    margin: $spacer auto 0;
+    display: block;
+  }
+
+  .highlight {
+    @include text-size($text-size-default);
+
+    background: $color-dark-gray;
+    margin: $spacer $spacer / 2 0;
+    padding: $text-padding-minor;
   }
 }
 
