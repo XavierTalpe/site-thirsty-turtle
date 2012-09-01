@@ -249,14 +249,14 @@ article.post {
     color: $color-blue;
   }
 
-  p.caption {
+  .caption {
     background: $color-soft-white;
     font-style: italic;
     margin: 0 2 * $spacer;
     padding: $text-padding-minor;
   }
 
-  p.dark {
+  .quote {
     background: $color-gray;
     border-radius: 5px;
     color: $color-white;
@@ -265,15 +265,15 @@ article.post {
     padding: $text-padding-minor;
   }
 
-  p.center {
+  .center {
     text-align: center;
   }
 
-  p.left {
+  .left {
     float: left;
   }
 
-  p.right {
+  .right {
     float: right;
   }
 }
