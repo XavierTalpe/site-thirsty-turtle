@@ -59,3 +59,5 @@ include: [ .htaccess ]
 # Prose plugin configuration.
 prose:
   rooturl: "_posts"
+  metadata:
+    layout: post

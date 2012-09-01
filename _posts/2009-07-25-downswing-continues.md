@@ -5,7 +5,6 @@ title: Downswing continues
 
 92% equity just ain’t enough …
 
-<div class="quote">
 No-Limit Hold'em, $0.50 BB (6 handed)
 
 <strong>saw flop</strong> | <span style="color: #c00000;"><strong>saw showdown</strong></span>
@@ -33,4 +32,4 @@ SB ($49.50)
 Results:
 Hero had K<img class="noborder" title="Spade" src="http://www.xaviert.be/wp-content/themes/xavier/images/spade.gif" alt="Spade" />, A<img class="noborder" title="Spade" src="http://www.xaviert.be/wp-content/themes/xavier/images/spade.gif" alt="Spade" /> (straight, six high).
 UTG had K<img class="noborder" title="Heart" src="http://www.xaviert.be/wp-content/themes/xavier/images/heart.gif" alt="Heart" />, J<img class="noborder" title="Heart" src="http://www.xaviert.be/wp-content/themes/xavier/images/heart.gif" alt="Heart" /> (straight, six high).
-Outcome: Hero won $52.90</div>
+Outcome: Hero won $52.90
