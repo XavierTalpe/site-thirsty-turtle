@@ -6,5 +6,3 @@ gem 'thin'
 
 gem 'jekyll'
 gem 'sass'
-gem 'RedCloth'
-
