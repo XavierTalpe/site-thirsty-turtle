@@ -1,6 +1,6 @@
 ---
-layout: default
-published: false
+layout: post
+published: true
 ---
 
 # How does it work?
