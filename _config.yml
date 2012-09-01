@@ -36,7 +36,7 @@ destination: ./_site
 markdown: kramdown
 
 # Enables highlight tag with Pygments.
-pygments: true
+pygments: false
 
 # Publishes posts with a future date.
 future: false
@@ -56,5 +56,6 @@ exclude: [ .gitignore, config.ru, Gemfile, Gemfile.lock, Procfile, README.md, re
 # A list of directories and files to specifically include in the conversion.
 include: [ .htaccess ]
 
-# Limits the number of posts to parse and publish.
-# limit_posts: 10
+# Prose plugin configuration.
+prose:
+  rooturl: "_posts"
