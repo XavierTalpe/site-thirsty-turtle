@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '~4 buyins day'
+title: Four buyins day
 published: true
 ---
 
