@@ -1,5 +1,6 @@
 ---
 layout: post
+title: '~4 buyins day'
 published: true
 ---
 
