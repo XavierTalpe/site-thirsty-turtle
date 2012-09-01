@@ -248,6 +248,35 @@ article.post {
 
     color: $color-blue;
   }
+
+  p.caption {
+    background: $color-soft-white;
+    color: $color-dark-gray;
+    font-style: italic;
+    margin: 0 2 * $spacer;
+    padding: $text-padding-minor;
+  }
+
+  p.dark {
+    background: $color-gray;
+    border-radius: 5px;
+    color: $color-white;
+    margin-left: 1.5 * $spacer;
+    margin-right: 1.5 * $spacer;
+    padding: $text-padding-minor;
+  }
+
+  p.center {
+    text-align: center;
+  }
+
+  p.left {
+    float: left;
+  }
+
+  p.right {
+    float: right;
+  }
 }
 
 aside#sidebar {
