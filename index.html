@@ -6,14 +6,32 @@ layout: default
 <article class="post">
   <div class="text">
     <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-    <header>{{ post.date | date: '%B %e, %Y' }}</header>
+    <header>
+      <img alt="date" src="/images/calendar.png" title="date"/> <span>{{ post.date | date: '%B %e, %Y' }}</span>
+      <img alt="comments" src="/images/comments.png" title="comments"/> <a class="dark" href="{{post.url}}#disqus_thread"></a>
+    </header>
     <!--<aside>-->
-      <!--<p>Fun Cat LOL</p>-->
+    <!--<p>Fun Cat LOL</p>-->
     <!--</aside>-->
     {{ post.content }}
     <!--<aside>-->
-      <!--<p>Categories or tags go here</p>-->
+    <!--<p>Categories or tags go here</p>-->
     <!--</aside>-->
+    <script type="text/javascript">
+      var disqus_shortname = 'thirstyturtle';
+      var disqus_identifier = '{{post.id}}';
+      var disqus_url = '{{site.url}}{{post.url}}index.html';
+      var disqus_title = '{{post.title}}';
+
+      (function () {
+        var c = document.createElement( 'script' );
+        c.type = 'text/javascript';
+        c.async = true;
+        c.src = 'http://thirstyturtle.disqus.com/count.js';
+
+        (document.getElementsByTagName( 'head' )[0] || document.getElementsByTagName( 'body' )[0]).appendChild( c );
+      })();
+    </script>
   </div>
 </article>
 {% endfor %}

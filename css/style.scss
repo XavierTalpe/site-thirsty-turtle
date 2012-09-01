@@ -82,6 +82,14 @@ a {
   }
 }
 
+a.dark {
+  color: $color-light-gray;
+
+  &:hover {
+    color: $color-dark-gray;
+  }
+}
+
 h1, h2 {
   font-family: 'Montserrat';
   font-weight: normal;
@@ -123,6 +131,10 @@ header#nav {
     float: left;
     margin: 0 2 * $spacer 0 0;
     position: absolute;
+
+    a, a:hover {
+      color: $color-white;
+    }
   }
 
   nav {
@@ -150,6 +162,10 @@ article {
 
   p {
     @include text-size($text-size-default);
+
+    a {
+      font-weight: bold;
+    }
   }
 
   iframe {
@@ -209,9 +225,14 @@ article.post {
   }
 
   header, aside {
-    @include text-size($text-size-small, $text-size-small);
-
+    @include text-size($text-size-default);
     color: $color-light-gray;
+
+    span, a {
+      line-height: 16px;
+      margin: 0 $spacer 0 0;
+      vertical-align: top;
+    }
   }
 
   aside.comments {
@@ -258,7 +279,6 @@ article.widget {
   @include text-size($text-size-default);
 
   clear: both;
-  font-family: 'Montserrat';
 
   footer {
     margin: 0 auto;
@@ -267,6 +287,23 @@ article.widget {
 
     p {
       margin: 0;
+    }
+  }
+}
+
+ul.dsq-widget-list {
+  padding: 0 $text-padding-minor;
+
+  a {
+    @include text-size(15px);
+    font-weight: normal;
+  }
+
+  li.dsq-widget-item {
+    margin: 0;
+
+    p {
+      padding: 0;
     }
   }
 }
