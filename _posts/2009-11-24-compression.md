@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Compression, first tests looking good!'
-published: true
+published: false
 ---
 
 256 depth maps, 32 samples per pixel.
@@ -11,7 +11,6 @@ published: true
 
 {:.caption}
 Stanford Bunny Uncompressed
-
 
 {:.center}
 ![Stanford Bunny Compressed](/uploads/2010/11/Stanford-Bunny-Compressed.png)
