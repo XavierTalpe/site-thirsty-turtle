@@ -1,6 +1,7 @@
 ---
-layout: default
-published: false
+layout: post
+title: 'Compression, first tests looking good!'
+published: true
 ---
 
 256 depth maps, 32 samples per pixel.
