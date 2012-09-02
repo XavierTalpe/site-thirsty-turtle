@@ -60,4 +60,6 @@ include: [ .htaccess ]
 prose:
   rooturl: "_posts"
   metadata:
-    layout: post
+    "_posts/": |
+          layout: post
+          title: 'Hello'
