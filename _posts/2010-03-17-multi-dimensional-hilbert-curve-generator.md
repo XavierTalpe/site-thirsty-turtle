@@ -1,6 +1,7 @@
 ---
-layout: default
-published: false
+layout: post
+title: 'Multi-Dimensional Hilbert Curve Generator'
+published: true
 ---
 
 After spending the last week on spherical stuff, I'm currently implementing an algorithm to build <strong>Hilbert curves</strong>. My idea of increasing the compression rate for the Coherent Shadow Maps is to use a 3D (possibly 4D) Hilbert curve that will traverse through all my data. Due to its nature, the Hilbert curve is very good at preserving data locality. This in turn affects my compression ratio in a positive way.
