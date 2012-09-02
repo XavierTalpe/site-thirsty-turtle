@@ -1,6 +1,7 @@
 ---
-layout: default
-published: false
+layout: post
+title: 'Depth maps'
+published: true
 ---
 
 After spending the entire yesterday afternoon I'm finally able to export my depth maps to JPG files using the DevIL library. It took me some time to extract the correct information out of the GPU, but now I can fluently export to JPG, TGA and others. (Why PNG doesn't work is still a mystery.) I also added the Hilbert enumeration and a few other minor things. Hilbert enumeration basicly order elements in such way that there is a minimal difference between previous and next elements. For a 2D square this looks like a zig-zag curve<sup>1</sup>:
