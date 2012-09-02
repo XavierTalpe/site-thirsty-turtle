@@ -9,7 +9,7 @@ Na de voorbije weken weinig vooruitgang geboekt te hebben, vliegen we er deze we
 Aangezien ik niet van plan was om de ganse dag te blijven sukkelen heb ik dan maar verder gewerkt aan het genereren van de depth maps. De bestaande depth map code is ondertussen herwerkt tot eentje die gebruik maakt van Framebuffer Objects, wat alles een pak vlotter moet laten gaan eenmaal er een paar duizenden depth maps gegenereerd moeten worden. Daar ik nu toch wel eens wou weten of mijn depth maps correct waren heb ik het bestaande voorbeeld uit de introductiesessies aangepast. In plaats van een kleurentextuur op de quad te kleven, heb ik er mijn depth map aan gehangen. De resultaten daarvan zie je op onderstaande figuur.
 
 {:.center}
-![Stanford Dragon Depth Map](http://www.xaviert.be/uploads/2010/11/Stanford-Dragon-Depth-Map.jpg)
+![Stanford Dragon Depth Map](/uploads/2010/11/Stanford-Dragon-Depth-Map.jpg)
 
 M'n programma om depth maps te genereren rondom een opgegeven model begint ondertussen vorm te krijgen. De stappen die op dit moment aanwezig zijn:
 - Inlezen van een opgegeven model.
