@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'More Results'
-published: true
+published: false
 ---
 
 In my attempt to find out why the Hilbert curve doesn't give better results than the Zig-Zag one, I experimented a bit with rotated versions of my path-filling curves. Instead of going from left to right, I tried going up and down (= 90° rotation). A 2D representation of this:
