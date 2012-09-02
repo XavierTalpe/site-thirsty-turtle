@@ -9,6 +9,7 @@ $text-size-large: 20px;
 $text-size-medium: 18px;
 $text-size-default: 13px;
 $text-size-small: 12px;
+$text-size-tiny: 10px;
 
 $page-width: 900px;
 $widget-width: $page-width / 3 - 2/3 * $spacer;
@@ -94,24 +95,32 @@ h1, h2 {
   font-family: 'Montserrat';
   font-weight: normal;
   margin: 0 0 $spacer * 2 / 3;
+  text-align: left;
 }
 
 h2 {
   margin: $spacer 0 0;
 }
 
-p {
+p, ul {
   margin: $spacer 0 0;
 }
 
-.box-white {
-  //TODO:cleanup
-  @include text-box($color-white, $color-gray);
+li {
+  list-style-position: inside;
 }
 
-.box-light-gray {
-  //TODO:cleanup
-  @include text-box($color-soft-white, $color-gray);
+sub, sup {
+  font-size: $text-size-tiny;
+  margin: 0 1px;
+}
+
+sup {
+  vertical-align: super;
+}
+
+sub {
+  vertical-align: sub;
 }
 
 #page {
@@ -141,6 +150,8 @@ header#nav {
     text-align: center;
 
     ul {
+      margin:0;
+
       li {
         display: inline;
         font-family: 'Ropa Sans', sans-serif;
@@ -160,7 +171,7 @@ article {
 
   margin: 0 0 $spacer;
 
-  p {
+  p, li {
     @include text-size($text-size-default);
 
     a {
@@ -251,9 +262,9 @@ article.post {
 
   p.caption {
     background: $color-soft-white;
-    font-style: italic;
+    font-weight:bold;
     margin: 0 2 * $spacer;
-    padding: $text-padding-minor;
+    padding: $text-padding-minor / 2;
   }
 
   p.quote {

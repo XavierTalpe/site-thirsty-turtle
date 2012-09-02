@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Compression, first tests looking good!'
-published: false
+published: true
 ---
 
 256 depth maps, 32 samples per pixel.
@@ -9,13 +9,13 @@ published: false
 {:.center}
 ![Stanford Bunny Uncompressed](/uploads/2010/11/Stanford-Bunny-Uncompressed.png)
 
-{:.caption}
+{:.center .caption}
 Stanford Bunny Uncompressed
 
 {:.center}
 ![Stanford Bunny Compressed](/uploads/2010/11/Stanford-Bunny-Compressed.png)
 
-{:.caption}
+{:.center .caption}
 Stanford Bunny Compressed
 
 Red areas indicate difference with the uncompressed version. In general I have less noise/self-shadowing, but some trivial points on the bunny are now miscalculated. It might have something to do with a special case where my current implementation of the compression algorithm isn't a 100% correct.

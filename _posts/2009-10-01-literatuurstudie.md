@@ -6,7 +6,7 @@ published: true
 
 De voorbije dagen heb ik serieus doorgewerkt aan mijn thesis. De uitleg van Jurgen over de Hilbert curve gaf me alvast enkele tips om de problemen die ik maandag nog had, op te lossen.
 
-Een van de problemen was het terugvinden van de schaduwmap die loodrecht staat op, en in dezelfde richting kijkt als, de vector getrokken vanuit de lichtbron richting het oppervlaktepunt p. (Zie de figuur [1] hieronder, de drie schuine lijnen met streepjes op stellen shaduwmappen voor.)
+Een van de problemen was het terugvinden van de schaduwmap die loodrecht staat op, en in dezelfde richting kijkt als, de vector getrokken vanuit de lichtbron richting het oppervlaktepunt `p`. (Zie de figuur [1] hieronder, de drie schuine lijnen met streepjes op stellen shaduwmappen voor.)
 
 {:.center}
 ![CSM objects](/uploads/2010/11/CSMObjects.png)

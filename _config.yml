@@ -42,7 +42,7 @@ pygments: false
 future: false
 
 # Produces an index for related posts.
-lsi: true
+lsi: false
 
 # Controls the URLs that posts are generated with.
 permalink: /:year/:month/:title/
