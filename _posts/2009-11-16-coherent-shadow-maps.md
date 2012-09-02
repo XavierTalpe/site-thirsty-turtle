@@ -6,13 +6,13 @@ published: true
 
 Since it's been a while since I made a blogpost, time to give an update on where I'm at and what I've been doing the past week. So currently I'm working on rendering soft shadows using my pregenerated shadow maps. No (decent) results yet, but it's only a matter of hours before everything is up and running. As a replacement for the missing pictures, let me give you a detailed overview of the algorithm as it's currently implemented:
 
-<strong>Step 1: Find depth map</strong>
+**Step 1: Find depth map**
 
 So the first step in the algorithm is to find what depth map we want to use for doing the visibility test. Which depth map is chosen depends on:
-- The current position <strong>P<sub>f</sub></strong> of the fragment we're rendering.
-- The position <strong>P<sub>l</sub></strong> of the light source.
+- The current position **P<sub>f</sub>** of the fragment we're rendering.
+- The position **P<sub>l</sub>** of the light source.
 
-Subtracting <strong>P<sub>f</sub></strong> from <strong>P<sub>l</sub></strong> gives us <strong>L</strong> = <strong>P<sub>l</sub></strong> - <strong>P<sub>f</sub></strong>. The depth map we then want is the one with a viewing direction equal to <strong>-L</strong>. Checking all depth maps for this condition is cumbersome so another method is preferred. Since all depth maps were built around the bounding sphere of an object, we can use their unique (spherical) positions to find the depth map we need. First we scale these spherical positions to the domain [0, 1]2 and then use the fact that all maps were built in Hilbert order. Which means we can assign a unique number to each of them. So if we have 16 depth maps, we can identify them using the numbers zero to 15.
+Subtracting **P<sub>f</sub>** from **P<sub>l</sub>** gives us **L** = **P<sub>l</sub>** - **P<sub>f</sub>**. The depth map we then want is the one with a viewing direction equal to **-L**. Checking all depth maps for this condition is cumbersome so another method is preferred. Since all depth maps were built around the bounding sphere of an object, we can use their unique (spherical) positions to find the depth map we need. First we scale these spherical positions to the domain [0, 1]2 and then use the fact that all maps were built in Hilbert order. Which means we can assign a unique number to each of them. So if we have 16 depth maps, we can identify them using the numbers zero to 15.
 
 In a 2D texture representing the domain [0, 1]2 it looks like this (black = 0, white = 15):
 <img src="http://www.xaviert.be/uploads/2010/11/Texture1.png" alt="" title="Texture1" width="384" height="384" class="aligncenter size-full wp-image-204" />
