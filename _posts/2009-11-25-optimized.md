@@ -1,6 +1,7 @@
 ---
-layout: default
-published: false
+layout: post
+title: 'Optimized'
+published: true
 ---
 
 {:.center}
