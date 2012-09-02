@@ -21,7 +21,7 @@ Now how do we go from <strong>L</strong> to [0, 15]? First we convert L from 3D 
 
 **Step 2: Find modelviewprojection matrix**
 
-For fast performance all modelviewprojection matrices are stored in a 2D texture of dimensions 4 * sqrt(*N*) x 4 * sqrt(*N*). For 16 depth maps a colorized version is given below (black = M<sub>00</sub>, white = M<sub>33</sub>):
+For fast performance all modelviewprojection matrices are stored in a 2D texture of dimensions 4 x sqrt(*N*) x 4 x sqrt(*N*). For 16 depth maps a colorized version is given below (black = M<sub>00</sub>, white = M<sub>33</sub>):
 
 {:.center}
 ![Texture](/uploads/2010/11/Texture2.png)
@@ -29,7 +29,7 @@ For fast performance all modelviewprojection matrices are stored in a 2D texture
 With the id of the depth map known, we can use this number to determine the offset used for retreiving the actual matrix data out of the texture. Once this matrix is built, we use it to transform the position P<sub>f</sub> of the fragment we're rendering.
 
 **Step 3: Do visibility test**
-Since I have no compression implemented yet, all depth maps are loaded and stored in two big texture of dimensions Rx * sqrt(*N*) x Ry * sqrt(*N*) (R being the resolution of our depth maps). For 16 depth maps of a Stanford Bunny these are the textures:
+Since I have no compression implemented yet, all depth maps are loaded and stored in two big texture of dimensions Rx x sqrt(*N*) x Ry x sqrt(*N*) (R being the resolution of our depth maps). For 16 depth maps of a Stanford Bunny these are the textures:
 
 {:.center}
 ![Texture](uploads/2010/11/Texture3.png)
