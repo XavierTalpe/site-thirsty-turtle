@@ -1,6 +1,7 @@
 ---
-layout: default
-published: false
+layout: post
+title: 'Litatuurstudio'
+published: true
 ---
 
 De voorbije dagen heb ik serieus doorgewerkt aan mijn thesis. De uitleg van Jurgen over de Hilbert curve gaf me alvast enkele tips om de problemen die ik maandag nog had, op te lossen.
