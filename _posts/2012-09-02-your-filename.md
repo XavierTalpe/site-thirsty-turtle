@@ -1,6 +1,7 @@
 ---
-layout: default
-published: false
+layout: post
+title: 'Hilbert / Spiral Results'
+published: true
 ---
 
 As promised, some results of using different space-filling curves:
