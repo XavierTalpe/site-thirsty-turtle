@@ -1,6 +1,7 @@
 ---
-layout: default
-published: false
+layout: post
+title: 'Shadows and Dragons'
+published: true
 ---
 
 The last days I've been trying to get my shadows up and running, with succes. Using an exported version of one of the depth maps, I can render shadows in my scene. One thing that suprised me was the huge amount of aliasing shadow mapping creates:
