@@ -1,0 +1,29 @@
+---
+layout: default
+published: false
+---
+
+What computer sciencese really is about: spending 40+ hours looking for a bug only to find out that this so-called "bug" is caused by somebody else his code. FML
+
+Over the past months I've spent countless hours working on my project of Computer Animation (given at [UHasselt](http://www.uhasselt.be)). In short, I have to make a tennisgame containing realistic animations. One of the tasks is to animate a human skeleton (using Inverse Kinematics) so it can swing his tennis racket back and forth. (And hopefully hitting some balls in the process to.) Over the past few weeks however I couldn't get this thing to work. All it did was moving the arm somewhere randomly, then keep moving untill it got stuck:
+
+{:.center}
+![Inverse kinematics](/uploads/2010/11/Inverse-Kinematics.png)
+
+{:.caption}
+Skeleton preparing his arm to swing. Instead he's bending forward.
+
+Hours and hours I've wasted looking for the bug in my code. I read my book several times, checked the original thesis again and again and again, I read course materials from other universities about the same subject and recently I've been having e-mail correspondence with my professor. Result: nothing, squadush.
+
+This afternoon however I found out what's wrong. Take a look at the following line:
+
+{:.caption}
+// Calculate cross product.
+plMath::plVectorf result = position.outerProduct(axis);
+
+As any non-math-wizard would expect, calculating the cross product of two vectors simply gives you a new vector, right?
+
+Well, it would if I had written the vector class. Unfortunately, I did not. The implementation for the vector class was written by somebody who works at UHasselt and apparently prefers returning a matrix as the result of a cross product. Add in the fact that C++ simply converted the matrix to a vector (not the one I wanted of course) and my calculations were way off. At least I can continue working on my project now, deadline is next week :o.
+
+{:.center}
+![This is a black box](/uploads/2010/11/Black-Box.jpg)
