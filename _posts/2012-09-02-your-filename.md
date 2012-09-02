@@ -1,0 +1,25 @@
+---
+layout: default
+published: false
+---
+
+Time to give a recap on what I've been doing the last week:
+
+<strong>1. Bounding Sphere Algorithm</strong>
+I've implemented some more advanced algorithms for finding the (minimum) bounding sphere of an object. I first tried the Ritter algorithm (Graphics Gems, 1990). Ritter stated that his algorithm should give an approximation within 5% of the true minimum sphere. A simple test on a cube proved otherwise though. 
+Then I tried the <a href="http://www.inf.ethz.ch/personal/gaertner/texts/own_work/esa99_final.pdf" target="_blank">Gärtner</a> algorithm. Writing my own implementation would be to much work, so I used an existing implementation from <a href="http://www.inf.ethz.ch/personal/gaertner/miniball.html" target="_blank">here</a>. After doing some tests with the algorithm, it seems the implementation must be broken because I never even ended up with a sphere containing all the necessary vertices ...
+
+In short: attempts to use another bounding sphere algorithm failed.
+
+<strong>2. Uniform Sampling</strong>
+Taking uniform samples on my bounding sphere gave some interesting results. Depending on the orientation of my bounding sphere and the space-filling curve used to traverse through my samples on this sphere, it's possible to decrease the size of the compressed depth maps with one third (compared to my original results). There's also a huge variation in the size of the CSM's for various settings of orientation and space-filling curve.
+
+To give you an example, an Armadillo with 1024 depth maps:
+Uniform, Vertical Zig-Zag curve and a ZYX (left) rotation of the bounding sphere: <strong>6.6 Mb</strong>.
+Not uniform, Horizontal Zig-Zag curve, YXZ: <strong>17.3 Mb</strong>!
+<div class="aligncenter"><img src="http://www.xaviert.be/uploads/2010/10/100314a.png" alt="Non-uniform" title="Non-uniform" width="200" height="150" class="size-full wp-image-109" /><img src="http://www.xaviert.be/uploads/2010/10/100314b.png" alt="Uniform" title="Uniform" width="200" height="150" class="size-full wp-image-110" /></div>
+
+In order to find the best match of orientation, sampling and path-curve I wrote a script that builds CSM's for all of the possible combinations for a specific number of depth maps. This was repeated for the Stanford Dragon, Bunny, Teapot, Armadillo and Venus. (I currently have around 9Gb of CSM's, without going any higher than 4096 depth maps). As an overal result of all the data I gathered, the (ZXY, Uniform, Vertical Zig-Zag) combination gave the smallest (and best) CSM's. I have yet to test if this is also the case for the overall quality of my shadows.
+
+<strong>3. Hilbert Curve</strong>
+Started reading some papers on how to generate the curve and algorithms for switching between the 1-dimensional and n-dimensional indices of the curve. Goals for this week are getting these implemented and start building results.
