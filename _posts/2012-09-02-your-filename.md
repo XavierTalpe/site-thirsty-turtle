@@ -1,6 +1,7 @@
 ---
-layout: default
-published: false
+layout: post
+title: 'Coherent Shadow Maps: Uncompressed Algorithm'
+published: true
 ---
 
 Since it's been a while since I made a blogpost, time to give an update on where I'm at and what I've been doing the past week. So currently I'm working on rendering soft shadows using my pregenerated shadow maps. No (decent) results yet, but it's only a matter of hours before everything is up and running. As a replacement for the missing pictures, let me give you a detailed overview of the algorithm as it's currently implemented:
