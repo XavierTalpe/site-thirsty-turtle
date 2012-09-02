@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Dragon Render'
-published: false
+published: true
 ---
 
 First render of the Stanford Dragon:
