@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Litatuurstudio'
+title: 'Litatuurstudie update'
 published: true
 ---
 
