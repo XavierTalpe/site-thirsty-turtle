@@ -1,6 +1,7 @@
 ---
-layout: default
-published: false
+layout: post
+title: 'Shadow bias'
+published: true
 ---
 
 As Jurgen pointed out this afternoon, a bias of 0.25 (see post below) for my depth maps isn't good since depth values are already clamped in the range of [0, 1]. Adding another quarter of that to my depth values is obviously no correct way of rendering shadows. The images below show the improved results with smaller bias values:
