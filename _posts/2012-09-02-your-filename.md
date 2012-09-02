@@ -1,6 +1,7 @@
 ---
-layout: default
-published: false
+layout: post
+title: 'Thesis update'
+published: true
 ---
 
 It's been a while since I made a post about my thesis so time to give you guys an update. Since many people probably forgot what my thesis is about, here's a quick recap:
