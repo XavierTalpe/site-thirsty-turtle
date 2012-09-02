@@ -1,0 +1,8 @@
+---
+layout: default
+published: false
+---
+
+While reading through my papers this morning, I stumbled upon a shadowing technique used in Pixar's first animation movie: Luxo Jr. The short film is about two desk lamps called Luxo and Luxo Jr. playing with a ball. Anyone who ever saw a Pixar movie will no doubt recognize Luxo Jr. as the desk lamping jumping on the "I" of Pixar in the beginning of a movie.
+
+Just for the record, this short film was made in 1986! Rendering one single frame took around 90 minutes back in those days. The film itself can be found [here](http://www.youtube.com/watch?v=PvCWPZfK8pI). Twenty years later they still haven't lost their touch!
