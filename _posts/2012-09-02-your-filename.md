@@ -1,6 +1,7 @@
 ---
-layout: default
-published: false
+layout: post
+title: 'Rasterizer framework'
+published: true
 ---
 
 Aangezien het alweer een week geleden is dat ik hier iets gepost heb, even een update over hoe het met m'n thesis gaat. Na een gesprek met Jurgen vorige week werd besloten dat ik mocht beginnen met de implementatie. Naast een heleboel tips gaf Jurgen me ook de raad om te vertrekken van het klassieke shadow-mapping algoritme en dit dan uit te bouwen naar coherente shaduwmappen.
