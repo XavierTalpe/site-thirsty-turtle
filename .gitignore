@@ -1,7 +1,7 @@
 *.iml
 .idea/
 
-**/.sass-cache/
+.sass-cache/
 
 _site/
 
