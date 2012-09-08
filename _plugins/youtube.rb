@@ -1,19 +1,19 @@
 class YouTube < Liquid::Tag
-  Syntax = /^\s*([^\s]+)?/
-
-  def initialize(tagName, markup, tokens)
+  def initialize(tag_name, markup, tokens)
     super
 
-    if markup =~ Syntax then
+    if markup =~ /^\s*([^\s]+)?/
       @id = $1
     else
-      raise "No YouTube ID provided in the \"youtube\" tag."
+      error_msg = 'No YouTube ID provided!'
+      puts error_msg
+      raise error_msg
     end
   end
 
   def render(context)
-    "<iframe width=\"565\" height=\"424\" src=\"http://www.youtube.com/embed/#{@id}\" frameborder=\"0\" allowfullscreen></iframe>"
+    "<iframe width=\"565\" height=\"424\" src=\"http://www.youtube.com/embed/#@id\" frameborder=\"0\" allowfullscreen></iframe>"
   end
 
-  Liquid::Template.register_tag "youtube", self
+  Liquid::Template.register_tag 'youtube', self
 end
