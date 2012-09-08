@@ -31,7 +31,7 @@ class Thumbnail < Liquid::Tag
       thumb.write absolute_thumb
     end
 
-    "<img alt='#@alt' src='#{src_thumb}' />"
+    "<a class='fancybox' href='#@src'><img alt='#@alt' src='#{src_thumb}' /></a>"
   end
 
   def get_thumb_src(width, height)
