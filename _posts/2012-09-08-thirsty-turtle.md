@@ -1,8 +1,6 @@
 ---
 layout: post
+title: 'Thirsty Turtle v1.0'
 published: false
 ---
 
-# How does it work?
-
-Enter Text in Markdown format.
