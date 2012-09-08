@@ -31,13 +31,16 @@ layout: default
         dsq.async = true;
         dsq.src = 'http://thirstyturtle.disqus.com/embed.js';
 
+        var root = (document.getElementsByTagName( 'head' )[0] || document.getElementsByTagName( 'body' )[0]);
+        root.appendChild( dsq );
+      })();
+      (function () {
         var c = document.createElement( 'script' );
         c.type = 'text/javascript';
         c.async = true;
         c.src = 'http://thirstyturtle.disqus.com/count.js';
 
         var root = (document.getElementsByTagName( 'head' )[0] || document.getElementsByTagName( 'body' )[0]);
-        root.appendChild( dsq );
         root.appendChild( c );
       })();
     </script>
