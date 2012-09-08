@@ -2,14 +2,12 @@ $spacer: 15px;
 $text-padding: 15px;
 $text-padding-minor: 10px;
 
-$text-size-huge: 30px;
-$text-size-very-large: 25px;
-$text-size-larger: 23px;
-$text-size-large: 20px;
-$text-size-medium: 18px;
-$text-size-default: 13px;
-$text-size-small: 12px;
-$text-size-tiny: 10px;
+$text-size-huge: 28px;
+$text-size-very-large: 24px;
+$text-size-large: 22px;
+$text-size-medium: 19px;
+$text-size-default: 14px;
+$text-size-tiny: 13px;
 
 $page-width: 900px;
 $widget-width: $page-width / 3 - 2/3 * $spacer;
@@ -32,7 +30,7 @@ $images: '../images';
   text-align: justify;
 }
 
-@mixin text-size($font-size, $line-height: $font-size * 1.35){
+@mixin text-size($font-size, $line-height: $font-size * 1.4){
   font-size: $font-size;
   line-height: $line-height;
 }
@@ -68,7 +66,7 @@ $images: '../images';
 
 body {
   background: url(#{$images}/background-white.jpg);
-  font-family: sans-serif;
+  font-family: 'PT Sans', sans-serif;
   margin: $spacer 0 0;
 }
 
@@ -111,7 +109,7 @@ li {
 }
 
 sub, sup {
-  font-size: $text-size-tiny;
+  @include text-size($text-size-tiny, $text-size-tiny);
   margin: 0 1px;
 }
 
@@ -130,7 +128,7 @@ sub {
 
 header#nav {
   @include text-box-gray;
-  @include text-size($text-size-larger, $text-size-larger);
+  @include text-size($text-size-very-large, $text-size-very-large);
 
   float: left;
   margin: 0 0 $spacer;
@@ -150,7 +148,7 @@ header#nav {
     text-align: center;
 
     ul {
-      margin:0;
+      margin: 0;
 
       li {
         display: inline;
@@ -236,7 +234,7 @@ article.post {
   }
 
   header, aside {
-    @include text-size($text-size-default);
+    @include text-size($text-size-tiny);
     color: $color-light-gray;
 
     span, a {
