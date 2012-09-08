@@ -7,7 +7,7 @@ published: true
 Had a decent month, probably my biggest so far. Sucks to run under EV though. If it wasn't for my downswing halfway the month, I would've probably hit the $ 1,000 mark :(.
 
 {:.center}
-![July 2009](/uploads/2010/11/July2009.png)
+{% thumbnail [July 2009][/uploads/2010/11/July2009.png] %}
 
 I'm also making some small changes to my game. Currently my non-showdown winnings are taking up a huge chunk of my winnings and I want them close to break-even before I move up to 100NL. Using Holdem Manager I did some analysis of my game:
 
