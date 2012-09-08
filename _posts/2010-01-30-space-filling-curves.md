@@ -11,19 +11,19 @@ You might wonder why these are important. Well, in order to achieve a high compr
 Currently I've been using a **Zig-Zag** curve. Other examples of space-filling curves are a **Spiral** or **[Hilbert curve](http://en.wikipedia.org/wiki/Hilbert_curve)**. Especially the Hilbert curve is quite known and can be used for a variety of things. Some of the more art-like applications I found on the internet are [](http://visualmotive.com/colorsort) or [traversing the 3-dimensional RGB cube](http://corte.si/posts/code/hilbert/portrait/index.html):
 
 {:.center}
-![3D Color Cube](http://www.xaviert.be/uploads/2010/11/3D-Color-Cube.png)
+![3D Color Cube](/uploads/2010/11/3D-Color-Cube.png)
 
 Below is a 2D representation of the Zig-Zag, Spiral and Hilbert space-filling curve:
 
 {:.center}
-![Zig-Zag](http://www.xaviert.be/uploads/2010/11/zig-zag.jpg)
-![Spiral](http://www.xaviert.be/uploads/2010/11/Spiral.jpg)
+![Zig-Zag](/uploads/2010/11/zig-zag.jpg)
+![Spiral](/uploads/2010/11/Spiral.jpg)
 
 {:.center .caption}
 Zig-zag (left) and spiral (right).
 
 {:.center}
-![Hilbert (Order 3)](http://www.xaviert.be/uploads/2010/11/Hilbert-Order-3.jpg)
+![Hilbert (Order 3)](/uploads/2010/11/Hilbert-Order-3.jpg)
 
 {:.center .caption}
 Hilbert curve of third order.
