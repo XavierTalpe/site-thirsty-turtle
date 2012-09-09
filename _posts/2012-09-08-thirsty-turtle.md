@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Thirsty Turtle v1.0'
-published: false
+published: true
 ---
 
 After almost two years of silence I've decided to start blogging again. Since my old blog was kinda out-dated, I created a new design, found myself a fitting name (more on the meaining of the 'Thirsty Turtle' later) _and_ switched my blog from Wordpress to [Jekyll](https://github.com/mojombo/jekyll). Today I'll go into some more detail on how to set up Jekyll on [Heroku](http://www.heroku.com).
@@ -14,23 +14,21 @@ So why would I use a static site generator? For one, it's __portable__ accross p
 I'm not going to explain the details on how to set up a Jekyll site, there are plenty of tutorials about that already. Instructions on how to set up a Jekyll generated site on Heroku are however slightly more difficult to find.
 
 ## Jekyll on Heroku
-[Heroku](http://www.heroku.com) is a platform to set up applications in the cloud. Best of all, it's free to use for simple sites and web applications.
-
-In order to set up your Jekyll powered blog on Heroku, you first have to create a Heroku account install the Heroku toolbelt. This allows you to maintain your apps from the command line.
+[Heroku](http://www.heroku.com) is a platform to set up applications in the cloud. Best of all, it's free to use for simple sites and web applications. In order to set up your Jekyll powered blog on Heroku, you first have to create a Heroku account and install the Heroku toolbelt. This allows you to maintain your apps from the command line.
 
 Next step is creating a new app on the [Cedar Stack](https://devcenter.heroku.com/articles/cedar):
 
     $ heroku create --stack cedar --buildpack git://github.com/mattmanning/heroku-buildpack-ruby-jekyll.git
     
-Heroku doesn't offer support for Jekyll out of the box, so you need a custom buildpack. This buildpack mentioned above will automatically regenerate your site when pushing your site to Heroku. Any custom plugins you have will also be executed when doing this.
+Heroku doesn't offer support for Jekyll out of the box, so for this you need a custom buildpack. The buildpack mentioned above takes care of this and will automatically regenerate your site when pushing your site to Heroku. Any custom plugins you have will also be executed when doing this.
 
-Add a **Gemfile** containing with the following dependencies:
+To get everything working with Heroku, add a **Gemfile** with the following dependencies. Don't forget to run bundle install to create the **Gemfile.lock**.
 
     source :rubygems
     
     gem 'jekyll'
 
-Run bundle install to create the **Gemfile.lock**. Then create a **Procfile**:
+ Then create a **Procfile** with the following command:
 
    web: bundle exec jekyll --server -p $PORT
 
