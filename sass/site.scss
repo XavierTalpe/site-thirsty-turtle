@@ -185,14 +185,6 @@ article {
     margin: $spacer auto 0;
     display: block;
   }
-
-  .highlight {
-    @include text-size($text-size-default);
-
-    background: $color-dark-gray;
-    margin: $spacer $spacer / 2 0;
-    padding: $text-padding-minor;
-  }
 }
 
 article.teaser {
@@ -269,12 +261,11 @@ article.post {
     padding: $text-padding-minor / 2;
   }
 
-  p.quote {
+  p.quote, div.highlight {
     background: $color-gray;
     border-radius: 5px;
     color: $color-white;
-    margin-left: 1.5 * $spacer;
-    margin-right: 1.5 * $spacer;
+    margin: $spacer 1.5 * $spacer 0;
     padding: $text-padding-minor;
   }
 
