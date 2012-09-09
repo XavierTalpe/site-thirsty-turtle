@@ -24,6 +24,16 @@ Next step is creating a new app on the [Cedar Stack](https://devcenter.heroku.co
     
 Heroku doesn't offer support for Jekyll out of the box, so you need a custom buildpack. This buildpack mentioned above will automatically regenerate your site when pushing your site to Heroku. Any custom plugins you have will also be executed when doing this.
 
+Add a **Gemfile** containing with the following dependencies:
+
+    source :rubygems
+    
+    gem 'jekyll'
+
+Run bundle install to create the **Gemfile.lock**. Then create a **Procfile**:
+
+   web: bundle exec jekyll --server -p $PORT
+
 Finally all you have to do is push your code to Heroku and see the magic unfold!
 
-    $ heroku push heroku master
+    $ git push heroku master
