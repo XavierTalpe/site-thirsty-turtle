@@ -64,6 +64,10 @@ $images: '../images';
   -webkit-box-shadow: 0 1px 5px 0 $color-gray;
 }
 
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Ropa+Sans);
+
 body {
   background: url(#{$images}/background-white.jpg);
   font-family: 'PT Sans', sans-serif;
