@@ -38,7 +38,14 @@ Then create a **Procfile** with the following command:
 web: bundle exec jekyll --server -p $PORT
 {% endhighlight %}
 
-Finally all you have to do is push your code to Heroku and see the magic unfold!
+Also make sure that the _auto_ and _server_ option in your **_config.yml** file are disabled:
+
+{% highlight yaml %}
+auto: false
+server: false
+{% endhighlight %}
+
+Finally all you have to do is push your code to Heroku and watch the magic unfold!
 
 {% highlight bash %}
 $ git push heroku master
