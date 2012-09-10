@@ -36,7 +36,7 @@ destination: ./_site
 markdown: kramdown
 
 # Enables highlight tag with Pygments.
-pygments: true
+pygments: false
 
 # Publishes posts with a future date.
 future: false

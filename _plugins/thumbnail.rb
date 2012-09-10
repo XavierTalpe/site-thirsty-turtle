@@ -18,7 +18,7 @@ class Thumbnail < Liquid::Tag
         @config = 'default'
       end
     else
-      error_msg = 'Invalid arguments for thumbnail generation!'
+      error_msg = 'Syntax error when parsing thumbnail.'
       puts error_msg
       raise error_msg
     end

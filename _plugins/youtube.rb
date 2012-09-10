@@ -5,7 +5,7 @@ class YouTube < Liquid::Tag
     if markup =~ /^\s*([^\s]+)?/
       @id = $1
     else
-      error_msg = 'No YouTube ID provided!'
+      error_msg = 'Syntax error when parsing youtube.'
       puts error_msg
       raise error_msg
     end
