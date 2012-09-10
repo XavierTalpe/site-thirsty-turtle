@@ -18,35 +18,35 @@ I'm not going to explain the details on how to set up a Jekyll site, there are p
 
 Next step is creating a new app on the [Cedar Stack](https://devcenter.heroku.com/articles/cedar):
 
-{% highlight bash %}
+{% pygments bash %}
 $ heroku create --stack cedar --buildpack git://github.com/mattmanning/heroku-buildpack-ruby-jekyll.git
-{% endhighlight %}
+{% endpygments %}
 
 Heroku doesn't offer support for Jekyll out of the box, so for this you need a custom buildpack. The buildpack mentioned above takes care of this and will automatically regenerate your site when pushing your site to Heroku. Any custom plugins you have will also be executed when doing this.
 
 To get everything working with Heroku, add a **Gemfile** with the following dependencies. Don't forget to run bundle install to create the **Gemfile.lock**.
 
-{% highlight ruby %}
+{% pygments ruby %}
 source :rubygems
     
 gem 'jekyll'
-{% endhighlight %}
+{% endpygments %}
 
 Then create a **Procfile** with the following command:
 
-{% highlight ruby %}
+{% pygments ruby %}
 web: bundle exec jekyll --server -p $PORT
-{% endhighlight %}
+{% endpygments %}
 
 Also make sure that the _auto_ and _server_ option in your **_config.yml** file are disabled:
 
-{% highlight yaml %}
+{% pygments yaml %}
 auto: false
 server: false
-{% endhighlight %}
+{% endpygments %}
 
 Finally all you have to do is push your code to Heroku and watch the magic unfold!
 
-{% highlight bash %}
+{% pygments bash %}
 $ git push heroku master
-{% endhighlight %}
+{% endpygments %}
