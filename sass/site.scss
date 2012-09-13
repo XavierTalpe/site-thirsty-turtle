@@ -223,6 +223,23 @@ article.teaser {
 section#articles {
   float: left;
   width: $article-width;
+
+  nav {
+    @include text-box-gray;
+    @include text-size(16px);
+
+    clear: both;
+    margin: 0 0 $spacer;
+    text-align: right;
+
+    ul {
+      display: inline;
+
+      li {
+        display: inline;
+      }
+    }
+  }
 }
 
 article.post {

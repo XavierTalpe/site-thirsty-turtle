@@ -48,7 +48,7 @@ lsi: false
 permalink: /:year/:month/:title/
 
 # Splits your posts up over multiple subdirectories called “page2”, “page3”, … “pageN”.
-# paginate:
+paginate: 5
 
 # A list of directories and files to exclude from the conversion.
 exclude: [ .gitignore, config.ru, Gemfile, Gemfile.lock, Procfile, README.md, resources, sass, vendor ]
