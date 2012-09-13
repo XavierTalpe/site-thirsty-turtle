@@ -5,6 +5,8 @@ published: false
 
 # Daily Notes
 
+* First cooking class of this semester. Had a great time as usual.
+
 * Sometimes I think I'm crazy for leaving Belgium and going to Canada instead.
 
 * Had lunch at the Diamant building. Their sandwiches + dessert are the best.
