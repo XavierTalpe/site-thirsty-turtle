@@ -7,7 +7,7 @@ layout: default
     <h1><a href="{{page.url}}">{{page.title}}</a></h1>
     <header>
       <img alt="date" src="/images/calendar.png"/> <span>{{ page.date | date: '%B %e, %Y' }}</span>
-      <img alt="comments" src="/images/comments.png"/> <a class="dark" href="{{page.url}}#disqus_thread"></a>
+      <img alt="comments" src="/images/comments.png"/> <a class="dark" href="{{site.url}}{{page.url}}index.html#disqus_thread"></a>
     </header>
     <!--<aside>-->
     <!--<p>Fun Cat LOL</p>-->
@@ -20,15 +20,12 @@ layout: default
   <aside class="comments">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
-      var disqus_shortname = 'thirstyturtle';
       var disqus_identifier = '{{page.id}}';
       var disqus_url = '{{site.url}}{{page.url}}';
       var disqus_title = '{{page.title}}';
 
       (function () {
         var dsq = document.createElement( 'script' );
-        dsq.type = 'text/javascript';
-        dsq.async = true;
         dsq.src = 'http://thirstyturtle.disqus.com/embed.js';
 
         var root = (document.getElementsByTagName( 'head' )[0] || document.getElementsByTagName( 'body' )[0]);
