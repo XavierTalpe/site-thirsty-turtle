@@ -50,7 +50,6 @@ $images: '../images';
   @include text-box($color-gray, $color-white);
 
   background: url(#{$images}/background-dark.jpg);
-  opacity: 0.75;
 }
 
 @mixin text-box-light-gray(){
@@ -283,9 +282,9 @@ article.post {
   }
 
   p.quote, div.highlight {
-    background: $color-gray;
+    @include text-box-gray;
+
     border-radius: 5px;
-    color: $color-white;
     margin: $spacer 1.5 * $spacer 0;
     padding: $text-padding-minor;
   }
