@@ -107,20 +107,6 @@ p, ul {
   margin: $spacer 0 0;
 }
 
-p {
-  &.center {
-    text-align: center;
-  }
-
-  &.left {
-    float: left;
-  }
-
-  &.right {
-    float: right;
-  }
-}
-
 li {
   list-style-position: inside;
 }
@@ -140,6 +126,18 @@ sub {
 
 pre {
   white-space: pre-wrap;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 #page {
@@ -198,7 +196,7 @@ article {
     }
   }
 
-  iframe {
+  .youtube {
     margin: $spacer auto 0;
     display: block;
   }
@@ -238,12 +236,14 @@ section#articles {
   width: $article-width;
 
   nav {
-    @include text-box-gray;
-    @include text-size(16px);
-
     clear: both;
-    margin: 0 0 $spacer;
-    text-align: right;
+
+    .button {
+      @include text-box-gray;
+
+      padding: $text-padding-minor;
+      margin: 0 0 $spacer;
+    }
 
     ul {
       display: inline;
