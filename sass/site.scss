@@ -107,6 +107,20 @@ p, ul {
   margin: $spacer 0 0;
 }
 
+p {
+  &.center {
+    text-align: center;
+  }
+
+  &.left {
+    float: left;
+  }
+
+  &.right {
+    float: right;
+  }
+}
+
 li {
   list-style-position: inside;
 }
@@ -287,18 +301,6 @@ article.post {
     border-radius: 5px;
     margin: $spacer 1.5 * $spacer 0;
     padding: $text-padding-minor;
-  }
-
-  p.center {
-    text-align: center;
-  }
-
-  p.left {
-    float: left;
-  }
-
-  p.right {
-    float: right;
   }
 }
 
