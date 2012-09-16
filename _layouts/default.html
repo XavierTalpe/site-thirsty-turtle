@@ -57,7 +57,6 @@
   <section id="articles">
     {{content}}
 
-    <!--&lt;!&ndash; Pagination links &ndash;&gt;-->
     <!--<nav>-->
     <!--{% if paginator.previous_page %}-->
     <!--<span class="previous">-->
@@ -113,6 +112,10 @@
 
     {% if site.widgets.popular %}
     {% include widget/popular.html %}
+    {% endif %}
+
+    {% if site.widgets.adsense %}
+    {% include widget/adsense.html %}
     {% endif %}
 
     <!--<article class="widget">-->

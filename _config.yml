@@ -5,6 +5,7 @@ description: description here
 
 widgets:
   popular: false
+  adsense: true
 
 ### jekyll ###
 
