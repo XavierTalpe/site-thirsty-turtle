@@ -59,45 +59,45 @@
 
     <!--&lt;!&ndash; Pagination links &ndash;&gt;-->
     <!--<nav>-->
-      <!--{% if paginator.previous_page %}-->
-      <!--<span class="previous">-->
-        <!--{% if paginator.previous_page == 1 %}-->
-        <!--<a href="/">Previous</a>-->
-        <!--{% else %}-->
-        <!--<a href="/page{{paginator.previous_page}}">Previous</a>-->
-        <!--{% endif %}-->
-      <!--</span>-->
-      <!--{% else %}-->
-      <!--<span class="previous disabled">Previous</span>-->
-      <!--{% endif %}-->
+    <!--{% if paginator.previous_page %}-->
+    <!--<span class="previous">-->
+    <!--{% if paginator.previous_page == 1 %}-->
+    <!--<a href="/">Previous</a>-->
+    <!--{% else %}-->
+    <!--<a href="/page{{paginator.previous_page}}">Previous</a>-->
+    <!--{% endif %}-->
+    <!--</span>-->
+    <!--{% else %}-->
+    <!--<span class="previous disabled">Previous</span>-->
+    <!--{% endif %}-->
 
-      <!--<ul>-->
-        <!--<li>-->
-          <!--{% if paginator.page == 1 %}-->
-          <!--<span class="current-page">1</span>-->
-          <!--{% else %}-->
-          <!--<a href="/">1</a>-->
-          <!--{% endif %}-->
-        <!--</li>-->
+    <!--<ul>-->
+    <!--<li>-->
+    <!--{% if paginator.page == 1 %}-->
+    <!--<span class="current-page">1</span>-->
+    <!--{% else %}-->
+    <!--<a href="/">1</a>-->
+    <!--{% endif %}-->
+    <!--</li>-->
 
-        <!--{% for count in (2..paginator.total_pages) %}-->
-        <!--<li class="page">-->
-          <!--{% if count == paginator.page %}-->
-          <!--<span class="current-page">{{count}}</span>-->
-          <!--{% else %}-->
-          <!--<a href="/page{{count}}">{{count}}</a>-->
-          <!--{% endif %}-->
-        <!--</li>-->
-        <!--{% endfor %}-->
-      <!--</ul>-->
+    <!--{% for count in (2..paginator.total_pages) %}-->
+    <!--<li class="page">-->
+    <!--{% if count == paginator.page %}-->
+    <!--<span class="current-page">{{count}}</span>-->
+    <!--{% else %}-->
+    <!--<a href="/page{{count}}">{{count}}</a>-->
+    <!--{% endif %}-->
+    <!--</li>-->
+    <!--{% endfor %}-->
+    <!--</ul>-->
 
-      <!--{% if paginator.next_page %}-->
-      <!--<span class="next">-->
-        <!--<a href="/page{{paginator.next_page}}">Next</a>-->
-      <!--</span>-->
-      <!--{% else %}-->
-      <!--<span class="next disabled">Next</span>-->
-      <!--{% endif %}-->
+    <!--{% if paginator.next_page %}-->
+    <!--<span class="next">-->
+    <!--<a href="/page{{paginator.next_page}}">Next</a>-->
+    <!--</span>-->
+    <!--{% else %}-->
+    <!--<span class="next disabled">Next</span>-->
+    <!--{% endif %}-->
     <!--</nav>-->
 
   </section>
@@ -111,13 +111,14 @@
         that require geo-spatial situational awareness.</p>
     </article>
 
+    {% if site.widgets.popular %}
     <article class="widget">
       <div id="popularthreads">
         <h1 class="dsq-widget-title">Most popular posts</h1>
-        <script src="http://thirstyturtle.disqus.com/popular_threads_widget.js?num_items=5"
-                type="text/javascript"></script>
+        <script src="http://thirstyturtle.disqus.com/popular_threads_widget.js?num_items=5"></script>
       </div>
     </article>
+    {% endif %}
 
     <!--<article class="widget">-->
     <!--<h1>Advertisement</h1>-->
