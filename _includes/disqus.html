@@ -1,11 +1,10 @@
 <script type="text/javascript">
-  (function () {
-    var nbComments = document.createElement( 'script' );
-    nbComments.async = true;
-    nbComments.type = 'text/javascript';
-    nbComments.src = 'http://thirstyturtle.disqus.com/count.js';
+  var disqus_shortname = 'thirstyturtle';
 
-    var root = (document.getElementsByTagName( 'head' )[0] || document.getElementsByTagName( 'body' )[0]);
-    root.appendChild( nbComments );
+  (function () {
+    var s = document.createElement( 'script' );
+    s.src = 'http://thirstyturtle.disqus.com/count.js';
+
+    (document.getElementsByTagName( 'head' )[0] || document.getElementsByTagName( 'body' )[0]).appendChild( c );
   })();
 </script>
