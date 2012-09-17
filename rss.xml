@@ -1,0 +1,29 @@
+---
+
+---
+
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+  <channel>
+    <title>{{site.title}}</title>
+    <description>{{site.description}}</description>
+    <link>{{site.url}}</link>
+    <atom:link type="application/rss+xml" href="{{site.url}}/rss.xml" rel="self"/>
+    <language>en-us</language>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+    <copyright>Copyright 2009-{{ site.time | date(site.time, "%Y") }} {{site.title}}</copyright>
+
+    {% for post in site.posts limit:5 %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>{{site.url}}{{ post.url }}</link>
+      <pubDate>{{post.date | date_to_xmlschema}}</pubDate>
+      <author>{{site.author}}</author>
+      <guid>{{site.url}}{{post.url}}</guid>
+      <description>{{ post.content | xml_escape }}</description>
+    </item>
+    {% endfor %}
+
+  </channel>
+</rss>
