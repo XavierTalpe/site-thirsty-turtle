@@ -14,9 +14,9 @@
   <author>
     <name>{{site.author}}</name>
   </author>
-  <rights>Copyright 2009-{{ site.time | date(site.time, "%Y") }} {{site.title}}</rights>
+  <rights>Copyright 2009-{{site.time | date(site.time, "%Y")}} {{site.title}}</rights>
 
-  {% for post in site.posts limit:5 %}
+  {% for post in site.posts %}
   <entry>
     <title>{{post.title}}</title>
     <link href="{{site.url}}{{post.url}}"/>
