@@ -296,7 +296,7 @@ article.post {
   }
 
   p.quote, div.highlight {
-    @include text-box-gray;
+    @include text-box($color-gray, $color-white);
 
     border-radius: 5px;
     margin: $spacer 1.5 * $spacer 0;
