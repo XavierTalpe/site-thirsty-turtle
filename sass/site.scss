@@ -288,11 +288,12 @@ article.post {
     color: $color-blue;
   }
 
-  p.caption {
+  p.caption, figcaption {
     background: $color-soft-white;
     border-radius: 5px;
     margin: 0 2 * $spacer;
     padding: $text-padding-minor / 2;
+    text-align: left;
   }
 
   p.quote, div.highlight {
@@ -361,4 +362,8 @@ ul.dsq-widget-list {
       font-size: 100%;
     }
   }
+}
+
+.instagram-post {
+  text-align: center;
 }
