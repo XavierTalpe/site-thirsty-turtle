@@ -222,9 +222,19 @@ aside#sidebar {
 
 article {
   @include box-shadow;
+  @include text-box-white;
 
   margin: 0 0 $spacer;
-  width: 100%;
+
+  h1 {
+    @include text-size($text-size-huge, $text-size-huge);
+  }
+
+  h2 {
+    @include text-size($text-size-very-large, $text-size-very-large);
+
+    color: $color-blue;
+  }
 
   p, li {
     @include text-size($text-size-default);
@@ -241,8 +251,6 @@ article {
 }
 
 article.teaser {
-  @include text-box-white;
-
   float: left;
   width: $widget-width - 2 * $text-padding;
 
@@ -272,10 +280,6 @@ article.teaser {
 article.post {
   float: left;
 
-  .text {
-    @include text-box-white;
-  }
-
   header, aside {
     @include text-size($text-size-tiny);
     color: $color-light-gray;
@@ -289,16 +293,6 @@ article.post {
 
   aside.comments {
     @include text-box-light-gray;
-  }
-
-  h1 {
-    @include text-size($text-size-huge, $text-size-huge);
-  }
-
-  h2 {
-    @include text-size($text-size-very-large, $text-size-very-large);
-
-    color: $color-blue;
   }
 
   p.caption, figcaption {
@@ -319,14 +313,12 @@ article.post {
 }
 
 article.widget {
-  @include text-box-white;
-
   padding: 0 0 $text-padding;
   width: $widget-width;
 
   h1 {
-    @include text-box-gray;
     @include text-size($text-size-large, $text-size-large);
+    @include text-box-gray;
 
     font-family: 'Ropa Sans', sans-serif;
     padding: $text-padding-minor;

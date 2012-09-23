@@ -3,20 +3,19 @@ layout: two-col
 ---
 
 <article class="post">
-  <div class="text">
-    <h1><a href="{{page.url}}">{{page.title}}</a></h1>
-    <header>
-      <img alt="date" src="/images/calendar.png"/> <span>{{ page.date | date: '%B %e, %Y' }}</span>
-      <img alt="comments" src="/images/comments.png"/> <a class="dark" href="{{site.url}}{{page.url}}index.html#disqus_thread"></a>
-    </header>
-    <!--<aside>-->
-    <!--<p>Fun Cat LOL</p>-->
-    <!--</aside>-->
-    {{content}}
-    <!--<aside>-->
-    <!--<p>Categories or tags go here</p>-->
-    <!--</aside>-->
-  </div>
+  <h1><a href="{{page.url}}">{{page.title}}</a></h1>
+  <header>
+    <img alt="date" src="/images/calendar.png"/> <span>{{ page.date | date: '%B %e, %Y' }}</span>
+    <img alt="comments" src="/images/comments.png"/> <a class="dark"
+                                                        href="{{site.url}}{{page.url}}index.html#disqus_thread"></a>
+  </header>
+  <!--<aside>-->
+  <!--<p>Fun Cat LOL</p>-->
+  <!--</aside>-->
+  {{content}}
+  <!--<aside>-->
+  <!--<p>Categories or tags go here</p>-->
+  <!--</aside>-->
   <aside class="comments">
     <div id="disqus_thread"></div>
     <script type="text/javascript">

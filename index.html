@@ -4,7 +4,6 @@ layout: two-col
 
 {% for post in paginator.posts %}
 <article class="post">
-  <div class="text">
     <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
     <header>
       <img alt="date" src="/images/calendar.png"/> <span>{{ post.date | date: '%B %e, %Y' }}</span>
@@ -17,6 +16,5 @@ layout: two-col
     <!--<aside>-->
     <!--<p>Categories or tags go here</p>-->
     <!--</aside>-->
-  </div>
 </article>
 {% endfor %}
