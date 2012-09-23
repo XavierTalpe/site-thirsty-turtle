@@ -293,6 +293,9 @@ article.post {
 
   aside.comments {
     @include text-box-light-gray;
+
+    margin: 0 -$spacer;
+    margin-top: $spacer;
   }
 
   p.caption, figcaption {
