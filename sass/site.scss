@@ -183,10 +183,48 @@ header#nav {
   }
 }
 
+
+section {
+  float: left;
+
+  nav {
+    clear: both;
+
+    .button {
+      @include text-box-gray;
+
+      padding: $text-padding-minor;
+      margin: 0 0 $spacer;
+    }
+
+    ul {
+      display: inline;
+
+      li {
+        display: inline;
+      }
+    }
+  }
+
+  &#one-col {
+    width: $page-width;
+  }
+
+  &#two-col {
+    width: $article-width;
+  }
+}
+
+aside#sidebar {
+  float: left;
+  margin: 0 0 0 $spacer;
+}
+
 article {
   @include box-shadow;
 
   margin: 0 0 $spacer;
+  width: 100%;
 
   p, li {
     @include text-size($text-size-default);
@@ -231,33 +269,8 @@ article.teaser {
   }
 }
 
-section#two-col {
-  float: left;
-  width: $article-width;
-
-  nav {
-    clear: both;
-
-    .button {
-      @include text-box-gray;
-
-      padding: $text-padding-minor;
-      margin: 0 0 $spacer;
-    }
-
-    ul {
-      display: inline;
-
-      li {
-        display: inline;
-      }
-    }
-  }
-}
-
 article.post {
   float: left;
-  width: $article-width;
 
   .text {
     @include text-box-white;
@@ -303,11 +316,6 @@ article.post {
     margin: $spacer 1.5 * $spacer 0;
     padding: $text-padding-minor;
   }
-}
-
-aside#sidebar {
-  float: left;
-  margin: 0 0 0 $spacer;
 }
 
 article.widget {
@@ -362,8 +370,4 @@ ul.dsq-widget-list {
       font-size: 100%;
     }
   }
-}
-
-.instagram-post {
-  text-align: center;
 }
