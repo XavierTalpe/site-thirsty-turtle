@@ -2,8 +2,26 @@
 layout: one-col
 ---
 
-{% include script/jquery.instagram.html %}
-
 <h1>Photo Feed</h1>
 
-<div class="instagram"></div>
+<div id="instagram-feed"></div>
+<script src="/libs/jquery/jquery.instagram.min.js"></script>
+<script>
+  $( document ).ready( function () {
+    $( "#instagram-feed" ).instagram( { userId:'30093897',
+                                        clientId:'2d7bdc69b8cf4244952920ec646cbb28',
+                                        accessToken:'30093897.2d7bdc6.7ba8d7bf00ad4afc990b4cf5735553d1',
+                                        show:15} );
+    $( ".instagram-link" ).fancybox( {
+                                       prevEffect:'fade',
+                                       nextEffect:'fade',
+                                       helpers:{
+                                         title:{
+                                           type:'inside'
+                                         },
+                                         buttons:{}
+                                       }
+                                     } );
+  } );
+</script>
+
