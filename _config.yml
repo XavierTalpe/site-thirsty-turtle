@@ -4,6 +4,7 @@ author: Xavier Talpe
 description: description here
 
 widgets:
+  about: true
   popular: false
   adsense: false
 

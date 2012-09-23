@@ -102,23 +102,8 @@
     </nav>
   </section>
 
-  <aside id="sidebar">
-    <article class="widget">
-      <h1>About the author</h1>
+  {% include sidebar.html %}
 
-      <p>Xavier Talpe is a software engineer currently working at Luciad. He develops Android applications for
-        applications
-        that require geo-spatial situational awareness.</p>
-    </article>
-
-    {% if site.widgets.popular %}
-    {% include widget/popular.html %}
-    {% endif %}
-
-    {% if site.widgets.adsense %}
-    {% include widget/adsense.html %}
-    {% endif %}
-  </aside>
 </div>
 
 <div id="bottom">
