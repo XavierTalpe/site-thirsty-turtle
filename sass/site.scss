@@ -150,6 +150,14 @@ pre {
   float: right;
 }
 
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
 #page {
   margin: 0 auto;
   width: $page-width;
@@ -324,7 +332,7 @@ article.post {
 
 article.widget {
   float: none;
-  padding: 0 0 $text-padding;
+  padding: 0 0 $text-padding-minor;
   width: $widget-width;
 
   h1 {
@@ -337,6 +345,7 @@ article.widget {
 
   p {
     padding: 0 $text-padding;
+    margin-top: $text-padding-minor;
   }
 }
 
