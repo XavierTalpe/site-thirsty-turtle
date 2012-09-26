@@ -412,3 +412,20 @@ ul.dsq-widget-list {
     }
   }
 }
+
+#widget-photo {
+  margin: 0 $text-padding-minor;
+
+  figure {
+    a {
+      img {
+        @include border-radius($border-radius-default);
+        width: $widget-width - 2 * $text-padding-minor;
+      }
+    }
+
+    figcaption {
+      display: none;
+    }
+  }
+}
