@@ -178,11 +178,8 @@ header#nav {
     margin: 0 2 * $spacer 0 0;
     position: absolute;
 
-    a {
+    a, a:hover {
       color: $color-white;
-    }
-    a:hover {
-      color: $color-light-blue;
     }
 
     .label-green {
