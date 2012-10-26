@@ -5,7 +5,7 @@ class Thumbnail < Liquid::Tag
   def initialize(tag_name, markup, tokens)
     super
 
-    if markup =~ /\s*\[([\s\w\(\)]+)\]\[([\w\/\.-]+)\](\[([a-z]+)\]|\[([\d]+)+x([\d]+)\])?\s*$/
+    if markup =~ /\s*\[([\s\w\(\)-:]+)\]\[([\w\/\.-]+)\](\[([a-z]+)\]|\[([\d]+)+x([\d]+)\])?\s*$/
       @alt = $1
       @src = $2
 
@@ -52,6 +52,9 @@ class Thumbnail < Liquid::Tag
     elsif config == 'small'
       @width = 250
       @height = 250
+    elsif config == 'tiny'
+      @width = 200
+      @height = 200
     end
   end
 
