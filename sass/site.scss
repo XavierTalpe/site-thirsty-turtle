@@ -18,12 +18,14 @@ $article-width: $page-width -$widget-width - $spacer;
 
 $color-white: #fff;
 $color-soft-white: #eee;
+$color-dark-white: #bbb;
 $color-dark-gray: #333;
 $color-gray: #4a4a4a;
 $color-medium-gray: #5a5a5a;
 $color-light-gray: #8a8a8a;
 $color-blue: #3A84CF;
-$color-light-blue: #4E90D4;
+$color-light-blue: #86c1ff;
+$color-green: #61e83a;
 
 $images: '../images';
 
@@ -176,8 +178,15 @@ header#nav {
     margin: 0 2 * $spacer 0 0;
     position: absolute;
 
-    a, a:hover {
+    a {
       color: $color-white;
+    }
+    a:hover {
+      color: $color-light-blue;
+    }
+
+    .label-green {
+      color: $color-green;
     }
   }
 
@@ -188,13 +197,23 @@ header#nav {
       margin: 0;
 
       li {
-        display: inline;
-        font-family: 'Ropa Sans', sans-serif;
-        margin: 0 1.25 * $spacer;
-        text-transform: uppercase;
+        display: inline-block;
+        font-family: 'PT Sans', sans-serif;
+        margin: 0 1.5 * $spacer;
+        text-align: left;
+
+        a {
+          color: $color-light-blue;
+        }
 
         a:hover {
           color: $color-white;
+        }
+
+        span {
+          color: $color-dark-white;
+          display: block;
+          font-size: $text-size-tiny;
         }
       }
     }
