@@ -23,7 +23,7 @@ $color-dark-gray: #333;
 $color-gray: #4a4a4a;
 $color-medium-gray: #5a5a5a;
 $color-light-gray: #8a8a8a;
-$color-blue: #3A84CF;
+$color-blue: #397ac3;
 $color-light-blue: #86c1ff;
 $color-green: #61e83a;
 
@@ -275,10 +275,6 @@ article {
 
   p, li {
     @include text-size($text-size-default);
-
-    a {
-      font-weight: bold;
-    }
   }
 
   .youtube {
