@@ -318,6 +318,11 @@ article.post {
     }
   }
 
+  footer {
+    text-align: right;
+    margin: $spacer 0 0;
+  }
+
   aside.comments {
     @include text-box-light-gray;
 
