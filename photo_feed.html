@@ -5,14 +5,40 @@ layout: one-col
 <h1>Photo Feed</h1>
 
 <div id="instagram-feed"></div>
+<nav id="instagram-nav">
+  More
+</nav>
 <script src="/libs/jquery/jquery.instagram.min.js"></script>
 <script>
   $( document ).ready( function () {
-    $( "#instagram-feed" ).instagram( { userId:'30093897',
-                                        clientId:'2d7bdc69b8cf4244952920ec646cbb28',
-                                        accessToken:'30093897.2d7bdc6.7ba8d7bf00ad4afc990b4cf5735553d1',
-                                        show:15} );
-    $( ".instagram-link" ).fancybox( {
+    var photo_container = $( '#instagram-feed' );
+    var next_url;
+
+    photo_container.instagram( { userId:'30093897',
+                                 clientId:'2d7bdc69b8cf4244952920ec646cbb28',
+                                 accessToken:'30093897.2d7bdc6.7ba8d7bf00ad4afc990b4cf5735553d1',
+                                 show:9,
+                                 onComplete:function ( photos, data ) {
+                                   next_url = data.pagination.next_url
+                                 }} );
+
+    $( '#instagram-nav' ).on( 'click', function () {
+      var button = $( this );
+      var text = button.text()
+
+      if ( button.text() != 'Loading…' ) {
+        button.text( 'Loading…' )
+        photo_container.instagram( {
+                                     next_url:next_url,
+                                     show:9,
+                                     onComplete:function ( photos, data ) {
+                                       next_url = data.pagination.next_url;
+                                       button.text( text );
+                                     }} );
+      }
+    } );
+
+    $( '.instagram-link' ).fancybox( {
                                        prevEffect:'fade',
                                        nextEffect:'fade',
                                        helpers:{
