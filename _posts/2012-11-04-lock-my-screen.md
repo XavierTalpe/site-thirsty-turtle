@@ -8,4 +8,5 @@ Last week I released my first app in the Google Play store. It's a simple app th
 
 So I made an app that does exactly that. Press the icon and the screen is locked. No settings, no adds, it just works. All devices running Android 2.2 and up are supported. To find it in the Google Play store, just click the link below!
 
+{:.center}
 [![Lock My Screen](http://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](http://play.google.com/store/apps/details?id=com.thirstyturtle.lockmyscreen)
