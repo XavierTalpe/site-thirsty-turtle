@@ -5,7 +5,7 @@ $text-padding-minor: 10px;
 $text-size-huge: 28px;
 $text-size-very-large: 24px;
 $text-size-large: 22px;
-$text-size-medium: 19px;
+$text-size-medium: 16px;
 $text-size-default: 14px;
 $text-size-tiny: 13px;
 
@@ -221,20 +221,18 @@ section {
   float: left;
 
   nav {
+    @include text-size($text-size-medium);
+
     clear: both;
-
-    .button {
-      @include text-box-gray;
-
-      padding: $text-padding-minor;
-      margin: 0 0 $spacer;
-    }
+    text-align: center;
+    margin-bottom: $spacer;
 
     ul {
       display: inline;
 
       li {
         display: inline;
+        margin: 0 $spacer / 4;
       }
     }
   }
@@ -319,6 +317,8 @@ article.post {
   }
 
   footer {
+    @include text-size($text-size-medium);
+
     text-align: right;
     margin: $spacer 0 0;
   }
