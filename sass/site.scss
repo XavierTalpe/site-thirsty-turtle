@@ -305,6 +305,8 @@ article.teaser {
 }
 
 article.post {
+  width: $article-width - 2 * $text-padding;
+
   header, aside {
     @include text-size($text-size-tiny);
     color: $color-light-gray;
@@ -343,6 +345,10 @@ article.post {
     border-radius: 5px;
     margin: $spacer 1.5 * $spacer 0;
     padding: $text-padding-minor;
+  }
+
+  div.gist {
+    margin: $spacer 0 0;
   }
 }
 
