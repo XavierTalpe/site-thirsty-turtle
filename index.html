@@ -4,20 +4,63 @@ layout: two-col
 
 {% for post in paginator.posts %}
 <article class="post">
-    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-    <header>
-      <img alt="date" src="/images/calendar.png"/> <span>{{ post.date | date: '%B %e, %Y' }}</span>
-      <img alt="comments" src="/images/comments.png"/> <a class="dark" href="{{site.url}}{{post.url}}index.html#disqus_thread"></a>
-    </header>
-    <!--<aside>-->
-    <!--<p>Fun Cat LOL</p>-->
-    <!--</aside>-->
-    {{ post.content }}
-    <!--<aside>-->
-    <!--<p>Categories or tags go here</p>-->
-    <!--</aside>-->
+  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  <header>
+    <img alt="date" src="/images/calendar.png"/> <span>{{ post.date | date: '%B %e, %Y' }}</span>
+    <img alt="comments" src="/images/comments.png"/> <a class="dark"
+                                                        href="{{site.url}}{{post.url}}index.html#disqus_thread"></a>
+  </header>
+  <!--<aside>-->
+  <!--<p>Fun Cat LOL</p>-->
+  <!--</aside>-->
+  {{ post.content }}
+  <!--<aside>-->
+  <!--<p>Categories or tags go here</p>-->
+  <!--</aside>-->
   <footer>
     <a href="{{ post.url }}">Read comments</a>
   </footer>
 </article>
 {% endfor %}
+
+<nav>
+  <!--{% if paginator.previous_page %}-->
+  <!--<div class="button left">-->
+  <!--{% if paginator.previous_page == 1 %}-->
+  <!--<a href="/">Previous</a>-->
+  <!--{% else %}-->
+  <!--<a href="/page{{paginator.previous_page}}">Previous</a>-->
+  <!--{% endif %}-->
+  <!--</div>-->
+  <!--{% else %}-->
+  <!--<div class="button disabled left">Previous</div>-->
+  <!--{% endif %}-->
+
+  <ul>
+    <li>
+      {% if paginator.page == 1 %}
+      <span class="current-page">1</span>
+      {% else %}
+      <a href="/">1</a>
+      {% endif %}
+    </li>
+
+    {% for count in (2..paginator.total_pages) %}
+    <li class="page">
+      {% if count == paginator.page %}
+      <span class="current-page">{{count}}</span>
+      {% else %}
+      <a href="/page{{count}}">{{count}}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+
+  <!--{% if paginator.next_page %}-->
+  <!--<div class="button right">-->
+  <!--<a href="/page{{paginator.next_page}}">Next</a>-->
+  <!--</div>-->
+  <!--{% else %}-->
+  <!--<div class="button disabled right">Next</div>-->
+  <!--{% endif %}-->
+</nav>
