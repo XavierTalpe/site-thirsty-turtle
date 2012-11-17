@@ -14,7 +14,8 @@ $photo-size: 300px;
 
 $page-width: 950px;
 $widget-width: $page-width / 3 - 2/3 * $spacer;
-$article-width: $page-width -$widget-width - $spacer;
+$article-one-col-width: $page-width - 2 * $spacer;
+$article-two-col-width: $page-width - $spacer - $widget-width;
 
 $color-white: #fff;
 $color-soft-white: #eee;
@@ -239,10 +240,14 @@ section {
 
   &#one-col {
     width: $page-width;
+
+    article {
+      width: $article-one-col-width;
+    }
   }
 
   &#two-col {
-    width: $article-width;
+    width: $article-two-col-width;
   }
 }
 
@@ -305,7 +310,7 @@ article.teaser {
 }
 
 article.post {
-  width: $article-width - 2 * $text-padding;
+  width: $article-two-col-width - 2 * $text-padding;
 
   header, aside {
     @include text-size($text-size-tiny);
