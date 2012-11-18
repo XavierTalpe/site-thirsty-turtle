@@ -29,7 +29,7 @@ I have created a custom filter for displaying previous and next links on categor
 module Jekyll
 
   class CategoryPages < Generator
-  
+
     safe true
 
     def generate(site)
@@ -39,17 +39,19 @@ module Jekyll
     end
 
     def paginate(site, page)
-    
+
       # sort categories by descending date of publish
       category_posts = site.categories[page.data['category']].sort_by { |p| -p.date.to_f }
+      puts "Category Posts #{category_posts}"
 
       # calculate total number of pages
       pages = CategoryPager.calculate_pages(category_posts, site.config['paginate'].to_i)
 
       # iterate over the total number of pages and create a physical page for each
       (1..pages).each do |num_page|
-      
+
         # the CategoryPager handles the paging and category data
+        puts "Page Category #{page.data['category']}"
         pager = CategoryPager.new(site.config, num_page, category_posts, page.data['category'], pages)
 
         # the first page is the index, so no page needs to be created. However, the subsequent pages need to be generated
@@ -66,7 +68,7 @@ module Jekyll
     end
 
   end
-  
+
   class CategoryPager < Pager
 
     attr_reader :category
@@ -74,7 +76,7 @@ module Jekyll
     def self.pagination_enabled?(config, page)
       page.name == 'index.html' && page.data.key?('category') && !config['paginate'].nil?
     end
-    
+
     # same as the base class, but includes the category value
     def initialize(config, page, all_posts, category, num_pages = nil)
     	@category = category
@@ -88,16 +90,15 @@ module Jekyll
       x['category'] = @category
       x
     end
-    
+
   end
 
-  # TODO: Can be removed?
   # The CategorySubPage class creates a single category page for the specified tag.
   # This class exists to specify the layout to use for pages after the first index page
   class CategorySubPage < Page
-    
+
     def initialize(site, base, category, layout)
-        
+
       @site = site
       @base = base
       @dir  = category
@@ -110,16 +111,16 @@ module Jekyll
       self.data['title']       = "#{title_prefix}#{category}"
 
     end
-    
+
   end
 
-  
+
   module Filters
-  
+
   	def pager_links(pager)
 
 		if pager['previous_page'] || pager['next_page']
-  	  	
+
 			html = '<div class="pager clearfix">'
 			if pager['previous_page']
 
@@ -131,7 +132,7 @@ module Jekyll
 
 			end
 
-			if pager['next_page'] 
+			if pager['next_page']
 				html << "<div class=\"next\"><a href=\"/#{pager['category']}/page#{pager['next_page']}\">Older posts &raquo;</a></div>"
 			end
 
@@ -141,7 +142,7 @@ module Jekyll
 		end
 
   	end
-  
+
   end
 
 end
