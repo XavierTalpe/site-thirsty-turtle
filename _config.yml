@@ -8,6 +8,7 @@ widgets:
   popular: false
   photo: true
   adsense: false
+  tags: false
 
 ### jekyll ###
 
@@ -66,6 +67,6 @@ include: [ .htaccess ]
 prose:
   rooturl: "_posts"
   metadata:
-    "_posts/": |
+    "_posts": |
           layout: post
-          title: 'Hello'
+          title: 'New Post'
