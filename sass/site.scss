@@ -381,15 +381,10 @@ article.widget {
   @include text-size($text-size-default);
 
   clear: both;
+  text-align: center;
 
-  footer {
-    margin: 0 auto;
-    text-align: center;
-    width: $page-width;
-
-    p {
+  footer p {
       margin: 0;
-    }
   }
 }
 
