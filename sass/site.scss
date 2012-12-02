@@ -19,7 +19,7 @@ $article-two-col-width: $page-width - $spacer - $widget-width;
 
 $color-white: #fff;
 $color-soft-white: #eee;
-$color-dark-white: #bbb;
+$color-dark-white: #ccc;
 $color-dark-gray: #333;
 $color-gray: #4a4a4a;
 $color-medium-gray: #5a5a5a;
@@ -83,7 +83,6 @@ $images: '../images';
 body {
   background: url(#{$images}/background-white.jpg);
   font-family: 'PT Sans', sans-serif;
-  margin: $spacer 0 0;
 }
 
 a {
@@ -161,23 +160,23 @@ pre {
   text-align: right;
 }
 
-#page {
+.center-block {
   margin: 0 auto;
   width: $page-width;
 }
 
 header#nav {
-  @include text-box-gray;
-  @include text-size($text-size-very-large, $text-size-very-large);
+  background: url(#{$images}/background-dark.jpg);
 
-  float: left;
   margin: 0 0 $spacer;
-  width: $page-width - 2 * $text-padding;
+  overflow:hidden;
+  width: 100%;
 
   h1 {
+    @include text-size(1.35 * $text-size-huge);
+
     float: left;
-    margin: 0 2 * $spacer 0 0;
-    position: absolute;
+    margin: $text-padding-minor 0;
 
     a, a:hover {
       color: $color-white;
@@ -189,16 +188,17 @@ header#nav {
   }
 
   nav {
-    text-align: center;
+    @include text-size($text-size-very-large, $text-size-very-large);
+
+    float: right;
 
     ul {
-      margin: 0;
+      margin: $text-padding-minor;
 
       li {
         display: inline-block;
         font-family: 'PT Sans', sans-serif;
-        margin: 0 $spacer;
-        text-align: left;
+        margin: 0 0 0 2 * $spacer;
 
         a {
           color: $color-light-blue;
