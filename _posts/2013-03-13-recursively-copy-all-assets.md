@@ -1,7 +1,7 @@
 ---
 layout: post
-published: true
-title: "Recursively copying all asses using the Gradle Android Plugin"
+published: false
+title: "Recursively copy all assets using v0.3 of the Gradle Android Plugin"
 tags: code
 ---
 
