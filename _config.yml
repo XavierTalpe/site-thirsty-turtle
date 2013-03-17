@@ -6,7 +6,6 @@ description: description here
 widgets:
   about: true
   popular: false
-  photo: true
   adsense: false
   tags: false
 
