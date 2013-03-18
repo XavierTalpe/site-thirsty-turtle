@@ -17,9 +17,9 @@ $widget-width: $page-width / 3 - 2/3 * $spacer;
 $article-one-col-width: $page-width - 2 * $spacer;
 $article-two-col-width: $page-width - $spacer - $widget-width;
 
-$color-white: #fff;
+$color-white: #fcfcfc;
 $color-soft-white: #eee;
-$color-dark-white: #ccc;
+$color-dark-white: #bbb;
 $color-dark-gray: #333;
 $color-gray: #4a4a4a;
 $color-medium-gray: #5a5a5a;
@@ -30,46 +30,110 @@ $color-green: #61e83a;
 
 $images: '../images';
 
-@mixin text-box($background-color, $text-color){
+$navbar-top-height: 60px;
+
+body {
+  padding-top: $navbar-top-height;
+}
+
+header {
+
+  .navbar {
+    opacity: 0.9;
+
+    .navbar-inner {
+      // Inline.
+      min-height: $navbar-top-height;
+
+      .nav {
+        margin: 0;
+
+        li {
+          line-height: $navbar-top-height;
+          // Use percentage of base font variable.
+          font-size: 16px;
+
+          a {
+            // Inline.
+            color: $color-white;
+            font-weight: bold;
+            // Use default column width padding variable?
+            padding: 0 20px;
+          }
+
+          a:hover {
+            // Inline.
+            color: $color-dark-white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  h1 {
+    a, a:hover {
+      color: $color-white;
+    }
+
+    .label-green {
+      color: $color-green;
+    }
+  }
+
+  #image {
+    background: url ("../images/header-image.jpg") center no-repeat;
+    border: 4px solid #397ac3;
+    border-left: 0;
+    border-right: 0;
+    display: block;
+    height: 250px;
+    width: 100%;
+    margin: 0 0 $spacer 0;
+  }
+}
+
+/*
+@mixin text-box($background-color, $text-color) {
   background: $background-color;
   color: $text-color;
   padding: $text-padding;
   text-align: justify;
 }
 
-@mixin text-size($font-size, $line-height: $font-size * 1.4){
+@mixin text-size($font-size, $line-height: $font-size * 1.4) {
   font-size: $font-size;
   line-height: $line-height;
 }
 
-@mixin transition($property, $duration, $type){
+@mixin transition($property, $duration, $type) {
   transition: $property $duration $type;
   -o-transition: $property $duration $type;
   -moz-transition: $property $duration $type;
   -webkit-transition: $property $duration $type;
 }
 
-@mixin text-box-white(){
+@mixin text-box-white() {
   @include text-box($color-white, $color-gray);
 }
 
-@mixin text-box-gray(){
+@mixin text-box-gray() {
   @include text-box($color-gray, $color-white);
 
   background: url(#{$images}/background-dark.jpg);
 }
 
-@mixin text-box-light-gray(){
+@mixin text-box-light-gray() {
   @include text-box($color-soft-white, $color-gray);
 }
 
-@mixin border-radius($top-left, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-left){
+@mixin border-radius($top-left, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-left) {
   border-radius: $top-left $top-right $top-left $bottom-left;
   -moz-border-radius: $top-left $top-right $top-left $bottom-left;
   -webkit-border-radius: $top-left $top-right $top-left $bottom-left;
 }
 
-@mixin box-shadow(){
+@mixin box-shadow() {
   box-shadow: 0 1px 5px 0 $color-gray;
   -o-box-shadow: 0 1px 5px 0 $color-gray;
   -moz-box-shadow: 0 1px 5px 0 $color-gray;
@@ -80,10 +144,6 @@ $images: '../images';
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Ropa+Sans);
 
-body {
-  background: url(#{$images}/background-white.jpg);
-  font-family: 'PT Sans', sans-serif;
-}
 
 a {
   @include transition(color, 0.2s, linear);
@@ -165,310 +225,285 @@ pre {
   width: $page-width;
 }
 
-header#nav {
-  background: url(#{$images}/background-dark.jpg);
+*/
 
-  margin: 0 0 $spacer;
-  overflow:hidden;
-  width: 100%;
+/*
+nav {
+@include text-size($text-size-very-large, $text-size-very-large);
 
-  h1 {
-    @include text-size(1.35 * $text-size-huge);
+ul  li {
+font-family: 'PT Sans', sans-serif;
+//margin: 0 0 0 2 * $spacer;
 
-    float: left;
-    margin: $text-padding-minor 0;
+a {
+color: $color-light-blue;
+}
 
-    a, a:hover {
-      color: $color-white;
-    }
+a:hover {
+color: $color-white;
+}
 
-    .label-green {
-      color: $color-green;
-    }
-  }
-
-  nav {
-    @include text-size($text-size-very-large, $text-size-very-large);
-
-    float: right;
-
-    ul {
-      margin: $text-padding-minor;
-
-      li {
-        display: inline-block;
-        font-family: 'PT Sans', sans-serif;
-        margin: 0 0 0 2 * $spacer;
-
-        a {
-          color: $color-light-blue;
-        }
-
-        a:hover {
-          color: $color-white;
-        }
-
-        span {
-          color: $color-dark-white;
-          display: block;
-          font-size: $text-size-tiny;
-        }
-      }
-    }
-  }
+//span {
+//  color: $color-dark-white;
+//  display: block;
+//  font-size: $text-size-tiny;
+//}
+}
+}
 }
 
 section {
-  float: left;
+float: left;
 
-  nav {
-    @include text-size($text-size-medium);
+nav {
+@include text-size($text-size-medium);
 
-    clear: both;
-    text-align: center;
-    margin-bottom: $spacer;
+clear: both;
+text-align: center;
+margin-bottom: $spacer;
 
-    ul {
-      display: inline;
+ul {
+display: inline;
 
-      li {
-        display: inline;
-        margin: 0 $spacer / 4;
-      }
-    }
-  }
+li {
+display: inline;
+margin: 0 $spacer / 4;
+}
+}
+}
 
-  &#one-col {
-    width: $page-width;
+&#one-col {
+width: $page-width;
 
-    article {
-      width: $article-one-col-width;
-    }
-  }
+article {
+width: $article-one-col-width;
+}
+}
 
-  &#two-col {
-    width: $article-two-col-width;
-  }
+&#two-col {
+width: $article-two-col-width;
+}
 }
 
 aside#sidebar {
-  float: left;
-  margin: 0 0 0 $spacer;
+float: left;
+margin: 0 0 0 $spacer;
 }
 
 article {
-  @include box-shadow;
-  @include text-box-white;
+@include box-shadow;
+@include text-box-white;
 
-  float: left;
-  margin: 0 0 $spacer;
+float: left;
+margin: 0 0 $spacer;
 
-  h1 {
-    @include text-size($text-size-huge, $text-size-huge);
-  }
+h1 {
+@include text-size($text-size-huge, $text-size-huge);
+}
 
-  h2 {
-    @include text-size($text-size-very-large, $text-size-very-large);
+h2 {
+@include text-size($text-size-very-large, $text-size-very-large);
 
-    color: $color-medium-gray;
-  }
+color: $color-medium-gray;
+}
 
-  p, li {
-    @include text-size($text-size-default);
-  }
+p, li {
+@include text-size($text-size-default);
+}
 
-  .youtube {
-    margin: $spacer auto 0;
-    display: block;
-  }
+.youtube {
+margin: $spacer auto 0;
+display: block;
+}
 }
 
 article.teaser {
-  width: $widget-width - 2 * $text-padding;
+width: $widget-width - 2 * $text-padding;
 
-  h1 {
-    @include text-size($text-size-medium, $text-size-medium);
-    margin: 0 0 $spacer / 2;
-  }
+h1 {
+@include text-size($text-size-medium, $text-size-medium);
+margin: 0 0 $spacer / 2;
+}
 
-  p {
-    margin: 0;
-  }
+p {
+margin: 0;
+}
 
-  &.first {
-    clear: both;
-  }
+&.first {
+clear: both;
+}
 
-  &.second, &.third {
-    margin-left: $spacer;
-  }
+&.second, &.third {
+margin-left: $spacer;
+}
 
-  img {
-    margin: 0 0 $spacer / 2;
-    width: 100%;
-  }
+img {
+margin: 0 0 $spacer / 2;
+width: 100%;
+}
 }
 
 article.post {
-  width: $article-two-col-width - 2 * $text-padding;
+width: $article-two-col-width - 2 * $text-padding;
 
-  header, aside {
-    @include text-size($text-size-tiny);
-    color: $color-light-gray;
+header, aside {
+@include text-size($text-size-tiny);
+color: $color-light-gray;
 
-    span, a {
-      line-height: 16px;
-      margin: 0 $spacer 0 0;
-      vertical-align: top;
-    }
-  }
+span, a {
+line-height: 16px;
+margin: 0 $spacer 0 0;
+vertical-align: top;
+}
+}
 
-  footer {
-    @include text-size($text-size-medium);
+footer {
+@include text-size($text-size-medium);
 
-    text-align: right;
-    margin: $spacer 0 0;
-  }
+text-align: right;
+margin: $spacer 0 0;
+}
 
-  aside.comments {
-    @include text-box-light-gray;
+aside.comments {
+@include text-box-light-gray;
 
-    margin: 0 -$spacer;
-    margin-top: $spacer;
-  }
+margin: 0 -$spacer;
+margin-top: $spacer;
+}
 
-  p.caption, figcaption {
-    background: $color-soft-white;
-    border-radius: 5px;
-    margin: 0 2 * $spacer;
-    padding: $text-padding-minor / 2;
-  }
+p.caption, figcaption {
+background: $color-soft-white;
+border-radius: 5px;
+margin: 0 2 * $spacer;
+padding: $text-padding-minor / 2;
+}
 
-  p.quote, div.highlight {
-    @include text-box($color-gray, $color-white);
+p.quote, div.highlight {
+@include text-box($color-gray, $color-white);
 
-    border-radius: 5px;
-    margin: $spacer 1.5 * $spacer 0;
-    padding: $text-padding-minor;
-  }
+border-radius: 5px;
+margin: $spacer 1.5 * $spacer 0;
+padding: $text-padding-minor;
+}
 
-  div.gist {
-    margin: $spacer 0 0;
-  }
+div.gist {
+margin: $spacer 0 0;
+}
 }
 
 article.widget {
-  float: none;
-  padding: 0 0 $text-padding-minor;
-  width: $widget-width;
+float: none;
+padding: 0 0 $text-padding-minor;
+width: $widget-width;
 
-  h1 {
-    @include text-size($text-size-large, $text-size-large);
-    @include text-box-gray;
+h1 {
+@include text-size($text-size-large, $text-size-large);
+@include text-box-gray;
 
-    font-family: 'Ropa Sans', sans-serif;
-    padding: $text-padding-minor;
-  }
+font-family: 'Ropa Sans', sans-serif;
+padding: $text-padding-minor;
+}
 
-  p {
-    padding: 0 $text-padding;
-    margin-top: $text-padding-minor;
-  }
+p {
+padding: 0 $text-padding;
+margin-top: $text-padding-minor;
+}
 }
 
 #bottom {
-  @include text-box-gray;
-  @include text-size($text-size-default);
+@include text-box-gray;
+@include text-size($text-size-default);
 
-  clear: both;
-  text-align: center;
+clear: both;
+text-align: center;
 
-  footer p {
-      margin: 0;
-  }
+footer p {
+margin: 0;
+}
 }
 
 ul.dsq-widget-list {
-  padding: 0 $text-padding-minor;
+padding: 0 $text-padding-minor;
 
-  a {
-    @include text-size(15px);
-    font-weight: normal;
-  }
+a {
+@include text-size(15px);
+font-weight: normal;
+}
 
-  li.dsq-widget-item {
-    margin: 0;
+li.dsq-widget-item {
+margin: 0;
 
-    p {
-      padding: 0;
-      font-size: 100%;
-    }
-  }
+p {
+padding: 0;
+font-size: 100%;
+}
+}
 }
 
 #instagram-feed {
-  margin: 0 $text-padding-minor;
+margin: 0 $text-padding-minor;
 
-  figure {
-    display: block;
-    float: left;
-    height: $photo-size;
-    width: $photo-size;
+figure {
+display: block;
+float: left;
+height: $photo-size;
+width: $photo-size;
 
-    a {
-      position: absolute;
+a {
+position: absolute;
 
-      img {
-        @include border-radius($border-radius-default);
+img {
+@include border-radius($border-radius-default);
 
-        width: $photo-size - $text-padding-minor;
-      }
-    }
+width: $photo-size - $text-padding-minor;
+}
+}
 
-    figcaption {
-      @include border-radius($border-radius-default, $border-radius-default, 0, 0);
-      @include text-box($color-gray, $color-white);
-      @include transition(opacity, 0.4s, linear);
+figcaption {
+@include border-radius($border-radius-default, $border-radius-default, 0, 0);
+@include text-box($color-gray, $color-white);
+@include transition(opacity, 0.4s, linear);
 
-      position: absolute;
+position: absolute;
 
-      float: left;
-      opacity: 0;
-      padding: $text-padding-minor / 2;
-      width: $photo-size - 2 * $text-padding-minor;
-    }
+float: left;
+opacity: 0;
+padding: $text-padding-minor / 2;
+width: $photo-size - 2 * $text-padding-minor;
+}
 
-    &:hover figcaption {
-      opacity: 0.90;
-    }
-  }
+&:hover figcaption {
+opacity: 0.90;
+}
+}
 }
 
 #instagram-nav {
-  @include transition(color, 0.2s, linear);
+@include transition(color, 0.2s, linear);
 
-  color: $color-blue;
-  cursor: pointer;
-  margin-bottom: 0;
+color: $color-blue;
+cursor: pointer;
+margin-bottom: 0;
 
-  &:hover {
-    color: $color-gray;
-  }
+&:hover {
+color: $color-gray;
+}
 }
 
 #widget-photo {
-  margin: 0 $text-padding-minor;
+margin: 0 $text-padding-minor;
 
-  figure {
-    a {
-      img {
-        @include border-radius($border-radius-default);
-        width: $widget-width - 2 * $text-padding-minor;
-      }
-    }
-
-    figcaption {
-      display: none;
-    }
-  }
+figure {
+a {
+img {
+@include border-radius($border-radius-default);
+width: $widget-width - 2 * $text-padding-minor;
 }
+}
+
+figcaption {
+display: none;
+}
+}
+}
+*/
