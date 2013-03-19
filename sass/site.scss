@@ -32,8 +32,22 @@ $images: '../images';
 
 $navbar-top-height: 60px;
 
+@mixin border-radius($top-left, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-left) {
+  border-radius: $top-left $top-right $top-left $bottom-left;
+  -moz-border-radius: $top-left $top-right $top-left $bottom-left;
+  -webkit-border-radius: $top-left $top-right $top-left $bottom-left;
+}
+
+//@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+
 body {
+  // Inline.
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding-top: $navbar-top-height;
+}
+
+.navbar-inner {
+  border: 0;
 }
 
 header {
@@ -54,7 +68,6 @@ header {
     opacity: 0.9;
 
     .navbar-inner {
-      border: 0;
       // Inline.
       min-height: $navbar-top-height;
 
@@ -96,6 +109,16 @@ header {
   }
 }
 
+footer {
+  background: #1b1b1b;
+  padding: $spacer;
+
+  p {
+    color: $color-white;
+    margin: 0;
+  }
+}
+
 /*
 @mixin text-box($background-color, $text-color) {
   background: $background-color;
@@ -130,11 +153,6 @@ header {
   @include text-box($color-soft-white, $color-gray);
 }
 
-@mixin border-radius($top-left, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-left) {
-  border-radius: $top-left $top-right $top-left $bottom-left;
-  -moz-border-radius: $top-left $top-right $top-left $bottom-left;
-  -webkit-border-radius: $top-left $top-right $top-left $bottom-left;
-}
 
 @mixin box-shadow() {
   box-shadow: 0 1px 5px 0 $color-gray;
@@ -360,12 +378,6 @@ vertical-align: top;
 }
 }
 
-footer {
-@include text-size($text-size-medium);
-
-text-align: right;
-margin: $spacer 0 0;
-}
 
 aside.comments {
 @include text-box-light-gray;
@@ -410,18 +422,6 @@ padding: $text-padding-minor;
 p {
 padding: 0 $text-padding;
 margin-top: $text-padding-minor;
-}
-}
-
-#bottom {
-@include text-box-gray;
-@include text-size($text-size-default);
-
-clear: both;
-text-align: center;
-
-footer p {
-margin: 0;
 }
 }
 

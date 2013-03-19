@@ -47,11 +47,15 @@
     {{ content }}
 </div>
 
-<div id="bottom">
-    <footer>
-        <p>Copyright &copy; 2009 - {{ site.time | date: '%Y' }} Thirsty Turtle. All rights reserved.</p>
-    </footer>
-</div>
+<footer>
+    <div class="container">
+        <p class="pull-right">
+            <small>
+                Copyright &copy; 2009 - {{ site.time | date: '%Y' }} Thirsty Turtle. All rights reserved.
+            </small>
+        </p>
+    </div>
+</footer>
 
 {% include script/jquery.html %}
 {% include script/bootstrap.html %}
