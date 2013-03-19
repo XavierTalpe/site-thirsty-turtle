@@ -36,7 +36,7 @@ $navbar-top-height: 60px;
   -webkit-border-radius: $top-left $top-right $top-left $bottom-left;
 }
 
-//@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 
 body {
   // Inline.
@@ -118,7 +118,6 @@ footer {
   }
 }
 
-/*
 @mixin text-box($background-color, $text-color) {
   background: $background-color;
   color: $text-color;
@@ -152,7 +151,6 @@ footer {
   @include text-box($color-soft-white, $color-gray);
 }
 
-
 @mixin box-shadow() {
   box-shadow: 0 1px 5px 0 $color-gray;
   -o-box-shadow: 0 1px 5px 0 $color-gray;
@@ -160,6 +158,7 @@ footer {
   -webkit-box-shadow: 0 1px 5px 0 $color-gray;
 }
 
+/*
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Ropa+Sans);
@@ -247,265 +246,66 @@ pre {
 
 */
 
-/*
-nav {
-@include text-size($text-size-very-large, $text-size-very-large);
-
-ul  li {
-font-family: 'PT Sans', sans-serif;
-//margin: 0 0 0 2 * $spacer;
-
-a {
-color: $color-light-blue;
-}
-
-a:hover {
-color: $color-white;
-}
-
-//span {
-//  color: $color-dark-white;
-//  display: block;
-//  font-size: $text-size-tiny;
-//}
-}
-}
-}
-
-section {
-float: left;
-
-nav {
-@include text-size($text-size-medium);
-
-clear: both;
-text-align: center;
-margin-bottom: $spacer;
-
-ul {
-display: inline;
-
-li {
-display: inline;
-margin: 0 $spacer / 4;
-}
-}
-}
-
-&#one-col {
-width: $page-width;
-
 article {
-width: $article-one-col-width;
+  @include box-shadow;
+  @include text-box-white;
+
+  float: left;
+  margin: 0 0 $spacer;
+
+  h1 {
+    @include text-size($text-size-huge, $text-size-huge);
+  }
+
+  h2 {
+    @include text-size($text-size-very-large, $text-size-very-large);
+
+    color: $color-medium-gray;
+  }
+
+  p, li {
+    @include text-size($text-size-default);
+  }
+
+  .youtube {
+    margin: $spacer auto 0;
+    display: block;
+  }
+
+  header, aside {
+    @include text-size($text-size-tiny);
+    color: $color-light-gray;
+
+    span, a {
+      line-height: 16px;
+      margin: 0 $spacer 0 0;
+      vertical-align: top;
+    }
+  }
+
+  aside.comments {
+    @include text-box-light-gray;
+
+    margin: 0 -$spacer;
+    margin-top: $spacer;
+  }
+
+  p.caption, figcaption {
+    background: $color-soft-white;
+    border-radius: 5px;
+    margin: 0 2 * $spacer;
+    padding: $text-padding-minor / 2;
+  }
+
+  p.quote, div.highlight {
+    @include text-box($color-gray, $color-white);
+
+    border-radius: 5px;
+    margin: $spacer 1.5 * $spacer 0;
+    padding: $text-padding-minor;
+  }
+
+  div.gist {
+    margin: $spacer 0 0;
+  }
 }
-}
-
-&#two-col {
-width: $article-two-col-width;
-}
-}
-
-aside#sidebar {
-float: left;
-margin: 0 0 0 $spacer;
-}
-
-article {
-@include box-shadow;
-@include text-box-white;
-
-float: left;
-margin: 0 0 $spacer;
-
-h1 {
-@include text-size($text-size-huge, $text-size-huge);
-}
-
-h2 {
-@include text-size($text-size-very-large, $text-size-very-large);
-
-color: $color-medium-gray;
-}
-
-p, li {
-@include text-size($text-size-default);
-}
-
-.youtube {
-margin: $spacer auto 0;
-display: block;
-}
-}
-
-article.teaser {
-width: $widget-width - 2 * $text-padding;
-
-h1 {
-@include text-size($text-size-medium, $text-size-medium);
-margin: 0 0 $spacer / 2;
-}
-
-p {
-margin: 0;
-}
-
-&.first {
-clear: both;
-}
-
-&.second, &.third {
-margin-left: $spacer;
-}
-
-img {
-margin: 0 0 $spacer / 2;
-width: 100%;
-}
-}
-
-article.post {
-width: $article-two-col-width - 2 * $text-padding;
-
-header, aside {
-@include text-size($text-size-tiny);
-color: $color-light-gray;
-
-span, a {
-line-height: 16px;
-margin: 0 $spacer 0 0;
-vertical-align: top;
-}
-}
-
-
-aside.comments {
-@include text-box-light-gray;
-
-margin: 0 -$spacer;
-margin-top: $spacer;
-}
-
-p.caption, figcaption {
-background: $color-soft-white;
-border-radius: 5px;
-margin: 0 2 * $spacer;
-padding: $text-padding-minor / 2;
-}
-
-p.quote, div.highlight {
-@include text-box($color-gray, $color-white);
-
-border-radius: 5px;
-margin: $spacer 1.5 * $spacer 0;
-padding: $text-padding-minor;
-}
-
-div.gist {
-margin: $spacer 0 0;
-}
-}
-
-article.widget {
-float: none;
-padding: 0 0 $text-padding-minor;
-width: $widget-width;
-
-h1 {
-@include text-size($text-size-large, $text-size-large);
-@include text-box-gray;
-
-font-family: 'Ropa Sans', sans-serif;
-padding: $text-padding-minor;
-}
-
-p {
-padding: 0 $text-padding;
-margin-top: $text-padding-minor;
-}
-}
-
-ul.dsq-widget-list {
-padding: 0 $text-padding-minor;
-
-a {
-@include text-size(15px);
-font-weight: normal;
-}
-
-li.dsq-widget-item {
-margin: 0;
-
-p {
-padding: 0;
-font-size: 100%;
-}
-}
-}
-
-#instagram-feed {
-margin: 0 $text-padding-minor;
-
-figure {
-display: block;
-float: left;
-height: $photo-size;
-width: $photo-size;
-
-a {
-position: absolute;
-
-img {
-@include border-radius($border-radius-default);
-
-width: $photo-size - $text-padding-minor;
-}
-}
-
-figcaption {
-@include border-radius($border-radius-default, $border-radius-default, 0, 0);
-@include text-box($color-gray, $color-white);
-@include transition(opacity, 0.4s, linear);
-
-position: absolute;
-
-float: left;
-opacity: 0;
-padding: $text-padding-minor / 2;
-width: $photo-size - 2 * $text-padding-minor;
-}
-
-&:hover figcaption {
-opacity: 0.90;
-}
-}
-}
-
-#instagram-nav {
-@include transition(color, 0.2s, linear);
-
-color: $color-blue;
-cursor: pointer;
-margin-bottom: 0;
-
-&:hover {
-color: $color-gray;
-}
-}
-
-#widget-photo {
-margin: 0 $text-padding-minor;
-
-figure {
-a {
-img {
-@include border-radius($border-radius-default);
-width: $widget-width - 2 * $text-padding-minor;
-}
-}
-
-figcaption {
-display: none;
-}
-}
-}
-*/
