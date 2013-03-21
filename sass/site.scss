@@ -36,9 +36,18 @@ $navbar-top-height: 60px;
   -webkit-border-radius: $top-left $top-right $top-left $bottom-left;
 }
 
+@mixin box-shadow($length: 5px) {
+  box-shadow: 0 1px $length 0 $color-gray;
+  -o-box-shadow: 0 1px $length 0 $color-gray;
+  -moz-box-shadow: 0 1px $length 0 $color-gray;
+  -webkit-box-shadow: 0 1px $length 0 $color-gray;
+}
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 body {
+  background: url(#{$images}/background-white.jpg);
   // Inline.
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding-top: $navbar-top-height;
@@ -62,34 +71,32 @@ header {
     }
   }
 
-  .navbar {
-    opacity: 0.9;
+  .navbar .navbar-inner {
+    background: url(#{$images}/background-dark.jpg);
+    @include box-shadow(1px);
+    // Inline.
+    min-height: $navbar-top-height;
 
-    .navbar-inner {
-      // Inline.
-      min-height: $navbar-top-height;
+    .nav {
+      margin: 0;
 
-      .nav {
-        margin: 0;
+      li {
+        line-height: $navbar-top-height;
+        // Use percentage of base font variable.
+        font-size: 16px;
 
-        li {
-          line-height: $navbar-top-height;
-          // Use percentage of base font variable.
-          font-size: 16px;
+        a {
+          // Inline.
+          color: $color-white;
+          font-weight: bold;
+          // Use default column width padding variable?
+          padding: 0 20px;
+        }
 
-          a {
-            // Inline.
-            color: $color-white;
-            font-weight: bold;
-            // Use default column width padding variable?
-            padding: 0 20px;
-          }
-
-          a:hover {
-            // Inline.
-            color: $color-dark-white;
-            text-decoration: none;
-          }
+        a:hover {
+          // Inline.
+          color: $color-dark-white;
+          text-decoration: none;
         }
       }
     }
@@ -98,9 +105,8 @@ header {
   #image {
     // Set different resolutions for media devices.
     background: url(#{$images}/header-image.jpg) center no-repeat;
-    border: 4px solid $color-blue;
-    border-left: 0;
-    border-right: 0;
+    border-top: 5px solid $color-blue;
+    border-bottom: 4px solid $color-blue;
     display: block;
     height: 250px;
     width: 100%;
@@ -151,15 +157,7 @@ footer {
   @include text-box($color-soft-white, $color-gray);
 }
 
-@mixin box-shadow() {
-  box-shadow: 0 1px 5px 0 $color-gray;
-  -o-box-shadow: 0 1px 5px 0 $color-gray;
-  -moz-box-shadow: 0 1px 5px 0 $color-gray;
-  -webkit-box-shadow: 0 1px 5px 0 $color-gray;
-}
-
 /*
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Ropa+Sans);
 
@@ -183,12 +181,15 @@ a.dark {
   }
 }
 
+*/
 h1, h2 {
   font-family: 'Montserrat';
   font-weight: normal;
-  margin: 0 0 $spacer * 2 / 3;
-  text-align: left;
+  //margin: 0 0 $spacer * 2 / 3;
+  //text-align: left;
 }
+
+/*
 
 h2 {
   margin: $spacer 0 0;
