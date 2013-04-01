@@ -53,6 +53,15 @@ body {
   padding-top: $navbar-top-height;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
+
+.icon-calendar, .icon-user {
+  opacity: 0.65;
+}
+
 .navbar-inner {
   border: 0;
 }
@@ -95,7 +104,7 @@ header {
 
         a:hover {
           // Inline.
-          color: $color-dark-white;
+          color: $color-green;
           text-decoration: none;
         }
       }
@@ -181,28 +190,6 @@ a.dark {
   }
 }
 
-*/
-h1, h2 {
-  font-family: 'Montserrat';
-  font-weight: normal;
-  //margin: 0 0 $spacer * 2 / 3;
-  //text-align: left;
-}
-
-/*
-
-h2 {
-  margin: $spacer 0 0;
-}
-
-p, ul {
-  margin: $spacer 0 0;
-}
-
-li {
-  list-style-position: inside;
-}
-
 sub, sup {
   @include text-size($text-size-tiny, $text-size-tiny);
   margin: 0 1px;
@@ -219,32 +206,6 @@ sub {
 pre {
   white-space: pre-wrap;
 }
-
-.center {
-  text-align: center;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-.align-left {
-  text-align: left;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.center-block {
-  margin: 0 auto;
-  width: $page-width;
-}
-
 */
 
 article {
@@ -262,10 +223,6 @@ article {
     @include text-size($text-size-very-large, $text-size-very-large);
 
     color: $color-medium-gray;
-  }
-
-  p, li {
-    @include text-size($text-size-default);
   }
 
   .youtube {
