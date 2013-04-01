@@ -58,10 +58,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-.icon-calendar, .icon-user {
-  opacity: 0.65;
-}
-
 .navbar-inner {
   border: 0;
 }
@@ -212,33 +208,30 @@ article {
   @include box-shadow;
   @include text-box-white;
 
-  float: left;
   margin: 0 0 $spacer;
 
-  h1 {
-    @include text-size($text-size-huge, $text-size-huge);
-  }
+  header, aside {
+    span {
+      opacity: 0.65;
+    }
 
-  h2 {
-    @include text-size($text-size-very-large, $text-size-very-large);
+    small {
+      line-height: 14px;
+      vertical-align: top;
+      opacity: 0.85;
+      padding-right: $spacer;
+    }
 
-    color: $color-medium-gray;
+    a {
+      line-height: 14px;
+      vertical-align: top;
+    }
   }
 
   .youtube {
+    // TODO
     margin: $spacer auto 0;
     display: block;
-  }
-
-  header, aside {
-    @include text-size($text-size-tiny);
-    color: $color-light-gray;
-
-    span, a {
-      line-height: 16px;
-      margin: 0 $spacer 0 0;
-      vertical-align: top;
-    }
   }
 
   aside.comments {

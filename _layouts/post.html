@@ -5,9 +5,9 @@ layout: default
 <article>
     <h1><a href="{{page.url}}">{{page.title}}</a></h1>
     <header>
-        <span class="icon-calendar"></span> <span>{{ page.date | date: '%B %e, %Y' }}</span>
-        <span class="icon-user"></span> <a class="dark"
-                                           href="{{site.url}}{{page.url}}index.html#disqus_thread"></a>
+        <small>{{ page.date | date: '%B %e, %Y' }}</small>
+        <span class="icon-calendar"></span>
+        <span class="icon-user"></span> <a class="dark" href="{{site.url}}{{page.url}}index.html#disqus_thread"></a>
     </header>
 
     {{content}}
