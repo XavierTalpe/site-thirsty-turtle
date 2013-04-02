@@ -9,7 +9,7 @@ Due to implementation issues back then, I was however limited to a curve of (27)
 
 These are the currently best results:
 
-{:.well-small}
+{:.text-center .well-small}
 ![3D Hilbert Compression vs Per-Pixel Compression](/uploads/2010/10/100322b.png)
 
 As can be seen from this graph, the **3D Hilbert compression** outperforms the per-pixel compression for anything below 9216 (962) depth maps. Beyond that per-pixel compression is still the way to go. Two weeks ago I thought that this could possibly be solved by increasing the resolution of my Hilbert curve (and thus reducing the amount of cubes necessary to browse through all my data). Last week I got more insight in the recursive nature of the Hilbert curve and had a suspicision that the size of my cubes (and the resolution of the Hilbert curve) wouldn't matter that much. The thing is, a Hilbert curve of a higher resolution is basically a concatenation of rotated versions of a lower resolution Hilbert curve. So the difference between one cube of a high resolution and two cubes of lower resolution is merely a rotation. And due to it's nature, the effect of these rotations are minimal.
