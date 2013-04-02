@@ -2,19 +2,6 @@ $spacer: 15px;
 $text-padding: 15px;
 $text-padding-minor: 10px;
 
-$text-size-huge: 27px;
-$text-size-very-large: 24px;
-$text-size-large: 22px;
-$text-size-medium: 16px;
-$text-size-default: 14px;
-$text-size-tiny: 13px;
-
-$border-radius-default: 5px;
-$photo-size: 300px;
-
-$page-width: 950px;
-$widget-width: $page-width / 3 - 2/3 * $spacer;
-
 $color-white: #fcfcfc;
 $color-soft-white: #eee;
 $color-dark-white: #bbb;
@@ -148,65 +135,9 @@ footer {
   -webkit-transition: $property $duration $type;
 }
 
-@mixin text-box-white() {
-  @include text-box($color-white, $color-gray);
-}
-
-@mixin text-box-gray() {
-  @include text-box($color-gray, $color-white);
-
-  background: url(#{$images}/background-dark.jpg);
-}
-
-@mixin text-box-light-gray() {
-  @include text-box($color-soft-white, $color-gray);
-}
-
-/*
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
-@import url(http://fonts.googleapis.com/css?family=Ropa+Sans);
-
-
-a {
-  @include transition(color, 0.2s, linear);
-
-  color: $color-blue;
-  text-decoration: none;
-
-  &:hover {
-    color: $color-gray;
-  }
-}
-
-a.dark {
-  color: $color-light-gray;
-
-  &:hover {
-    color: $color-dark-gray;
-  }
-}
-
-sub, sup {
-  @include text-size($text-size-tiny, $text-size-tiny);
-  margin: 0 1px;
-}
-
-sup {
-  vertical-align: super;
-}
-
-sub {
-  vertical-align: sub;
-}
-
-pre {
-  white-space: pre-wrap;
-}
-*/
-
 article {
   @include box-shadow;
-  @include text-box-white;
+  @include text-box($color-white, $color-gray);
 
   margin: 0 0 $spacer;
 
@@ -232,20 +163,6 @@ article {
     // TODO
     margin: $spacer auto 0;
     display: block;
-  }
-
-  aside.comments {
-    @include text-box-light-gray;
-
-    margin: 0 -$spacer;
-    margin-top: $spacer;
-  }
-
-  p.caption, figcaption {
-    background: $color-soft-white;
-    border-radius: 5px;
-    margin: 0 2 * $spacer;
-    padding: $text-padding-minor / 2;
   }
 
   div.highlight {

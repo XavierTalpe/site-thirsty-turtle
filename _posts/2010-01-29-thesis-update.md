@@ -13,7 +13,6 @@ Last semester I've been working on a technique to render **realistic looking sha
 
 A high-level description of how the algorithm works is the following:
 
-{:.caption}
 1. Build **shadow maps** around the bounding sphere of an object.
 2. Exploiting the coherence (similarities) between these shadow maps, they can be compactly **compressed** into one big map.
 3. During rendering, for every point in the scene:
