@@ -8,18 +8,15 @@ layout: default
     <header>
         <span class="icon-calendar"></span>
         <small>{{ post.date | date: '%B %e, %Y' }}</small>
-        <span class="icon-user"></span>
+        <span class="icon-comment"></span>
         <small><a class="dark" href="{{site.url}}{{post.url}}index.html#disqus_thread"></a></small>
     </header>
-    <!--<aside>-->
-    <!--<p>Fun Cat LOL</p>-->
-    <!--</aside>-->
+
     {{ post.content }}
-    <!--<aside>-->
-    <!--<p>Categories or tags go here</p>-->
-    <!--</aside>-->
-    <footer>
-        <a href="{{ post.url }}">Read comments</a>
+
+    <footer class="text-right">
+        <span class="icon-comment"></span>
+        <small><a href="{{ post.url }}">Post comment</a></small>
     </footer>
 </article>
 {% endfor %}
