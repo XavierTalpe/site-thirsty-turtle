@@ -8,7 +8,7 @@ The main goal for last week was creating dual depth maps. Whereas a regular dept
 
 Examples of some dual depth maps:
 
-{:.center}
+{:.text-center}
 ![Dual depth map - Front](/uploads/2010/11/DM1.png)
 ![Dual depth map - Back](/uploads/2010/11/DDM1.png)
 ![Dual depth map - Front](/uploads/2010/11/DM2.png)

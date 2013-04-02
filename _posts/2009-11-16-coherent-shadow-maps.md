@@ -16,7 +16,7 @@ Subtracting **P<sub>f</sub>** from **P<sub>l</sub>** gives us **L** = **P<sub>l<
 
 In a 2D texture representing the domain [0, 1]2 it looks like this (black = 0, white = 15):
 
-{:.center}
+{:.text-center}
 {% thumbnail [Texture][/uploads/2010/11/Texture1.png][small] %}
 
 Now how do we go from <strong>L</strong> to [0, 15]? First we convert L from 3D cartesian coordinates to 2D spherical coordinates (theta, phi), scale these to the domain [0, 1]2 and finally retreive the id of the depth map closest to these coordinates. For this a 2D texture of dimensions sqrt(N) x sqrt(N) is used (N is the number of depth maps) and each texel then contains a number in the range [0, N - 1].
@@ -25,7 +25,7 @@ Now how do we go from <strong>L</strong> to [0, 15]? First we convert L from 3D 
 
 For fast performance all modelviewprojection matrices are stored in a 2D texture of dimensions 4 x sqrt(*N*) x 4 x sqrt(*N*). For 16 depth maps a colorized version is given below (black = M<sub>00</sub>, white = M<sub>33</sub>):
 
-{:.center}
+{:.text-center}
 {% thumbnail [Texture][/uploads/2010/11/Texture2.png][small] %}
 
 With the id of the depth map known, we can use this number to determine the offset used for retreiving the actual matrix data out of the texture. Once this matrix is built, we use it to transform the position P<sub>f</sub> of the fragment we're rendering.
@@ -33,7 +33,7 @@ With the id of the depth map known, we can use this number to determine the offs
 **Step 3: Do visibility test**
 Since I have no compression implemented yet, all depth maps are loaded and stored in two big texture of dimensions Rx x sqrt(*N*) x Ry x sqrt(*N*) (R being the resolution of our depth maps). For 16 depth maps of a Stanford Bunny these are the textures:
 
-{:.center}
+{:.text-center}
 {% thumbnail [Texture][/uploads/2010/11/Texture3.png][small] %}
 {% thumbnail [Texture][/uploads/2010/11/Texture4.png][small] %}
 

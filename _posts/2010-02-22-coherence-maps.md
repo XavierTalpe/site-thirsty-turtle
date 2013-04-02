@@ -8,16 +8,16 @@ Last week I've created a small program which allows me to render all of my compr
 
 Some examples of these coherence maps are shown below:
 
-{:.center}
+{:.text-center}
 ![Coherence Map for Stanford Dragon](/uploads/2010/11/coherence-map-dragon.png)
 ![Coherence Map of Sphere](/uploads/2010/11/coherence-map-sphere.png)
 
-{:.center .caption}
+{:.text-center .caption}
 Stanford Dragon (left) and Sphere (right)
 
-{:.center}
+{:.text-center}
 ![Coherence Map for Utah Teapot](/uploads/2010/11/coherence-map-teapot.png)
 ![Coherence Map for Stanford Bunny](/uploads/2010/11/coherence-map-bunny.png)
 
-{:.center .caption}
+{:.text-center .caption}
 Utah Teapot (left) and Stanford Bunny (right)

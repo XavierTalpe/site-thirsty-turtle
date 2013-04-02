@@ -8,7 +8,7 @@ It's been a while since I made a post about my thesis so time to give you guys a
 
 Last semester I've been working on a technique to render **realistic looking shadows** for **non-deformable** objects in 3D scenes and this in **real-time**. The technique I use is called Coherent Shadow Maps and was discovered by Tobias Ritschel in 2007 [1]. In december I had a working implementation of this technique, resulting in pictures like this:
 
-{:.center}
+{:.text-center}
 ![Stanford Dragon CSM](/uploads/2010/11/Stanford-Dragon-CSM.png)
 
 A high-level description of how the algorithm works is the following:
