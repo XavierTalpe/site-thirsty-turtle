@@ -10,7 +10,7 @@ In my attempt to find out why the Hilbert curve doesn't give better results than
 ![Zig-zag](/uploads/2010/11/zig-zag.jpg)
 ![Zig-zag rotated](/uploads/2010/11/zig-zag-rotated.jpg)
 
-{:.text-center .caption}
+{:.text-center}
 Original Zig-Zag (left) and the 90° CCW rotation (right)
 
 The result of this simple rotation however is quite shocking. With the original curve my compressed map was **136Mb**, with the rotated version it was **244Mb**! Yes, that's almost twice as big!

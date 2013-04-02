@@ -12,12 +12,12 @@ Some examples of these coherence maps are shown below:
 ![Coherence Map for Stanford Dragon](/uploads/2010/11/coherence-map-dragon.png)
 ![Coherence Map of Sphere](/uploads/2010/11/coherence-map-sphere.png)
 
-{:.text-center .caption}
+{:.text-center}
 Stanford Dragon (left) and Sphere (right)
 
 {:.text-center}
 ![Coherence Map for Utah Teapot](/uploads/2010/11/coherence-map-teapot.png)
 ![Coherence Map for Stanford Bunny](/uploads/2010/11/coherence-map-bunny.png)
 
-{:.text-center .caption}
+{:.text-center}
 Utah Teapot (left) and Stanford Bunny (right)

@@ -249,10 +249,7 @@ article {
   }
 
   p.quote, div.highlight {
-    @include text-box($color-gray, $color-white);
-
-    border-radius: 5px;
-    margin: $spacer 1.5 * $spacer 0;
-    padding: $text-padding-minor;
+    padding: 0 $text-padding-minor;
   }
+
 }

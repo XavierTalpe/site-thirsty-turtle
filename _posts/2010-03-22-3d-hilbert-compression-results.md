@@ -17,7 +17,7 @@ As can be seen from this graph, the **3D Hilbert compression** outperforms the p
 {:.text-center}
 {% thumbnail [Hilbert Curve][/uploads/2010/10/100322a.png] %}
 
-{:.caption}
+{:.text-center}
 (Left) 2D Hilbert curve of order 1. (Middle) Hilbert curve of order 2. This consists of four rotated order 1 curves (corners) that are connected with each other. (Right) Order 3 curve, consists of four rotated order 2 curves.
 
 This theory is also confirmed in practice. The results for higher resolution Hilbert curves are nearly identical to those given above (up to some KB).

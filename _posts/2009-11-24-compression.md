@@ -9,13 +9,13 @@ published: true
 {:.text-center}
 ![Stanford Bunny Uncompressed](/uploads/2010/11/Stanford-Bunny-Uncompressed.png)
 
-{:.text-center .caption}
+{:.text-center}
 Stanford Bunny Uncompressed
 
 {:.text-center}
 ![Stanford Bunny Compressed](/uploads/2010/11/Stanford-Bunny-Compressed.png)
 
-{:.text-center .caption}
+{:.text-center}
 Stanford Bunny Compressed
 
 Red areas indicate difference with the uncompressed version. In general I have less noise/self-shadowing, but some trivial points on the bunny are now miscalculated. It might have something to do with a special case where my current implementation of the compression algorithm isn't a 100% correct.

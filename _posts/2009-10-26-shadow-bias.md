@@ -10,14 +10,14 @@ As Jurgen pointed out this afternoon, a bias of 0.25 (see post below) for my dep
 ![Dragon](/uploads/2010/11/Dragon1.png)
 ![Dragon](/uploads/2010/11/Dragon2.png)
 
-{:.text-center .caption}
+{:.text-center}
 **Bias of 0.005**
 
 {:.text-center}
 ![Dragon](/uploads/2010/11/Dragon3.png)
 ![Dragon](/uploads/2010/11/Dragon4.png)
 
-{:.text-center .caption}
+{:.text-center}
 **Bias of 0.01**
 
 Compared to a 0.25 bias my shadows look a lot more realistic now and less out of place:
