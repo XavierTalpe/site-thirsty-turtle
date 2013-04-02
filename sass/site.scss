@@ -166,23 +166,19 @@ article {
   header, footer {
     span {
       opacity: 0.65;
+      margin-left: $spacer;
     }
 
     small {
       line-height: 14px;
       vertical-align: top;
       opacity: 0.85;
-      padding-right: $spacer;
     }
 
     a {
       line-height: 14px;
       vertical-align: top;
     }
-  }
-
-  footer small {
-    padding: 0;
   }
 
   .youtube {
