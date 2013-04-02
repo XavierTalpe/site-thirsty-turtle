@@ -29,8 +29,32 @@ $navbar-top-height: 60px;
   -webkit-box-shadow: 0 1px $length 0 $color-gray;
 }
 
+@mixin text-box($background-color, $text-color) {
+  background: $background-color;
+  color: $text-color;
+  padding: $spacer;
+  text-align: justify;
+}
+
+@mixin text-size($font-size, $line-height: $font-size * 1.4) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin transition($property, $duration, $type) {
+  transition: $property $duration $type;
+  -o-transition: $property $duration $type;
+  -moz-transition: $property $duration $type;
+  -webkit-transition: $property $duration $type;
+}
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+// TODO: Link hover color.
+// Inline comments.
+// Header image.
+// Integration with new framework.
 
 body {
   background: url(#{$images}/background-white.jpg);
@@ -50,6 +74,8 @@ h1 {
 }
 
 a:hover {
+  // Inline
+  color: #08c;
   text-decoration: none;
 }
 
@@ -72,8 +98,9 @@ header {
   }
 
   .navbar .navbar-inner {
-    background: url(#{$images}/background-dark.jpg);
     @include box-shadow(1px);
+
+    background: url(#{$images}/background-dark.jpg);
     // Inline.
     min-height: $navbar-top-height;
 
@@ -108,7 +135,7 @@ header {
     border-top: 5px solid $color-blue;
     border-bottom: 4px solid $color-blue;
     display: block;
-    height: 250px;
+    height: 225px;
     width: 100%;
   }
 }
@@ -122,25 +149,6 @@ footer#main-footer {
     color: $color-white;
     margin: 0;
   }
-}
-
-@mixin text-box($background-color, $text-color) {
-  background: $background-color;
-  color: $text-color;
-  padding: $spacer;
-  text-align: justify;
-}
-
-@mixin text-size($font-size, $line-height: $font-size * 1.4) {
-  font-size: $font-size;
-  line-height: $line-height;
-}
-
-@mixin transition($property, $duration, $type) {
-  transition: $property $duration $type;
-  -o-transition: $property $duration $type;
-  -moz-transition: $property $duration $type;
-  -webkit-transition: $property $duration $type;
 }
 
 article {
