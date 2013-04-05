@@ -2,10 +2,11 @@
 layout: default
 ---
 
-<article class="post">
+<article>
     <h1>Clean Tech Challenge Website</h1>
-    <header>
-        <img alt="date" src="/images/calendar.png"/> <span>November 31, 2011</span>
+    <header class="text-right">
+        <span class="icon-calendar"></span>
+        <small>November 31, 2011</small>
     </header>
 
     <p>
@@ -21,17 +22,19 @@ layout: default
         {% thumbnail [Clean Tech Challenge: Sponsors][/uploads/2011/11/ctc-2.jpg][tiny] %}
     </p>
 
-    <p class="caption center">
+    <p class="center">
         URL: <a href="http://www.cleantechchallenge.be">http://www.cleantechchallenge.be</a>
     </p>
 
 </article>
 
-<article class="post">
+<article>
     <h1>Master Thesis</h1>
-    <header>
-        <img alt="date" src="/images/calendar.png"/> <span>October 14, 2010</span>
+    <header class="text-right">
+        <span class="icon-calendar"></span>
+        <small>October 14, 2010</small>
     </header>
+
     <h2>Introduction</h2>
 
     <p>In the year 2009-2010 I did my master thesis at the the <a href="http://www.kuleuven.be/english/"
@@ -52,10 +55,8 @@ layout: default
     <p>Rendering realistic shadows in 3D scenes typically requires many expensive visibility queries. The visibility
         information of a three dimensional object can however be pre-calculated using shadow maps. By exploiting the
         coherence between these maps, a compact and easily accessible representation is possible. This allows for
-        real-time
-        rendering of realistic shadows. In my thesis I investigated if a more compact representation of the shadow maps
-        is
-        possible, and how accurate the technique of coherent shadow maps is.
+        real-time rendering of realistic shadows. In my thesis I investigated if a more compact representation of the
+        shadow maps is possible, and how accurate the technique of coherent shadow maps is.
     </p>
 
     <h2>Pictures</h2>
@@ -64,7 +65,8 @@ layout: default
         {% thumbnail [Dual depth map front][/uploads/2010/11/Texture3.png][small] %}
         {% thumbnail [Dual depth map back][/uploads/2010/11/Texture4.png][small] %}
         {% thumbnail [Coherent shadow maps based on 4096 dual depth maps][/uploads/2010/11/CSM2.png][small] %}
-        {% thumbnail [Coherent shadow maps based on 262144 dual depth maps][/uploads/2010/11/Stanford-Dragon-262144-DM.png][small] %}
+        {% thumbnail [Coherent shadow maps based on 262144 dual depth
+        maps][/uploads/2010/11/Stanford-Dragon-262144-DM.png][small] %}
         {% thumbnail [Coherent shadow maps based on 65536 dual depth maps][/uploads/2010/11/Teddy65536.png] %}
     </p>
 </article>
