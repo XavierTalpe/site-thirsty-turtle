@@ -84,6 +84,16 @@ h2 {
   border: 0;
 }
 
+img {
+  opacity: 0.85;
+
+  &:hover {
+    @include transition(opacity, 0.25s, linear);
+
+    opacity: 1;
+  }
+}
+
 @media (min-width: 1200px) {
   .navbar .container {
     width: 1170px;
@@ -145,11 +155,13 @@ header {
             color: $color-white;
             font-weight: bold;
             padding: 0 20px;
-          }
 
-          a:hover {
-            color: $color-green;
-            text-decoration: none;
+            &:hover {
+              @include transition(color, 0.2s, linear);
+
+              color: $color-green;
+              text-decoration: none;
+            }
           }
         }
       }
@@ -205,6 +217,8 @@ article {
       vertical-align: top;
 
       &:hover {
+        @include transition(color, 0.2s, linear);
+
         text-decoration: none;
       }
     }
